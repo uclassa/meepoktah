@@ -3,7 +3,7 @@ import { Link as LinkRouter } from 'react-router-dom'
 
 export const SidebarContainer = styled.aside`
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     height: fir-content;
     background: #B30000;

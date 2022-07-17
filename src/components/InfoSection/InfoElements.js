@@ -104,8 +104,10 @@ export const BtnWrap = styled.div`
 
 export const ImgWrap = styled.div`
     height: 100%;
+    max-width: 600px;
+    margin: 16px;
     transition: all 0.1s ease-in-out;
-
+    clip-path: ellipse(55% 60% at 51% 51%);
     @media screen and (max-width: 768px){
         max-width: 440px;
         margin-left: auto;

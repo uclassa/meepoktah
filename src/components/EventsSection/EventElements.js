@@ -55,6 +55,10 @@ export const EventsSubtitle = styled.p`
     letter-spacing: 1px;
     font-style: italic;
     text-align: center;
+
+    @media screen and (max-width: 480px){
+        font-size: 1rem;
+    }
 `
 
 export const EventsWrapper = styled.div`

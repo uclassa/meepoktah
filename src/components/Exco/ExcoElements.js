@@ -107,7 +107,7 @@ export const ExcoSubheader = styled.h3`
 
 export const ExcoH2 = styled.h2`
     font-size: 1.2rem;
-    color: #E8E9EB
+    color: #E8E9EB;
 `
 
 export const ExcoH4 = styled.h4`
@@ -136,7 +136,8 @@ export const Blob = styled.div`
     margin-right: auto;
     position: absolute;
     z-index: 1;
-    background-color: #d44444;
+    background: rgb(212,68,68);
+    background: linear-gradient(19deg, rgba(212,68,68,1) 0%, rgba(196,34,34,1) 39%, rgba(255,70,70,1) 72%, rgba(212,68,68,1) 100%);
     height: 900px;
     width: 1400px;
 

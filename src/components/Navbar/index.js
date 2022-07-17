@@ -54,7 +54,7 @@ const Navbar = ({toggle}) => {
                     <NavLinks to="sponsorships" smooth={true} duration={500} spy={true} exact='true' offset={0} activeClass="active">Sponsorships</NavLinks>
                 </NavItem>
                 <NavItem>
-                    <NavLinks to="/signup">Join Us!</NavLinks>
+                    <SotongButton href='https://discord.gg/rNzYBUFx6a' target="_blank">Join us!</SotongButton>
                 </NavItem>
                 <NavItem>
                     <SotongButton href="https://medium.com/@ssa.uclabruins/ucla-ssa-sotong-guide-6e68161a2506" target="_blank">Sotong Guide</SotongButton>

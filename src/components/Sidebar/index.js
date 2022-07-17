@@ -29,10 +29,10 @@ const Sidebar = ({isOpen, toggle}) => {
                     <NavLinks to="sponsorships" smooth={true} duration={400} spy={true} exact='true' offset={-60}  onClick={toggle}>Sponsorships</NavLinks>
                 </NavItem>
                 <NavItem>
-                    <NavLinks to="/signup">Join Us!</NavLinks>
+                    <SotongButton href='https://discord.gg/rNzYBUFx6a' target="_blank">Sotong Guide</SotongButton>
                 </NavItem>
                 <NavItem>
-                    <SotongButton href="/sotongGuide" >Sotong Guide</SotongButton>
+                    <SotongButton href="https://medium.com/@ssa.uclabruins/ucla-ssa-sotong-guide-6e68161a2506" target="_blank">Sotong Guide</SotongButton>
                 </NavItem>
             </SidebarMenu>
         </SidebarWrapper>
