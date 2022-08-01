@@ -112,6 +112,8 @@ export const EventsCard = styled.div`
     margin-bottom: 20px;
     overflow: hidden;
 
+    box-shadow: 0px 15px 24px #656565;
+
     @media screen and (max-width: 480px){
         height: 145px;
         width: 350px;
@@ -198,10 +200,11 @@ export const EventsTitle = styled.h2`
     font-size: 3.5rem;
     color: #fff;
     text-align: start;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 
     @media screen and (max-width: 480px){
         font-size: 2rem;
+        margin-bottom: 6px;
     }
 `
 export const EventsDescription = styled.p`

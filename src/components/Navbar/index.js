@@ -51,7 +51,7 @@ const Navbar = ({toggle}) => {
                     <NavLinks to="team" smooth={true} duration={500} spy={true} exact='true' offset={-60} activeClass="active">Our Team</NavLinks>
                 </NavItem>
                 <NavItem>
-                    <NavLinks to="sponsorships" smooth={true} duration={500} spy={true} exact='true' offset={0} activeClass="active">Sponsorships</NavLinks>
+                    <NavLinks to="sponsorships" smooth={true} duration={500} spy={true} exact='true' offset={0} activeClass="active">Partnerships</NavLinks>
                 </NavItem>
                 <NavItem>
                     <SotongButton href='https://discord.gg/rNzYBUFx6a' target="_blank">Join us!</SotongButton>

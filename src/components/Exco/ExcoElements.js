@@ -42,7 +42,8 @@ export const ExcoCard = styled.div`
     border-color: #0b0e24;
     border-style: solid;
     border-width: 1px;
-    box-shadow: 2px 2px 3px #0b0e24;
+
+    box-shadow: 0px 10px 16px #060714;
     height: 400px;
     width: 320px;
     margin-bottom: 20px;
@@ -116,7 +117,8 @@ export const ExcoH4 = styled.h4`
     color: #E8E9EB;
 `
 export const ExcoP = styled.p`
-    font-size: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
     margin: 5px;
     color: #E8E9EB;
 `

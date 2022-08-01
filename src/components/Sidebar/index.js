@@ -26,7 +26,7 @@ const Sidebar = ({isOpen, toggle}) => {
                     <NavLinks to="team" smooth={true} duration={400} spy={true} exact='true' offset={-60} onClick={toggle}>Our Team</NavLinks>
                 </NavItem>
                 <NavItem>
-                    <NavLinks to="sponsorships" smooth={true} duration={400} spy={true} exact='true' offset={-60}  onClick={toggle}>Sponsorships</NavLinks>
+                    <NavLinks to="sponsorships" smooth={true} duration={400} spy={true} exact='true' offset={-60}  onClick={toggle}>Partnerships</NavLinks>
                 </NavItem>
                 <NavItem>
                     <SotongButton href='https://discord.gg/rNzYBUFx6a' target="_blank">Sotong Guide</SotongButton>

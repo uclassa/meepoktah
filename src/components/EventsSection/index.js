@@ -56,12 +56,7 @@ const EventsSection = () => {
     <EventsContainer>
         <EventsHeaderWrapper id="events">
             <EventsHeadline> <Emoji symbol="🔥" /> Our Events <Emoji symbol="🔥" /> </EventsHeadline>
-            <EventsSubtitle> The SSA community comes together multiple times each quarter. Stay up to date by following us on Instagram! </EventsSubtitle>
-            <Button
-                href="https://www.instagram.com/ucla.ssa/"
-                target="_blank"
-                fontBig = '1'
-            > Stalk Us! </Button>
+            <EventsSubtitle> We come together regularly to bond, eat, travel, and more. Watch this space for updates on future events! We hope to see you at our next one!</EventsSubtitle>
         </EventsHeaderWrapper>
         {
             upcomingEvents && pastEvents ? <>
@@ -113,7 +108,7 @@ const EventsSection = () => {
                     }
                     </EventsCardWrapper>
                     <EventsCenteredBox>
-                        <EventsSubtitle> Find us on instagram for more of our past events! <Emoji symbol="👇" /></EventsSubtitle>
+                        <EventsSubtitle> Find us on Instagram to keep up to date with all our happenings! <Emoji symbol="👇" /></EventsSubtitle>
                         <Button
                             href="https://www.instagram.com/ucla.ssa/"
                             target="_blank"

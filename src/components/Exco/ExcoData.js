@@ -1,7 +1,7 @@
 export const excoData = [
     {
         name: "David Greuber",
-        role: "Co-President",
+        role: "Co-President / External Affairs Director",
         year: "'24",
         major: "B.S Mathematics & Economics",
         photo: require("./../../images/excos/president.jpg"),
@@ -10,7 +10,7 @@ export const excoData = [
     },
     {
         name: "Hazim Bin Fathul Rahman",
-        role: "Co-President",
+        role: "Co-President / Finance Director",
         year: "'24",
         major: "B.S Biology",
         photo: require("./../../images/excos/vicePresident.jpg"),
@@ -19,7 +19,7 @@ export const excoData = [
     },
     {
         name: "Tania Tan",
-        role: "Director of Events",
+        role: "Events Director",
         year: "'25",
         major: "B.A Psychology",
         photo: require("./../../images/excos/events.jpg"),
@@ -28,7 +28,7 @@ export const excoData = [
     },
     {
         name: "Matthew Ryan Teo",
-        role: "Director of Marketing",
+        role: "Marketing Director",
         year: "'25",
         major: "B.S Computer Science",
         photo: require("./../../images/excos/marketing.jpg"),
@@ -37,7 +37,7 @@ export const excoData = [
     },
     {
         name: "Pierce Chong",
-        role: "Director of Technology",
+        role: "Technology Director",
         year: "'25",
         major: "B.S Computer Science",
         photo: require("./../../images/excos/technology.jpg"),

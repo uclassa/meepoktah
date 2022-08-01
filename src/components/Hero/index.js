@@ -31,8 +31,8 @@ const Hero = () => {
             src={Video} type='video/mp4' />
         </HeroBg>
         <HeroContent>
-            <HeroH1> SINGAPORE STUDENTS ASSOCIATION </HeroH1>
-            <HeroP> <Emoji symbol="👋"/> Looking for a tight-knit community? We welcome everyone! </HeroP>
+            <HeroH1> SINGAPORE STUDENTS' ASSOCIATION </HeroH1>
+            <HeroP> <Emoji symbol="👋"/> Hello! Welcome to SSA, a tight-knit community that welcomes everyone! </HeroP>
             <HeroBtnWrapper>
                 <Button href='https://discord.gg/vr94dUxP8x'
                         target='_blank'

@@ -1,6 +1,5 @@
 import React from 'react'
 import { excoData } from './ExcoData'
-import Emoji from './../Commons/Emojis'
 import {
   ExcoContainer,
   ExcoHeader,
@@ -23,8 +22,8 @@ const Exco = () => {
 
   return (
     <ExcoContainer id="team">
-        <ExcoHeader><Emoji symbol="✨"/> Executive Board <Emoji symbol="✨"/></ExcoHeader>
-        <ExcoSubheader>The lovely people keeping SSA running</ExcoSubheader>
+        <ExcoHeader> Executive Board </ExcoHeader>
+        <ExcoSubheader>Our association is built by our community</ExcoSubheader>
         <ExcoWrapper>
             { 
             excoData.length > 0 ?

@@ -104,17 +104,19 @@ export const BtnWrap = styled.div`
 
 export const ImgWrap = styled.div`
     height: 100%;
-    max-width: 600px;
+    max-width: 800px;
     margin: 16px;
     transition: all 0.1s ease-in-out;
-    clip-path: ellipse(55% 60% at 51% 51%);
+
+    box-shadow: 0px 3px 30px #001f4d;
+
     @media screen and (max-width: 768px){
         max-width: 440px;
         margin-left: auto;
         margin-right: auto;
     }
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.02);
         transition: all 0.2s ease-in-out;
     }
 `
