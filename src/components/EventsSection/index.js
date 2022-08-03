@@ -41,7 +41,6 @@ const EventsSection = () => {
         (response) => {
             const pastEvents = response.data;
             setPastEvents(pastEvents);
-            console.log(response.data);
         }
         ).catch(() => {
             console.log("Error fetching list of past events");

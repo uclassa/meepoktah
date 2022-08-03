@@ -4,7 +4,7 @@ Hello! This repository contains the code for the website of the [UCLA Singapore 
 
 The website fetches content from a MongoDB database via an Express.js backend.
 
-Images are hosted on the SSA Google Drive, with embed code generated using [this tool](https://www.publicalbum.org/blog/embedding-google-photos-image).
+Images are hosted on the SSA Google Drive using sharable links.
 
 Styling was mostly achieved using [styled-components](https://styled-components.com/).
 
