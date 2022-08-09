@@ -19,8 +19,6 @@ function App() {
   const toggle = () => {
     setIsOpen(!isOpen);
   }
-
-  console.log(process.env)
   return (
     <Router>
       <Routes>

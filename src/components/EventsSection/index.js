@@ -29,7 +29,6 @@ const EventsSection = () => {
         (response) => {
             const upcomingEvents = response.data;
             setUpcomingEvents(upcomingEvents);
-            console.log(response.data);
         }
         ).catch(() => {
             console.log("Error fetching list of upcoming events");

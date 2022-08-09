@@ -12,7 +12,6 @@ const PastEventsModel = require('../models/PastEvent.js');
 router.get('/UpcomingEvents', (req, res) => {
     UpcomingEventsModel.find({ })
     .then((data) => {
-        console.log(data)
         res.json(data)
     })
     .catch((error) => {
@@ -23,7 +22,6 @@ router.get('/UpcomingEvents', (req, res) => {
 router.get('/PastEvents', (req, res) => {
     PastEventsModel.find({ })
     .then((data) => {
-        console.log(data)
         res.json(data)
     })
     .catch((error) => {

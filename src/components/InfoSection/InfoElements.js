@@ -115,10 +115,6 @@ export const ImgWrap = styled.div`
         margin-left: auto;
         margin-right: auto;
     }
-    &:hover {
-        transform: scale(1.02);
-        transition: all 0.2s ease-in-out;
-    }
 `
 
 export const Img = styled.img`

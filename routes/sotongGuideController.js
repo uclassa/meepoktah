@@ -12,7 +12,6 @@ const SotongGuideHeaders = require('../models/SotongGuideHeadersModel');
 router.get('/SotongGuideHeaders', (req, res) => {
     SotongGuideHeaders.find({ })
     .then((data) => {
-        console.log(data)
         res.json(data)
     })
     .catch((error) => {
@@ -24,7 +23,6 @@ router.get('/SotongGuideHeaders', (req, res) => {
 router.get('/SotongGuides', (req, res) => {
     SotongGuideModel.find({ })
     .then((data) => {
-        console.log(data)
         res.json(data)
     })
     .catch((error) => {
@@ -39,7 +37,6 @@ router.get('/SotongGuides', (req, res) => {
 router.get('/SotongGuides/visa', (req, res) => {
     SotongGuideModel.findOne({ title: "visa" })
     .then((data) => {
-        console.log(data)
         res.json(data)
     })
     .catch((error) => {
@@ -50,7 +47,6 @@ router.get('/SotongGuides/visa', (req, res) => {
 router.get('/SotongGuides/predeparture', (req, res) => {
     SotongGuideModel.findOne({ title: "predeparture" })
     .then((data) => {
-        console.log(data)
         res.json(data)
     })
     .catch((error) => {
@@ -61,7 +57,6 @@ router.get('/SotongGuides/predeparture', (req, res) => {
 router.get('/SotongGuides/general', (req, res) => {
     SotongGuideModel.findOne({ title: "general" })
     .then((data) => {
-        console.log(data)
         res.json(data)
     })
     .catch((error) => {
@@ -72,7 +67,6 @@ router.get('/SotongGuides/general', (req, res) => {
 router.get('/SotongGuides/oncampus', (req, res) => {
     SotongGuideModel.findOne({ title: "oncampus" })
     .then((data) => {
-        console.log(data)
         res.json(data)
     })
     .catch((error) => {

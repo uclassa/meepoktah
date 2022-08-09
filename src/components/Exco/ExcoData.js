@@ -6,7 +6,7 @@ export const excoData = [
         major: "B.S Mathematics & Economics",
         photo: require("./../../images/excos/president.jpg"),
         alt: "Photo of David",
-        vision: "I wish that SSA will become the number one Singaporean club at UCLA lorem ipsum dolor sit emet."
+        vision: "The community spirit among people in SSA is what I most look forward to when I come to events!"
     },
     {
         name: "Hazim Bin Fathul Rahman",
@@ -15,7 +15,7 @@ export const excoData = [
         major: "B.S Biology",
         photo: require("./../../images/excos/vicePresident.jpg"),
         alt: "Photo of Hazim",
-        vision: "I wish that SSA will become the number one Singaporean club at UCLA lorem ipsum dolor sit emet."
+        vision: "SSA has been a core part of my journey at UCLA. The friendships I forged will definitely last beyond graduation."
     },
     {
         name: "Tania Tan",
@@ -24,7 +24,7 @@ export const excoData = [
         major: "B.A Psychology",
         photo: require("./../../images/excos/events.jpg"),
         alt: "Photo of Tania",
-        vision: "I wish that SSA will become the number one Singaporean club at UCLA lorem ipsum dolor sit emet."
+        vision: "SSA is a family of people that feels like home away from home."
     },
     {
         name: "Matthew Ryan Teo",
@@ -33,7 +33,7 @@ export const excoData = [
         major: "B.S Computer Science",
         photo: require("./../../images/excos/marketing.jpg"),
         alt: "Photo of Matt",
-        vision: "I wish that SSA will become the number one Singaporean club at UCLA lorem ipsum dolor sit emet."
+        vision: "I really appreciate the community of people in SSA who have always been there for me in freshmen year."
     },
     {
         name: "Pierce Chong",
@@ -42,6 +42,6 @@ export const excoData = [
         major: "B.S Computer Science",
         photo: require("./../../images/excos/technology.jpg"),
         alt: "Photo of Pierce",
-        vision: "I wish that SSA will become the number one Singaporean club at UCLA lorem ipsum dolor sit emet."
+        vision: "The events organized by SSA were a great opportunity for me to get to know fellow Singaporeans at UCLA!"
     },
 ]
