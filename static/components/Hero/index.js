@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import Video from '../../videos/hero.mp4'
 import { Button } from '../Commons/ButtonElement'
 import Emoji from '../Commons/Emojis'
 import {
@@ -13,6 +12,8 @@ import {
     ArrowForward,
     ArrowRight,
 } from './HeroElements'
+
+const video = require('../../videos/hero.mp4');
 
 const Hero = () => {
 
@@ -28,7 +29,7 @@ const Hero = () => {
             autoPlay={true} 
             loop={true} 
             muted={true} 
-            src={Video} type='video/mp4' />
+            src={video} type='video/mp4' />
         </HeroBg>
         <HeroContent>
             <HeroH1> SINGAPORE STUDENTS' ASSOCIATION </HeroH1>

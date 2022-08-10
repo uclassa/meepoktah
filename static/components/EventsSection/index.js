@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Button } from './../Commons/ButtonElement'
-import Emoji from './../Commons/Emojis'
+import { Button } from '../Commons/ButtonElement'
+import Emoji from '../Commons/Emojis'
 import axios from 'axios';
 import {
     EventsContainer,
@@ -25,7 +25,7 @@ const EventsSection = () => {
 
   const [upcomingEvents, setUpcomingEvents] = useState();
   const getUpcomingEvents = () => {
-    axios.get(`/api/UpcomingEvents`).then(
+    axios.get("/api/UpcomingEvents", { crossdomain: true }).then(
         (response) => {
             const upcomingEvents = response.data;
             setUpcomingEvents(upcomingEvents);
@@ -36,7 +36,7 @@ const EventsSection = () => {
     }
   const [pastEvents, setPastEvents] = useState();
   const getPastEvents = () => {
-    axios.get(`/api/PastEvents`).then(
+    axios.get("/api/PastEvents", { crossdomain: true }).then(
         (response) => {
             const pastEvents = response.data;
             setPastEvents(pastEvents);

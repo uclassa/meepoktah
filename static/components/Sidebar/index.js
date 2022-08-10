@@ -9,7 +9,7 @@ import {
     NavItem,
     NavLinks,
     SotongButton
-} from './../Navbar/NavbarElements'
+} from '../Navbar/NavbarElements'
 
 const Sidebar = ({isOpen, toggle}) => {
   return (

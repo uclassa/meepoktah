@@ -1,5 +1,5 @@
 import React from 'react'
-import Emoji from './../Commons/Emojis'
+import Emoji from '../Commons/Emojis'
 import {
     FooterContainer,
     FooterWrapper,

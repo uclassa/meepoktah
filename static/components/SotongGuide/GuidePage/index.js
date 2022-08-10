@@ -31,7 +31,6 @@ const GuidePage = ({ guide }) => {
       .then((response) => {
           const md = response.data;
           getArticle(md);
-          console.log(md);
         })
         .catch(() => {
             console.log('Error retrieving Guide');

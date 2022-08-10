@@ -5,8 +5,8 @@ const express = require('express');
 const router = express.Router();
 
 // Data models
-const SotongGuideModel = require('../models/SotongGuideModel');
-const SotongGuideHeaders = require('../models/SotongGuideHeadersModel');
+const SotongGuideModel = require('../../models/SotongGuideModel');
+const SotongGuideHeaders = require('../../models/SotongGuideHeadersModel');
 
 // "/" defaults to "/api". Specify the URL to search MongoDB
 router.get('/SotongGuideHeaders', (req, res) => {
