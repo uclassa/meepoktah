@@ -38,8 +38,7 @@
     "build": "parcel build static/index.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "npm run build && concurrently -n \"server,client\" -c \"blue,green\" \"node server/server.js\" \"npm run watch-parcel\""
-    
+    "dev": "concurrently -n \"server,client\" -c \"blue,green\" \"node server/server.js\" \"npm run watch-parcel\""
   },
   "eslintConfig": {
     "extends": [
