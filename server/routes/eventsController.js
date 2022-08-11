@@ -9,8 +9,8 @@ const UpcomingEventsModel = require('../models/UpcomingEvent.js');
 const PastEventsModel = require('../models/PastEvent.js');
 
 // "/" defaults to "/api". Specify the URL to search MongoDB
-router.get('/UpcomingEvents', (req, res) => {
-    UpcomingEventsModel.find({ })
+router.get('/UpcomingEvents', async (req, res) => {
+    await UpcomingEventsModel.find({ })
     .then((data) => {
         res.json(data)
     })
@@ -19,8 +19,8 @@ router.get('/UpcomingEvents', (req, res) => {
     })
 });
 
-router.get('/PastEvents', (req, res) => {
-    PastEventsModel.find({ })
+router.get('/PastEvents', async (req, res) => {
+    await PastEventsModel.find({ })
     .then((data) => {
         res.json(data)
     })

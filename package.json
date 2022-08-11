@@ -1,7 +1,9 @@
 {
   "name": "meepoktah",
   "version": "0.1.0",
-  "private": true,
+  "description": "UCLA SSA Portal",
+  "author": "UCLA SSA",
+  "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.5",
@@ -29,11 +31,15 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run serve",
+    "serve": "node server/server.js",
+    "deploy": "npm run build && gcloud app deploy",
+    "watch-parcel": "parcel static/index.html",
+    "build": "parcel build static/index.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "concurrently -n \"server,client\" -c \"blue,green\" \"node server.js\" \"npm start\""
+    "dev": "npm run build && concurrently -n \"server,client\" -c \"blue,green\" \"node server/server.js\" \"npm run watch-parcel\""
+    
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +58,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "parcel": "^2.7.0",
+    "process": "^0.11.10"
   },
   "proxy": "http://localhost:8080"
 }
