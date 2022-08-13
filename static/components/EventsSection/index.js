@@ -18,7 +18,8 @@ import {
     EventsDescription,
     BtnWrap,
     ArrowRight,
-    EventsCenteredBox
+    EventsCenteredBox,
+    InstagramLink
 } from './EventElements'
 
 const EventsSection = () => {
@@ -54,7 +55,7 @@ const EventsSection = () => {
     <EventsContainer>
         <EventsHeaderWrapper id="events">
             <EventsHeadline> <Emoji symbol="🔥" /> Our Events <Emoji symbol="🔥" /> </EventsHeadline>
-            <EventsSubtitle> We come together regularly to bond, eat, travel, and more. Watch this space for updates on future events! We hope to see you at our next one!</EventsSubtitle>
+            <EventsSubtitle> We come together regularly to bond, eat, travel, and more. Watch this space for updates on future events!</EventsSubtitle>
         </EventsHeaderWrapper>
         {
             upcomingEvents && pastEvents ? <>
@@ -62,26 +63,31 @@ const EventsSection = () => {
                     <Headline> <Emoji symbol="🙌" /> Upcoming Events </Headline>
                     {
                         upcomingEvents.length > 0 ? 
-                        <EventsCardWrapper>{
-                        upcomingEvents.map((data, index) => {
-                            return(
-                            <EventsCard>
-                                <EventsPhoto src={data.image} alt="Picture of event"/>
-                                <EventsTextWrapperCol>
-                                    <EventsDatePlace>{data.date} | {data.address}</EventsDatePlace>
-                                    <EventsTitle>{data.title}</EventsTitle>
-                                    <EventsDescription>{data.description}</EventsDescription>
-                                    <BtnWrap href={data.link} target="_blank" color={data.color}>
-                                        <ArrowRight />
-                                    </BtnWrap>
-                                </EventsTextWrapperCol>
-                            </EventsCard>
-                            )}
-                        )
-                        }
-                    </EventsCardWrapper> : 
+                        <EventsCardWrapper>
+                            {
+                                upcomingEvents.map((data, index) => {
+                                    return(
+                                    <EventsCard key={index}>
+                                        <EventsPhoto src={data.image} alt="Picture of event"/>
+                                        <EventsTextWrapperCol href={data.link} target="_blank" >
+                                            <EventsDatePlace>{data.date} | {data.address}</EventsDatePlace>
+                                            <EventsTitle>{data.title}</EventsTitle>
+                                            <EventsDescription>{data.description}</EventsDescription>
+                                            <BtnWrap color={data.color}>
+                                                <ArrowRight />
+                                            </BtnWrap>
+                                        </EventsTextWrapperCol>
+                                    </EventsCard>
+                                    )}
+                                )
+                            }
+                        </EventsCardWrapper> : 
                     <EventsCenteredBox>
-                        <EventsSubtitle>  <Emoji symbol="😢"/> No upcoming events for now, follow us on Instagram to stay up to date with future events!</EventsSubtitle>
+                        <EventsSubtitle>  
+                            No upcoming events for now. Check out our
+                            <InstagramLink href='https://www.instagram.com/ucla.ssa/' target="_blank">Instagram</InstagramLink>
+                            to stay up to date with future events!
+                        </EventsSubtitle>
                     </EventsCenteredBox>
                     }
                     <Headline> A couple of our past events</Headline>
@@ -90,13 +96,13 @@ const EventsSection = () => {
                         pastEvents.length > 0 ? 
                         pastEvents.map((data, index) => {
                             return(
-                            <EventsCard>
+                            <EventsCard key={index}>
                                 <EventsPhoto src={data.image} alt="Picture of event"/>
-                                <EventsTextWrapperCol>
+                                <EventsTextWrapperCol href={data.link} target="_blank">
                                     <EventsDatePlace>{data.date} | {data.address}</EventsDatePlace>
                                     <EventsTitle>{data.title}</EventsTitle>
                                     <EventsDescription>{data.description}</EventsDescription>
-                                    <BtnWrap href={data.link} target="_blank" color={data.color}>
+                                    <BtnWrap color={data.color}>
                                         <ArrowRight />
                                     </BtnWrap>
                                 </EventsTextWrapperCol>

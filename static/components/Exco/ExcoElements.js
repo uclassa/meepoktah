@@ -10,6 +10,10 @@ export const ExcoContainer = styled.div`
 
     background: #e8e9eb;
 
+    @media screen and (max-width: 768px){
+        margin-top: -128px;
+    }
+
     @media screen and (max-width: 480px){
         padding: 20px;
     }
