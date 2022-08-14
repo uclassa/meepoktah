@@ -13,6 +13,9 @@ export const EventsContainer = styled.div`
     @media screen and (max-width: 1440px){
         margin-top: 0px;
     }
+    @media screen and (max-width: 768px){
+        margin-top: -48px;
+    }
     @media screen and (max-width: 480px){
         padding: 20px;
     }
@@ -28,6 +31,9 @@ export const EventsHeaderWrapper = styled.div`
     margin-top: 300px;
     @media screen and (max-width: 1440px){
         margin-top: 0px;
+    }
+    @media screen and (max-width: 768px){
+        margin-top: -128px;
     }
 `
 
@@ -53,7 +59,6 @@ export const EventsSubtitle = styled.p`
     margin-bottom: 12px;
     color: #0b0e24;
     letter-spacing: 1px;
-    font-style: italic;
     text-align: center;
 
     @media screen and (max-width: 480px){
@@ -91,7 +96,7 @@ export const Headline = styled.h2`
     text-align: start;
 
     @media screen and (max-width: 768px){
-        margin-top: 150px;
+        margin-top: 15px;
     }
 
     @media screen and (max-width: 480px){
@@ -132,10 +137,9 @@ export const EventsPhoto = styled.img`
     opacity: 0.45;
 `
 
-export const BtnWrap = styled.a`
+export const BtnWrap = styled.div`
     display: flex;
     justify-content: center;
-    text-decoration: none;
     align-items: center;
     background: ${ props => props.color || '#E60000'};
     width: 60px;
@@ -157,9 +161,10 @@ export const BtnWrap = styled.a`
     }
 `
     
-export const EventsTextWrapperCol = styled.div`
+export const EventsTextWrapperCol = styled.a`
     display: flex;
     width: 595px;
+    text-decoration: none;
     height: 245px;
     border-radius: 15px;
     flex-direction: column;
@@ -235,4 +240,15 @@ export const EventsCenteredBox = styled.div`
     height: fit-content;
     align-items: center;
     justify-content: center;
+    padding-top: 24px;
+`
+export const InstagramLink = styled.a`
+    text-decoration: none;
+    background-color: #E60000;
+    padding: 1px;
+    padding-right: 0px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: white;
+    margin: 4px;
 `

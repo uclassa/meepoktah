@@ -108,8 +108,6 @@ export const ImgWrap = styled.div`
     margin: 16px;
     transition: all 0.1s ease-in-out;
 
-    box-shadow: 0px 3px 30px #001f4d;
-
     @media screen and (max-width: 768px){
         max-width: 440px;
         margin-left: auto;
@@ -119,6 +117,7 @@ export const ImgWrap = styled.div`
 
 export const Img = styled.img`
     width: 100%;
+    border-radius: 5px;
 ` 
 
 export const MarginDiv = styled.div`

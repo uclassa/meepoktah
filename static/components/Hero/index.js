@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { Button } from '../Commons/ButtonElement'
 import Emoji from '../Commons/Emojis'
 import {
@@ -13,10 +13,14 @@ import {
     ArrowRight,
 } from './HeroElements'
 
-const video = require('../../videos/hero.mp4');
 
 const Hero = () => {
 
+  const [video, setVideo] = useState();
+  useEffect(() => {
+     setVideo(require('../../videos/hero.mp4'));
+  }, [])
+  
   const [hover, setHover] = useState(false)
   const onHover = () => {
       setHover(!hover);
@@ -26,10 +30,12 @@ const Hero = () => {
     <HeroContainer>
         <HeroBg>
             <VideoBg 
-            autoPlay={true} 
-            loop={true} 
-            muted={true} 
-            src={video} type='video/mp4' />
+                autoPlay={true} 
+                loop={true} 
+                muted={true} 
+                src={video} 
+                type='video/mp4' 
+            />
         </HeroBg>
         <HeroContent>
             <HeroH1> SINGAPORE STUDENTS' ASSOCIATION </HeroH1>

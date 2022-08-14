@@ -25,11 +25,11 @@ const Exco = () => {
         <ExcoHeader> Executive Board </ExcoHeader>
         <ExcoSubheader>Our association is built by our community</ExcoSubheader>
         <ExcoWrapper>
-            { 
+          { 
             excoData.length > 0 ?
-            excoData.map((data) => {
+            excoData.map((data, index) => {
               return (
-                <ExcoCard>
+                <ExcoCard key={index}>
                   <ExcoInfo>
                     <ExcoPhoto src={data.photo} alt={data.alt}/>
                     <ExcoH2>{data.name}</ExcoH2>
