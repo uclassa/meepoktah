@@ -1,16 +1,15 @@
 # :sparkles: Official website for UCLA SSA
 
-### Hello! Meepoktah is the *best way* to have bak chor mee :yum: 
-![standard bcm](/images/bcm.webp)
+Hello! Meepoktah is the *best way* to have bak chor mee :yum: 
 
-### It is also the 2022 revamp of the [UCLA Singapore Students' Association](www.uclassa.org) website. Check it out, learn more about SSA and join us for our events!
+It is also the 2022 revamp of the [UCLA Singapore Students' Association](www.uclassa.org) website. Check it out, learn more about SSA and join us for our events!
 
-### The site is a React SPA served by an Express.js server, with styling implemented largely using [Styled components](https://styled-components.com/). Information about our events is hosted on our MongoDB database.
-### The site is deployed on [Railway](https://railway.app/), which automatically builds and deploys the app when changes are made to main.
+The site is a React SPA served by an Express.js server, with styling implemented largely using [Styled components](https://styled-components.com/). Information about our events is hosted on our MongoDB database.
+The site is deployed on [Railway](https://railway.app/), which automatically builds and deploys the app when changes are made to main.
 
 ## Development setup
-#### Make sure you have [node](https://nodejs.org/en/) installed before starting. Just download the LTS version for now, but the app currently uses Node version 14, so its recommended to use [nvm](https://github.com/nvm-sh/nvm) to easily switch between node versions.
-#### Also install [git](https://git-scm.com/) if you haven't.
+Make sure you have [node](https://nodejs.org/en/) installed before starting. Just download the LTS version for now, but the app currently uses Node version 14, so its recommended to use [nvm](https://github.com/nvm-sh/nvm) to easily switch between node versions.
+Also install [git](https://git-scm.com/) if you haven't.
 
 Clone the repository:
 ```
@@ -23,9 +22,11 @@ Use the following command to run the app on your local machine:
 ```
 npm run dev
 ```
-#### The site will be running on localhost at port **8080**, **not** 1234 like what the CLI says. 
-#### Note that the app unfortunately *does not* currently support hot reloading, so every time you make changes, you will need to reload the browser. :confused:
-#### To allow the server to fetch data from the MongoDB database, insert the provided **.env** file into the **root** folder.
+The site will be running on localhost at port **8080**, **not** 1234 like what the CLI says.
+
+Note that the app unfortunately *does not* currently support hot reloading, so every time you make changes, you will need to reload the browser. :confused:
+
+To allow the server to fetch data from the MongoDB database, insert the provided **.env** file into the **root** folder.
 
 ## Contribution workflow
 ### :sunglasses: Here are the steps to make changes to the site:
