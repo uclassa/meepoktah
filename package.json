@@ -9,6 +9,7 @@
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
+    "browser-sync": "^2.27.10",
     "concurrently": "^7.2.2",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
@@ -34,11 +35,11 @@
     "start": "npm run serve",
     "serve": "node server/server.js",
     "deploy": "npm run build && gcloud app deploy",
-    "watch-parcel": "parcel static/index.html",
     "build": "parcel build static/index.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "concurrently -n \"server,client\" -c \"blue,green\" \"node server/server.js\" \"npm run watch-parcel\""
+    "browsersync": "browser-sync start --proxy localhost:5000 --files 'public,views'",
+    "dev": "concurrently -n \"server,browser\" -c \"blue,red\" \"node server/server.js\" \"npm run browsersync\""
   },
   "eslintConfig": {
     "extends": [
