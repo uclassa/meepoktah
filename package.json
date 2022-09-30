@@ -38,8 +38,8 @@
     "build": "parcel build static/index.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "browsersync": "browser-sync start --proxy localhost:5000 --files 'public,views'",
-    "dev": "concurrently -n \"server,browser\" -c \"blue,red\" \"node server/server.js\" \"npm run browsersync\""
+    "watch-parcel": "parcel static/index.html",
+    "dev": "concurrently -n \"server,client\" -c \"blue,green\" \"node server/server.js\" \"npm run watch-parcel\""
   },
   "eslintConfig": {
     "extends": [

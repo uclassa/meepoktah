@@ -28,7 +28,7 @@ const Footer = () => {
                         <FooterLinkTitle> Connect with us! </FooterLinkTitle>
                         <FooterExternalLink href='mailto:ssa.uclabruins@gmail.com' target="_blank">Contact</FooterExternalLink>
                         <FooterExternalLink href='https://www.instagram.com/ucla.ssa' target="_blank">Instagram</FooterExternalLink>
-                        <FooterExternalLink href='https://discord.gg/rNzYBUFx6a' target="_blank">Discord</FooterExternalLink>
+                        <FooterExternalLink href='https://discord.gg/TtdgWEG68U' target="_blank">Discord</FooterExternalLink>
                     </FooterLinkItems>
                     <FooterLinkItems>
                         <FooterLinkTitle> For the newbies </FooterLinkTitle>
