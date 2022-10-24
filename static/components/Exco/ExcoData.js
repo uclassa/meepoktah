@@ -33,7 +33,7 @@ export const excoData = [
         major: "B.S Computer Science",
         photo: require("./../../images/excos/marketing.jpg"),
         alt: "Photo of Matt",
-        vision: "I really appreciate the community of people in SSA who have always been there for me in freshmen year."
+        vision: "I really appreciate the community of people in SSA who have always been there for me in freshman year."
     },
     {
         name: "Pierce Chong",

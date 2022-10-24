@@ -29,7 +29,6 @@ app.use((req, res, next) => {
   next();
 });
   
-
 // HTTP request logger. Prints requests to console
 app.use(morgan('tiny'));
 app.use('/api', eventsController);
