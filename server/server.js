@@ -23,8 +23,13 @@ mongoose.connection.on('connected', () => {
 
 app.set('trust proxy', true);
 app.use(express.json());
-app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.urlencoded({ extended: false }));
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
   
 // HTTP request logger. Prints requests to console
 app.use(morgan('tiny'));

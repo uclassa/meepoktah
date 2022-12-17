@@ -33,13 +33,11 @@ const EventsSection = () => {
 
   const _handleGetUpcomingEvents = async () => {
     const res = await getUpcomingEvents()
-    console.log(res)
     setUpcomingEvents(res.data.events)
   }
   const [pastEvents, setPastEvents] = useState();
   const _handleGetPastEvents = async () => {
     const res = await getPastEvents()
-    console.log(res)
     setPastEvents(res.data.events)
   }
 
