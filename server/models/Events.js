@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema;
-const PastEventSchema = new Schema({
+const Event = new Schema({
     title: {
         type: String,
         required: true
@@ -11,7 +11,7 @@ const PastEventSchema = new Schema({
         required: true
     },
     date: {
-        type: String,
+        type: Date,
         required: true
     },
     address: {
@@ -26,11 +26,11 @@ const PastEventSchema = new Schema({
         type: String,
         required: true
     },
-    image: { // GOOGLE PHOTOS as image host
+    image: {
         type: String
     }
 })
 
 // Model
-const PastEvent = mongoose.model('PastEvents', PastEventSchema);
-module.exports = PastEvent;
+const Events = mongoose.model('Events', Event);
+module.exports = Events;

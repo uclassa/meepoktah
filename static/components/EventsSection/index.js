@@ -22,33 +22,30 @@ import {
     InstagramLink
 } from './EventElements'
 
+import {
+    getUpcomingEvents,
+    getPastEvents
+} from "../../services/eventsApi"
+
 const EventsSection = () => {
 
   const [upcomingEvents, setUpcomingEvents] = useState();
-  const getUpcomingEvents = () => {
-    axios.get("/api/UpcomingEvents", { crossdomain: true }).then(
-        (response) => {
-            const upcomingEvents = response.data;
-            setUpcomingEvents(upcomingEvents);
-        }
-        ).catch(() => {
-            console.log("Error fetching list of upcoming events");
-        });
-    }
+
+  const _handleGetUpcomingEvents = async () => {
+    const res = await getUpcomingEvents()
+    console.log(res)
+    setUpcomingEvents(res.data.events)
+  }
   const [pastEvents, setPastEvents] = useState();
-  const getPastEvents = () => {
-    axios.get("/api/PastEvents", { crossdomain: true }).then(
-        (response) => {
-            const pastEvents = response.data;
-            setPastEvents(pastEvents);
-        }
-        ).catch(() => {
-            console.log("Error fetching list of past events");
-        });
-    }
+  const _handleGetPastEvents = async () => {
+    const res = await getPastEvents()
+    console.log(res)
+    setPastEvents(res.data.events)
+  }
+
   useEffect(() => {
-    getUpcomingEvents();
-    getPastEvents();
+    _handleGetUpcomingEvents();
+    _handleGetPastEvents();
   }, []);
 
   return (
@@ -70,7 +67,7 @@ const EventsSection = () => {
                                     <EventsCard key={index}>
                                         <EventsPhoto src={data.image} alt="Picture of event"/>
                                         <EventsTextWrapperCol href={data.link} target="_blank" >
-                                            <EventsDatePlace>{data.date} | {data.address}</EventsDatePlace>
+                                            <EventsDatePlace>{new Date(data.date).toDateString()} | {data.address}</EventsDatePlace>
                                             <EventsTitle>{data.title}</EventsTitle>
                                             <EventsDescription>{data.description}</EventsDescription>
                                             <BtnWrap color={data.color}>
@@ -99,7 +96,7 @@ const EventsSection = () => {
                             <EventsCard key={index}>
                                 <EventsPhoto src={data.image} alt="Picture of event"/>
                                 <EventsTextWrapperCol href={data.link} target="_blank">
-                                    <EventsDatePlace>{data.date} | {data.address}</EventsDatePlace>
+                                    <EventsDatePlace>{new Date(data.date).toDateString()} | {data.address}</EventsDatePlace>
                                     <EventsTitle>{data.title}</EventsTitle>
                                     <EventsDescription>{data.description}</EventsDescription>
                                     <BtnWrap color={data.color}>
