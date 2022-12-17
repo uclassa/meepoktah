@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose')
 const morgan = require('morgan');
+const cors = require('cors')
 require('dotenv').config();
 
 const MONGO_URI = process.env.REACT_APP_MONGO_URI;
@@ -21,15 +22,12 @@ mongoose.connection.on('connected', () => {
     console.log("Mongoose is connected");
 })
 
+app.use(cors())
 app.set('trust proxy', true);
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.urlencoded({ extended: false }));
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+
   
 // HTTP request logger. Prints requests to console
 app.use(morgan('tiny'));
