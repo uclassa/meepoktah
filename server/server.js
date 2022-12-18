@@ -9,7 +9,7 @@ require('dotenv').config();
 const MONGO_URI = process.env.REACT_APP_MONGO_URI;
 
 const app = express();
-const PORT = process.env.PORT  || 8080;
+const PORT = process.env.PORT || 8080;
 
 const eventsRouter = require('./routes/eventsRouter.js');
 
@@ -25,10 +25,9 @@ mongoose.connection.on('connected', () => {
 app.use(cors())
 app.set('trust proxy', true);
 app.use(express.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.urlencoded({ extended: false }));
 
-  
 // HTTP request logger. Prints requests to console
 app.use(morgan('tiny'));
 app.use('/api', eventsRouter);

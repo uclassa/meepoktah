@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from '../Commons/ButtonElement'
 import Emoji from '../Commons/Emojis'
-import axios from 'axios';
 import {
     EventsContainer,
     EventsHeaderWrapper,
@@ -30,7 +29,6 @@ import {
 const EventsSection = () => {
 
   const [upcomingEvents, setUpcomingEvents] = useState();
-
   const _handleGetUpcomingEvents = async () => {
     const res = await getUpcomingEvents()
     setUpcomingEvents(res.data.events)
