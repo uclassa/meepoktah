@@ -6,14 +6,14 @@ const morgan = require('morgan');
 const cors = require('cors')
 require('dotenv').config();
 
-const MONGO_URI = process.env.REACT_APP_MONGO_URI;
+const MONGO_URI = process.env.REACT_APP_MONGO_URI || 'mongodb://localhost:27017/meepoktah';
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
 const eventsRouter = require('./routes/eventsRouter.js');
 
-mongoose.connect(MONGO_URI || 'mongodb://localhost/meepoktah', {
+mongoose.connect(MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });

@@ -8,19 +8,10 @@ import {
     EventsSubtitle,
     EventsWrapper,
     Headline,
-    EventsCardWrapper,
-    EventsCard,
-    EventsPhoto,
-    EventsTextWrapperCol,
-    EventsDatePlace,
-    EventsTitle,
-    EventsDescription,
-    BtnWrap,
-    ArrowRight,
     EventsCenteredBox,
     InstagramLink
 } from './EventElements'
-
+import EventList from './EventList'
 import {
     getUpcomingEvents,
     getPastEvents
@@ -55,55 +46,21 @@ const EventsSection = () => {
                 <EventsWrapper>
                     <Headline> <Emoji symbol="🙌" /> Upcoming Events </Headline>
                     {
-                        upcomingEvents.length > 0 ? 
-                        <EventsCardWrapper>
-                            {
-                                upcomingEvents.map((data, index) => {
-                                    return(
-                                    <EventsCard key={index}>
-                                        <EventsPhoto src={data.image} alt="Picture of event"/>
-                                        <EventsTextWrapperCol href={data.link} target="_blank" >
-                                            <EventsDatePlace>{new Date(data.date).toDateString()} | {data.address}</EventsDatePlace>
-                                            <EventsTitle>{data.title}</EventsTitle>
-                                            <EventsDescription>{data.description}</EventsDescription>
-                                            <BtnWrap color={data.color}>
-                                                <ArrowRight />
-                                            </BtnWrap>
-                                        </EventsTextWrapperCol>
-                                    </EventsCard>
-                                    )}
-                                )
-                            }
-                        </EventsCardWrapper> : 
-                    <EventsCenteredBox>
-                        <EventsSubtitle>  
-                            No upcoming events for now. Check out our
-                            <InstagramLink href='https://www.instagram.com/ucla.ssa/' target="_blank">Instagram</InstagramLink>
-                            to stay up to date with future events!
-                        </EventsSubtitle>
-                    </EventsCenteredBox>
+                    upcomingEvents.length > 0 ? 
+                        <EventList events={upcomingEvents} /> : 
+                        <EventsCenteredBox>
+                            <EventsSubtitle>  
+                                No upcoming events for now. Check out our
+                                <InstagramLink href='https://www.instagram.com/ucla.ssa/' target="_blank">Instagram</InstagramLink>
+                                to stay up to date with future events!
+                            </EventsSubtitle>
+                        </EventsCenteredBox>
                     }
                     <Headline> A couple of our past events</Headline>
-                    <EventsCardWrapper>
                     {
                         pastEvents.length > 0 ? 
-                        pastEvents.map((data, index) => {
-                            return(
-                            <EventsCard key={index}>
-                                <EventsPhoto src={data.image} alt="Picture of event"/>
-                                <EventsTextWrapperCol href={data.link} target="_blank">
-                                    <EventsDatePlace>{new Date(data.date).toDateString()} | {data.address}</EventsDatePlace>
-                                    <EventsTitle>{data.title}</EventsTitle>
-                                    <EventsDescription>{data.description}</EventsDescription>
-                                    <BtnWrap color={data.color}>
-                                        <ArrowRight />
-                                    </BtnWrap>
-                                </EventsTextWrapperCol>
-                            </EventsCard>
-                            )}
-                        ) : <></>
+                        <EventList events={pastEvents} /> : <></>
                     }
-                    </EventsCardWrapper>
                     <EventsCenteredBox>
                         <EventsSubtitle> Find us on Instagram to keep up to date with all our happenings! <Emoji symbol="👇" /></EventsSubtitle>
                         <Button
