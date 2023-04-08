@@ -63,8 +63,8 @@ export const HeroContent = styled.div`
     transition: all 0.1s ease-in-out;
 
     &:hover {
-        transform: scale(1.05);
-        transition: all 0.3s ease-in-out;
+        transform: scale(1.02);
+        transition: all 0.35s ease-in-out;
     }
 `
 
@@ -74,6 +74,7 @@ export const HeroH1 = styled.h1`
     font-size: 48px;
     text-align: center;
     letter-spacing: 1px;
+    text-shadow: 5px 2px 10px rgba(0,0,0,0.6);
 
     @media screen and (max-width: 760px){
         font-size: 40px;
@@ -91,6 +92,7 @@ export const HeroP = styled.p`
     font-size: 28px;
     text-align: center;
     max-width: 660px;
+    text-shadow: 5px 2px 10px rgba(0,0,0,0.6);
 
     @media screen and (max-width: 480px){
         font-size: 20px;

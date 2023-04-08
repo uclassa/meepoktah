@@ -39,7 +39,7 @@ const Hero = () => {
         </HeroBg>
         <HeroContent>
             <HeroH1> SINGAPORE STUDENTS' ASSOCIATION </HeroH1>
-            <HeroP> <Emoji symbol="👋"/> Hello! Welcome to SSA, a tight-knit community that welcomes everyone!</HeroP>
+            <HeroP> <Emoji symbol="👋"/> Hello! Welcome to SSA, a tight-knit community that welcomes everyone! </HeroP>
             <HeroBtnWrapper>
                 <Button href='https://discord.gg/TtdgWEG68U'
                         target='_blank'

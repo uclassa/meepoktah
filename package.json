@@ -42,7 +42,7 @@
     "build": "parcel build static/index.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "livereload": "livereload static -w 10 -d",
+    "livereload": "livereload static -w 100",
     "dev": "concurrently -n \"server,client,livereload\" -c \"blue,green,yellow\" \"npm run watch-node\" \"npm run watch-parcel\" \"npm run livereload\""
   },
   "eslintConfig": {
@@ -64,6 +64,7 @@
     ]
   },
   "devDependencies": {
+    "nodemon": "^2.0.19",
     "parcel": "^2.7.0",
     "process": "^0.11.10"
   },

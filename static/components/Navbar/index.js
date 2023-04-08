@@ -42,7 +42,7 @@ const Navbar = ({toggle}) => {
             </MobileIcon>
             <NavMenu>
                 <NavItem>
-                    <NavLinks to="about" smooth={true} duration={500} spy={true} exact='true' offset={-20} activeClass="active">About</NavLinks>
+                    <NavLinks to="about" smooth={true} duration={500} spy={true} exact='true' offset={-160} activeClass="active">About</NavLinks>
                 </NavItem>
                 <NavItem>
                     <NavLinks to="events" smooth={true} duration={500} spy={true} exact='true' offset={-60} activeClass="active">Events</NavLinks>
@@ -60,9 +60,6 @@ const Navbar = ({toggle}) => {
                     <SotongButton href="https://medium.com/@ssa.uclabruins/ucla-ssa-sotong-guide-6e68161a2506" target="_blank">Sotong Guide</SotongButton>
                 </NavItem>
             </NavMenu>
-            {/* <NavBtn>
-                <NavBtnLink to="/signin">Sign In</NavBtnLink>
-            </NavBtn> */}
         </NavbarContainer>    
     </Nav>
     </IconContext.Provider>
