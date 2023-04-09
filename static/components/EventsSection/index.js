@@ -36,8 +36,8 @@ const EventsSection = () => {
   }, []);
 
   return (
-    <EventsContainer>
-        <EventsHeaderWrapper id="events">
+    <EventsContainer id="events">
+        <EventsHeaderWrapper>
             <EventsHeadline> <Emoji symbol="🔥" /> Our Events <Emoji symbol="🔥" /> </EventsHeadline>
             <EventsSubtitle> We come together regularly to bond, eat, travel, and more. Watch this space for updates on future events!</EventsSubtitle>
         </EventsHeaderWrapper>

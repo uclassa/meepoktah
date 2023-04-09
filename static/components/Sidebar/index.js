@@ -16,20 +16,20 @@ const Sidebar = ({isOpen, toggle}) => {
     <SidebarContainer isOpen={isOpen}>
         <SidebarWrapper>
             <SidebarMenu>
-                <NavItem>
-                    <NavLinks to="about" smooth={true} duration={400} spy={true} exact='true' offset={-60}  onClick={toggle}>About</NavLinks>
+            <NavItem>
+                    <NavLinks to="about" smooth={true} duration={500} spy={true} exact='true' activeClass="active">About</NavLinks>
                 </NavItem>
                 <NavItem>
-                    <NavLinks to="events" smooth={true} duration={400} spy={true} exact='true' offset={-60} onClick={toggle}>Events</NavLinks>
+                    <NavLinks to="events" smooth={true} duration={500} spy={true} exact='true' activeClass="active">Events</NavLinks>
                 </NavItem>
                 <NavItem>
-                    <NavLinks to="team" smooth={true} duration={400} spy={true} exact='true' offset={-60} onClick={toggle}>Our Team</NavLinks>
+                    <NavLinks to="team" smooth={true} duration={500} spy={true} exact='true' offset={-120} activeClass="active">Our Team</NavLinks>
                 </NavItem>
                 <NavItem>
-                    <NavLinks to="sponsorships" smooth={true} duration={400} spy={true} exact='true' offset={-60}  onClick={toggle}>Partnerships</NavLinks>
+                    <NavLinks to="partnerships" smooth={true} duration={500} spy={true} exact='true' offset={-80} activeClass="active">Partnerships</NavLinks>
                 </NavItem>
                 <NavItem>
-                    <SotongButton href='https://discord.gg/rNzYBUFx6a' target="_blank">Join Us!</SotongButton>
+                    <SotongButton href='https://docs.google.com/forms/d/e/1FAIpQLSc2FAgLIKSJ2ot7VmHFEzoiJIGdtCstcSfK5497U_34AaNUKQ/viewform' target="_blank">Membership</SotongButton>
                 </NavItem>
                 <NavItem>
                     <SotongButton href="https://medium.com/@ssa.uclabruins/ucla-ssa-sotong-guide-6e68161a2506" target="_blank">Sotong Guide</SotongButton>

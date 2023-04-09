@@ -11,7 +11,7 @@ import {
   Subtitle
 } from './VisionElements'
 import {Button} from '../Commons/ButtonElement.js'
-import img1 from "/static/images/infoSection1.jpeg"
+import img1 from "/static/images/visionImg.jpeg"
 
 const Vision = () => {
 

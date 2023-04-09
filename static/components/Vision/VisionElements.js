@@ -6,10 +6,6 @@ export const VisionContainer = styled.div`
     color: #fff;
     background: #AAAAAA;
     height: fit-content;
-    
-    @media screen and (max-width: 768px){
-        height: fit-content;
-    }
 `
 
 export const VisionBannerWrapper = styled.div`
@@ -53,7 +49,6 @@ export const ImgBg = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: all 0.1s ease-in-out;
     filter: blur(1.2px) grayscale(0.3) hue-rotate(-30deg);
 `
 
