@@ -38,8 +38,8 @@ const EventsSection = () => {
   return (
     <EventsContainer id="events">
         <EventsHeaderWrapper>
-            <EventsHeadline> <Emoji symbol="🔥" /> Our Events <Emoji symbol="🔥" /> </EventsHeadline>
-            <EventsSubtitle> We come together regularly to bond, eat, travel, and more. Watch this space for updates on future events!</EventsSubtitle>
+            <EventsHeadline> Our Events </EventsHeadline>
+            <EventsSubtitle> Watch this space for updates on future events!</EventsSubtitle>
         </EventsHeaderWrapper>
         {
             upcomingEvents && pastEvents ? <>

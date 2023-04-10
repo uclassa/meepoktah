@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import Vision from '../components/Vision';
 import Partnerships from '../components/Partnerships';
+import Programs from '../components/Programs';
 
 const Home = ({isOpen, toggle}) => {
 
@@ -16,6 +17,7 @@ const Home = ({isOpen, toggle}) => {
     <Navbar toggle={toggle}/>
     <Hero />
     <Vision />
+    <Programs />
     <Events />
     <Exco />
     <Partnerships/>
