@@ -13,7 +13,7 @@ Also install [git](https://git-scm.com/) if you haven't.
 
 Clone the repository:
 ```
-git clone https://github.com/PierceCCH/meepoktah
+git clone https://github.com/uclassa/meepoktah
 ...
 cd meepoktah
 npm install
