@@ -2,8 +2,10 @@ import styled from 'styled-components'
 import { Link as LinkRouter } from 'react-router-dom'
 import { Link as LinkScroll } from 'react-scroll'
 
+import colors from '../../styles.js'
+
 export const Nav = styled.nav`
-    background: ${({navBG}) => (navBG ? '#b30000' : 'transparent')};
+    background: ${({navBG}) => (navBG ? colors.red : 'transparent')};
     transition: all 0.2s ease-in;
     height: 80px;
     margin-top: -80px;
@@ -19,7 +21,7 @@ export const Nav = styled.nav`
         transition: 0.8s all ease;
     }
     @media screen and (max-width: 768px){
-        background: #b30000;
+        background: ${colors.red};
     }
 `;
 
@@ -34,7 +36,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkRouter)`
-    color: #fff;
+    color: ${colors.black};
     justify-self: flex-start;
     cursor: pointer;
     font-size: 1.5rem;
@@ -56,7 +58,7 @@ export const MobileIcon = styled.div`
         transform: translate(-100%, 35%);
         font-size: 1.8rem;
         cursor: pointer;
-        color: #fff;
+        color: ${colors.black};
     }
 `;
 
@@ -78,7 +80,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(LinkScroll)`
-    color: #fff;
+    color: ${colors.offWhite};
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -93,12 +95,12 @@ export const NavLinks = styled(LinkScroll)`
     }
 
     &.active {
-        border-bottom: 5px solid #E4B363;
+        border-bottom: 5px solid ${colors.gold};
     }
 `;
 
 export const SotongButton = styled.a`
-    color: #fff;
+    color: ${colors.offWhite};
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -110,10 +112,6 @@ export const SotongButton = styled.a`
     &:hover {
         transform: scale(1.1);
         transition: all 0.1s ease-in;
-    }
-
-    &.active {
-        border-bottom: 5px solid #E4B363;
     }
 `;
 
@@ -129,10 +127,10 @@ export const NavBtn = styled.nav`
 export const NavBtnLink = styled(LinkRouter)`
     border-radius: 20px;
     margin-right: 20px;
-    background: #fff;
+    background: ${colors.black};
     white-space: nowrap;
     padding: 10px 27px;
-    color: #000;
+    color: ${colors.black};
     font-size: 16px;
     font-weight: 500;
     outline: none;
@@ -143,8 +141,6 @@ export const NavBtnLink = styled(LinkRouter)`
 
     &:hover {
         transition: all 0.2s ease-in-out;
-        background: #1a8cff;
-        color: #ffff00;
     }
 `
 

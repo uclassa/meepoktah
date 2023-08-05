@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import colors from '../../styles.js'
 
 export const ExcoContainer = styled.div`
     height: fit-content;
@@ -8,7 +9,7 @@ export const ExcoContainer = styled.div`
     justify-content: center;
     align-items: center;
 
-    background: #e8e9eb;
+    background: ${colors.offWhite};
 
     @media screen and (max-width: 768px){
         margin-top: -128px;
@@ -41,45 +42,27 @@ export const ExcoCard = styled.div`
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    background: #0b0e24;
+    background: ${colors.navyBlue};
     border-radius: 15px;
-    border-color: #0b0e24;
+    border-color: ${colors.navyBlue};
     border-style: solid;
     border-width: 1px;
 
-    box-shadow: 0px 10px 16px #060714;
+    box-shadow: 0px 5px 8px #060714;
     height: 400px;
     width: 320px;
     margin-bottom: 20px;
-    transition: all 0.3s ease-in-out;
     z-index: 2;
-
-    &:hover {
-        transform: scale(1.15);
-        z-index: 3;
-        transition: all 0.4s ease-in-out;
-    }
 `
 
 export const ExcoInfo = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: all 0.2s ease-in-out;
-    
-    &:hover {
-        transform: translateY(-310px);
-        transition: all 0.3s ease-in-out;
-    }
-`
-
-export const ExcoTextWrapper = styled.div`
-    height: 1000px;
-    background: #0b0e24;
 `
 
 export const ExcoPhoto = styled.img`
-    height: 340px;
+    height: 320px;
     width: 340px;
     transform: translateY(-10px);
     border-radius: 15px;
@@ -88,7 +71,7 @@ export const ExcoPhoto = styled.img`
 
 export const ExcoHeader = styled.h1`
     font-size: 2.5rem;
-    color: #0b0e24;
+    color: ${colors.navyBlue};
     margin-bottom: 8px;
     margin-top: 32px;
     z-index: 2;
@@ -105,37 +88,26 @@ export const ExcoHeader = styled.h1`
 export const ExcoSubheader = styled.h3`
     font-size: 1rem;
     margin-bottom: 36px;
-    color: #E60000;
+    color: ${colors.red};
     font-style: italic;
     z-index: 2;
 `
 
 export const ExcoH2 = styled.h2`
     font-size: 1.2rem;
-    color: #E8E9EB;
+    color: ${colors.offWhite};
 `
 
 export const ExcoH4 = styled.h4`
     font-size: 0.95rem;
-    margin: 10px;
-    color: #E8E9EB;
+    color: ${colors.offWhite};
 `
 export const ExcoP = styled.p`
     text-align: center;
     font-size: 0.9rem;
     margin: 5px;
-    color: #E8E9EB;
+    color: ${colors.offWhite};
 `
-
-export const ExcoVision = styled.h1`
-    font-size: 1.5rem;
-    font-style: italic;
-    letter-spacing: 0.5px;
-    text-align: center;
-    margin: 35px;
-    color: #E8E9EB;
-`
-
 export const Blob = styled.div`
     display: flex;
     margin-left: auto;

@@ -23,7 +23,10 @@ const EventList = (props) => {
                     <EventsTextWrapperCol href={data.link} target="_blank">
                         <EventsDatePlace>{new Date(data.date).toDateString()} | {data.address}</EventsDatePlace>
                         <EventsTitle>{data.title}</EventsTitle>
-                        <EventsDescription>{data.description}</EventsDescription>
+                        {
+                            new Date(data.date) > new Date() ?
+                            <EventsDescription>{data.description}</EventsDescription> : null
+                        }
                         <BtnWrap color={data.color}>
                             <ArrowRight />
                         </BtnWrap>

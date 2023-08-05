@@ -10,9 +10,7 @@ import {
   ExcoCard,
   ExcoPhoto,
   ExcoWrapper,
-  ExcoTextWrapper,
   ExcoInfo,
-  ExcoVision,
   Blob,
   BottomDiv
 } from './ExcoElements'
@@ -35,9 +33,6 @@ const Exco = () => {
                     <ExcoH2>{data.name}</ExcoH2>
                     <ExcoP>{data.role}</ExcoP>
                     <ExcoH4>{data.major} {data.year}</ExcoH4>
-                    <ExcoTextWrapper>
-                      <ExcoVision>" {data.vision}"</ExcoVision>
-                    </ExcoTextWrapper>
                   </ExcoInfo>
                 </ExcoCard>
               )
