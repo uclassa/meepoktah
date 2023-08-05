@@ -28,7 +28,7 @@ export const excoData = [
         role: "Finance Director",
         year: "'25",
         major: "B.S Applied Math",
-        photo: require("./../../images/excos/evp.jpg"),
+        photo: require("./../../images/excos/finance.jpg"),
         alt: "Photo of Bowen",
     },
     {
