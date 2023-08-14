@@ -53,3 +53,4 @@ service_token.json
 
 .gcloudignore
 .vscode
+.history/

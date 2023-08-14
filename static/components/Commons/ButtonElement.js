@@ -1,13 +1,13 @@
 import styled from 'styled-components'
-import colors from '../../styles.js'
+import Colors from '../styles.js'
 
 export const Button = styled.a`
     border-radius: 50px;
     text-decoration: none;
-    background: ${({primary}) => (primary ? colors.offWhite : colors.red)};
+    background: ${({primary}) => (primary ? Colors.offWhite : Colors.red)};
     white-space: nowrap;
     padding: ${({big}) => (big ? '14px 48px' : '12px 30px')};
-    color: ${({primary}) => (primary ? colors.black : colors.offWhite)};
+    color: ${({primary}) => (primary ? Colors.black : Colors.offWhite)};
     font-size: ${({fontBig}) => (fontBig ? '20px' : '16px')};
     outline: none;
     border: none;
@@ -19,7 +19,7 @@ export const Button = styled.a`
 
     &:hover{
         transition: all 0.2s ease-in-out;
-        background: ${({primary}) => (primary ? colors.red : colors.gold)};
-        color: ${({primary}) => (primary ? colors.offWhite : colors.black)};
+        background: ${({primary}) => (primary ? Colors.red : Colors.gold)};
+        color: ${({primary}) => (primary ? Colors.offWhite : Colors.black)};
     }
 `

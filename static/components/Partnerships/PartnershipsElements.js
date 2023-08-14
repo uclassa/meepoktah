@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import colors from '../../styles.js'
+import Colors from '../styles.js'
 
 export const PartnershipsContainer = styled.div`
     display: flex;
@@ -32,7 +32,7 @@ export const Heading = styled.h1`
     margin-bottom: 24px;
     font-size: 64px;
     font-weight: 800;
-    color: ${colors.offWhite};
+    color: ${Colors.offWhite};
     font-family: 'Asap', sans-serif;
     text-align: right;
 
@@ -52,7 +52,7 @@ export const Subtitle = styled.p`
     margin-bottom: 8px;
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;
-    color: ${colors.offWhite};
+    color: ${Colors.offWhite};
 
     text-align: right;
     line-height: 1.5;

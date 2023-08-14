@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { BsArrowRight } from 'react-icons/bs'
 
-import colors from '../../styles.js'
+import Colors from '../styles.js'
 
 export const EventsContainer = styled.div`
     height: fit-content;
@@ -9,7 +9,7 @@ export const EventsContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #E8E9EB;
+    background: ${Colors.offWhite};
 
     margin-top: -300px;
     @media screen and (max-width: 1440px){
@@ -41,7 +41,7 @@ export const EventsHeaderWrapper = styled.div`
 
 export const EventsHeadline = styled.h1`
     font-size: 2.5rem;
-    color: ${colors.darkBlue};
+    color: ${Colors.darkBlue};
     margin-bottom: 8px;
     margin-top: 32px;
     text-align: center;
@@ -59,7 +59,7 @@ export const EventsSubtitle = styled.p`
     font-size: 1.5rem;
     max-width: 550px;
     margin-bottom: 12px;
-    color: ${colors.darkBlue};
+    color: ${Colors.darkBlue};
     letter-spacing: 1px;
     text-align: center;
 
@@ -92,7 +92,7 @@ export const EventsCardWrapper = styled.div`
 
 export const Headline = styled.h2`
     font-size: 2rem;
-    color: ${colors.darkBlue};
+    color: ${Colors.darkBlue};
     margin-bottom: 8px;
     margin-top: 32px;
     text-align: start;
@@ -111,7 +111,7 @@ export const EventsCard = styled.div`
     flex-direction: row;
     background: #000;
     border-radius: 15px;
-    border-color: ${colors.darkBlue};
+    border-color: ${Colors.darkBlue};
     border-style: solid;
     border-width: 1px;
     height: 250px;
@@ -143,7 +143,7 @@ export const BtnWrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: ${ props => props.color || colors.red};
+    background: ${ props => props.color || Colors.red};
     width: 60px;
     height: 60px;
     border-radius: 60px;
@@ -196,7 +196,7 @@ export const EventsDatePlace = styled.p`
     font-size: 1.5rem;
     max-width: 500px;
     font-weight: 600;
-    color: ${colors.offWhite};
+    color: ${Colors.offWhite};
 
     @media screen and (max-width: 480px){
         font-size: 1rem;
@@ -205,7 +205,7 @@ export const EventsDatePlace = styled.p`
 
 export const EventsTitle = styled.h2`
     font-size: 3.5rem;
-    color: ${colors.offWhite};
+    color: ${Colors.offWhite};
     text-align: start;
     margin-bottom: 12px;
 
@@ -217,7 +217,7 @@ export const EventsTitle = styled.h2`
 export const EventsDescription = styled.p`
     font-size: 1.2rem;
     max-width: 500px;
-    color: ${colors.offWhite};
+    color: ${Colors.offWhite};
     margin-bottom: 24px;
 
     @media screen and (max-width: 480px){
@@ -228,7 +228,7 @@ export const EventsDescription = styled.p`
 export const ArrowRight = styled(BsArrowRight)`
     margin: 0 0 8px 8px;
     font-size: 16px;
-    color: ${colors.offWhite};
+    color: ${Colors.offWhite};
 
     @media screen and (max-width: 480px){
         margin: 0 4px 16px 0;
@@ -246,7 +246,7 @@ export const EventsCenteredBox = styled.div`
 `
 export const InstagramLink = styled.a`
     text-decoration: none;
-    background-color: ${colors.red};
+    background-color: ${Colors.red};
     padding: 1px;
     padding-right: 0px;
     border-radius: 5px;

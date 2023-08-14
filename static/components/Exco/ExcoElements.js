@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import colors from '../../styles.js'
+import Colors from '../styles.js'
 
 export const ExcoContainer = styled.div`
     height: fit-content;
@@ -9,7 +9,7 @@ export const ExcoContainer = styled.div`
     justify-content: center;
     align-items: center;
 
-    background: ${colors.offWhite};
+    background: ${Colors.offWhite};
 
     @media screen and (max-width: 768px){
         margin-top: -128px;
@@ -42,9 +42,9 @@ export const ExcoCard = styled.div`
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    background: ${colors.navyBlue};
+    background: ${Colors.navyBlue};
     border-radius: 15px;
-    border-color: ${colors.navyBlue};
+    border-color: ${Colors.navyBlue};
     border-style: solid;
     border-width: 1px;
 
@@ -71,7 +71,7 @@ export const ExcoPhoto = styled.img`
 
 export const ExcoHeader = styled.h1`
     font-size: 2.5rem;
-    color: ${colors.navyBlue};
+    color: ${Colors.navyBlue};
     margin-bottom: 8px;
     margin-top: 32px;
     z-index: 2;
@@ -88,25 +88,25 @@ export const ExcoHeader = styled.h1`
 export const ExcoSubheader = styled.h3`
     font-size: 1rem;
     margin-bottom: 36px;
-    color: ${colors.red};
+    color: ${Colors.red};
     font-style: italic;
     z-index: 2;
 `
 
 export const ExcoH2 = styled.h2`
     font-size: 1.2rem;
-    color: ${colors.offWhite};
+    color: ${Colors.offWhite};
 `
 
 export const ExcoH4 = styled.h4`
     font-size: 0.95rem;
-    color: ${colors.offWhite};
+    color: ${Colors.offWhite};
 `
 export const ExcoP = styled.p`
     text-align: center;
     font-size: 0.9rem;
     margin: 5px;
-    color: ${colors.offWhite};
+    color: ${Colors.offWhite};
 `
 export const Blob = styled.div`
     display: flex;

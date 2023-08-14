@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import { Link as LinkRouter } from 'react-router-dom'
 import { Link as LinkScroll } from 'react-scroll'
 
-import colors from '../../styles.js'
+import Colors from '../styles.js'
 
 export const Nav = styled.nav`
-    background: ${({navBG}) => (navBG ? colors.red : 'transparent')};
+    background: ${({navBG}) => (navBG ? Colors.red : 'transparent')};
     transition: all 0.2s ease-in;
     height: 80px;
     margin-top: -80px;
@@ -21,7 +21,7 @@ export const Nav = styled.nav`
         transition: 0.8s all ease;
     }
     @media screen and (max-width: 768px){
-        background: ${colors.red};
+        background: ${Colors.red};
     }
 `;
 
@@ -36,7 +36,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkRouter)`
-    color: ${colors.black};
+    color: ${Colors.black};
     justify-self: flex-start;
     cursor: pointer;
     font-size: 1.5rem;
@@ -58,7 +58,7 @@ export const MobileIcon = styled.div`
         transform: translate(-100%, 35%);
         font-size: 1.8rem;
         cursor: pointer;
-        color: ${colors.black};
+        color: ${Colors.black};
     }
 `;
 
@@ -80,7 +80,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(LinkScroll)`
-    color: ${colors.offWhite};
+    color: ${Colors.offWhite};
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -95,12 +95,12 @@ export const NavLinks = styled(LinkScroll)`
     }
 
     &.active {
-        border-bottom: 5px solid ${colors.gold};
+        border-bottom: 5px solid ${Colors.gold};
     }
 `;
 
 export const SotongButton = styled.a`
-    color: ${colors.offWhite};
+    color: ${Colors.offWhite};
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -127,10 +127,10 @@ export const NavBtn = styled.nav`
 export const NavBtnLink = styled(LinkRouter)`
     border-radius: 20px;
     margin-right: 20px;
-    background: ${colors.black};
+    background: ${Colors.black};
     white-space: nowrap;
     padding: 10px 27px;
-    color: ${colors.black};
+    color: ${Colors.black};
     font-size: 16px;
     font-weight: 500;
     outline: none;

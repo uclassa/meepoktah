@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import colors from '../../styles.js'
+import Colors from '../styles.js'
 
 export const ProgramsContainer = styled.div`
     display: flex;
@@ -7,14 +7,14 @@ export const ProgramsContainer = styled.div`
     justify-content: center;
     align-items: center;
     height: fit-content;
-    background: #e8e9eb;
+    background: ${Colors.offWhite};
     padding: 56px 0 48px 0;
 `
 
 export const ProgramsCardWrapper = styled.div`
     display: flex;
     flex-direction: row;
-    background: #e8e9eb;
+    background: ${Colors.offWhite};
     height: fit-content;
 
     justify-content: space-evenly;
