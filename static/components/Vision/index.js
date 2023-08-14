@@ -19,7 +19,7 @@ const Vision = () => {
   return (
     <VisionContainer>
       <VisionBannerWrapper>
-        <Heading> A HOME AWAY FROM HOME </Heading>
+        <Heading> a home away from home </Heading>
       </VisionBannerWrapper>
       <VisionWrapper id="about">
         <ImgTextWrapper>
@@ -31,7 +31,7 @@ const Vision = () => {
       <VisionBannerWrapper>
         <Subtitle>from Singapore &</Subtitle>
         <Heading> NEW TO UCLA? </Heading>
-        <Button href="https://medium.com/@ssa.uclabruins/ucla-ssa-sotong-guide-6e68161a2506" fontBig="true" target='_blank'> THIS MIGHT HELP </Button>
+        <Button href="https://medium.com/@ssa.uclabruins/ucla-ssa-sotong-guide-6e68161a2506" fontBig="true" target='_blank' primary> THIS MIGHT HELP </Button>
       </VisionBannerWrapper>
     </VisionContainer>
   )

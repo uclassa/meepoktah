@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import colors from '../../styles.js'
 
 export const VisionContainer = styled.div`
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color: ${colors.offWhite};
     background: #AAAAAA;
     height: fit-content;
 `
@@ -16,13 +17,14 @@ export const VisionBannerWrapper = styled.div`
     align-items: center;
     height: 340px;
     width: 100%;
+    padding: 0 16rem 0 16rem;
 `
 
 export const Heading = styled.h1`
     margin-bottom: 24px;
-    font-size: 132px;
+    font-size: 96px;
     font-weight: 800;
-    color: #FFFFFF;
+    color: ${colors.offWhite};
     font-family: 'Asap', sans-serif;
     text-align: center;
 
@@ -55,7 +57,7 @@ export const ImgBg = styled.img`
 export const ImgTextWrapper = styled.div`
     position: absolute;
     top: 108rem;
-    color: #fff;
+    color: ${colors.offWhite};
     text-align: left;
     max-width: 95%;
     padding-left: 12px;
@@ -71,9 +73,12 @@ export const ImgTextWrapper = styled.div`
 export const ImgText = styled.h1`
     font-size: 96px;
     font-weight: 600;
-    color: #fff;
+    color: ${colors.offWhite};
     font-family: 'Montserrat', sans-serif;
     max-height: 100%;
+    
+    justify-content: center;
+    align-items: center;
     
     text-shadow: 5px 2px 10px rgba(0,0,0,0.6);
 
@@ -85,7 +90,7 @@ export const ImgText = styled.h1`
 `
 
 export const TopLine = styled.p`
-    color: #FFF;
+    color: ${colors.offWhite};
     font-size: 48px;
     line-height: 16px;
     font-weight: 700;
@@ -107,6 +112,6 @@ export const Subtitle = styled.p`
     max-width: 440px;
     margin-bottom: 8px;
     font-size: 24px;
-    color: #fff;
+    color: ${colors.offWhite};
     text-shadow: 5px 2px 10px rgba(0,0,0,0.6);
 `

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import colors from '../../styles.js'
 
 export const FooterContainer = styled.footer`
     background: rgb(228,179,99);
@@ -49,7 +50,7 @@ export const FooterLinkItems = styled.div`
     text-align: left;
     width: 160px;
     box-sizing: border-box;
-    color: #fff;
+    color: ${colors.black};
 
     @media screen and (max-width: 1000px){
         margin: 0;
@@ -61,11 +62,11 @@ export const FooterLinkItems = styled.div`
 export const FooterLinkTitle = styled.h1`
     font-size: 14px;
     margin-bottom: 16px;
-    color: #0b0e24;
+    color: ${colors.darkBlue};
 `
 
 export const FooterLink = styled(Link)`
-    color: #fff;
+    color: ${colors.black};
     text-decoration: none;
     margin-bottom: 0.5rem;
     font-size: 14px;
@@ -77,7 +78,7 @@ export const FooterLink = styled(Link)`
 `
 
 export const FooterExternalLink = styled.a`
-    color: #fff;
+    color: ${colors.black};
     text-decoration: none;
     margin-bottom: 0.5rem;
     font-size: 14px;

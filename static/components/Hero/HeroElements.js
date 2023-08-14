@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md'
+import colors from '../../styles.js'
 
 export const HeroContainer = styled.div`
     background: #0c0c0c;
@@ -70,7 +71,7 @@ export const HeroContent = styled.div`
 
 export const HeroH1 = styled.h1`
     font-family: Helvetica;
-    color: #fff;
+    color: ${colors.offWhite};
     font-size: 48px;
     text-align: center;
     letter-spacing: 1px;
@@ -88,7 +89,7 @@ export const HeroH1 = styled.h1`
 export const HeroP = styled.p`
     font-family: Helvetica;
     margin-top: 12px;
-    color: #fff;
+    color: ${colors.offWhite};
     font-size: 28px;
     text-align: center;
     max-width: 660px;
@@ -101,7 +102,7 @@ export const HeroP = styled.p`
 
 export const HeroP2 = styled.p`
     margin-top: 24px;
-    color: #fff;
+    color: ${colors.offWhite};
     font-size: 16px;
     text-align: center;
     max-width: 600px;
