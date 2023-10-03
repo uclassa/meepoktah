@@ -135,4 +135,3 @@ export const Subtitle = styled.p`
         font-size: 1.5rem;
     }
 `
-
