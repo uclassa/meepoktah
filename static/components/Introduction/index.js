@@ -14,7 +14,7 @@ import {
   Img
 } from './IntroductionElements.js'
 import {Button} from '../Commons/ButtonElement.js'
-import img1 from "/static/images/visionImg.jpeg"
+import img1 from "/static/images/introImg.jpg"
 
 const Introduction = () => {
 
