@@ -125,7 +125,3 @@ export const Blob = styled.div`
         display: none;
     }
 `
-
-export const BottomDiv = styled.div`
-    height: ${props => (props.height || '100px')};
-`

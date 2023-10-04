@@ -51,7 +51,6 @@ const Exco = () => {
           }
         </ExcoWrapper>
         <Blob />
-        <BottomDiv height="50px"/>
     </ExcoContainer>
   )
 }

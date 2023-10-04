@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import colors from '../styles.js'
+import Colors from '../styles.js'
 
 export const IntroductionContainer = styled.div`
     margin-top: -48px;
-    background: ${colors.offWhite};
+    background: ${Colors.offWhite};
 
     @media screen and (max-width: 768px) {
         padding: 100px 0;
