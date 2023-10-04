@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import { excoData } from './ExcoData'
 import {
   ExcoContainer,
@@ -10,9 +11,7 @@ import {
   ExcoCard,
   ExcoPhoto,
   ExcoWrapper,
-  ExcoInfo,
-  Blob,
-  BottomDiv
+  ExcoInfo
 } from './ExcoElements'
 
 
@@ -26,10 +25,20 @@ const Exco = () => {
           { 
             excoData.length > 0 ?
             excoData.map((data, index) => {
+
+              const [image, setImage] = useState(data.photo);
+              const handleMouseOver = () => {
+                if (data.altPhoto === "") return;
+                setImage(data.altPhoto);
+              };
+              const handleMouseOut = () => {
+                setImage(data.photo);
+              };
+
               return (
                 <ExcoCard key={index}>
                   <ExcoInfo>
-                    <ExcoPhoto src={data.photo} alt={data.alt}/>
+                    <ExcoPhoto src={image} alt={data.alt} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}/>
                     <ExcoH2>{data.name}</ExcoH2>
                     <ExcoP>{data.role}</ExcoP>
                     <ExcoH4>{data.major} {data.year}</ExcoH4>
@@ -39,8 +48,7 @@ const Exco = () => {
             }) : <></>
           }
         </ExcoWrapper>
-        <Blob />
-        <BottomDiv height="50px"/>
+        {/* <Blob /> */}
     </ExcoContainer>
   )
 }

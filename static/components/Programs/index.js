@@ -9,32 +9,36 @@ import {
   Heading,
   Subtitle
 } from './ProgramsElements'
+import {Button} from '../Commons/ButtonElement.js'
 import Emoji from '../Commons/Emojis.js'
 
 const Programs = () => {
 
   return (
     <ProgramsContainer>
-      <Title> what you can expect... </Title>
+      <Title> what we do </Title>
       <ProgramsCardWrapper>
         <ProgramsCard>
           <Heading>
             <Emoji symbol="💳" /> Membership card
           </Heading>
           <Subtitle>
-            At only $5, enjoy 15% off Simpang Asia and reduced entry to events!
+            At at one-time fee of $20, enjoy 15% off Simpang Asia and reduced entry to events!
           </Subtitle>
           <Subtitle>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2FAgLIKSJ2ot7VmHFEzoiJIGdtCstcSfK5497U_34AaNUKQ/viewform">Sign up here!</a>
+            <a href="https://forms.gle/UUue5zvbuXmDH5ua7">Reserve one!</a>
           </Subtitle>
         </ProgramsCard>
         <ProgramsCard2>
           <Heading>
-            <Emoji symbol="🙆‍♂️" /> Family System
+            <Emoji symbol="🙆‍♂️" /> Families
           </Heading>
           <Subtitle>
-            Led by "fam heads" as a way to integrate new members into the community, families serve as intimate platforms to meet people.
+            Families are small groups that meet regularly to hang out and bond over food, games, and more!
           </Subtitle>
+          <Button href="https://forms.gle/usgkAHvXxwgKQPjz9">
+            Sign up!
+          </Button>
         </ProgramsCard2>
         <ProgramsCard3>
           <Heading>

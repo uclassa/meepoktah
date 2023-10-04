@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Colors from '../styles.js'
+import Colors from './../styles.js'
 
 export const ProgramsContainer = styled.div`
     display: flex;
@@ -95,15 +95,16 @@ export const ProgramsCard3 = styled.div`
     }
 `
 
-export const Title = styled.h1`
+export const Title = styled.p`
     font-size: 2rem;
     color: #000;
     text-align: center;
 
     max-width: 60%;
-
-    font-family: 'Asap', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
 
     @media screen and (max-width: 768px){
         font-size: 2.5rem;
@@ -135,4 +136,3 @@ export const Subtitle = styled.p`
         font-size: 1.5rem;
     }
 `
-

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Colors from '../styles.js'
+import Colors from './../styles.js'
 
 export const Button = styled.a`
     border-radius: 50px;

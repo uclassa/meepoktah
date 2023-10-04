@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { BsArrowRight } from 'react-icons/bs'
 
-import Colors from '../styles.js'
+import Colors from './../styles.js'
 
 export const EventsContainer = styled.div`
     height: fit-content;

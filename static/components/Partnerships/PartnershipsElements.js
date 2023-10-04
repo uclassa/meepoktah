@@ -1,93 +1,109 @@
-import styled from 'styled-components'
-import Colors from '../styles.js'
+import styled from "styled-components";
+import Colors from "./../styles.js";
 
 export const PartnershipsContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    background: #C73b3C;
-    height: fit-content;
+  background: ${Colors.offWhite};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  padding: 100px 0 25px 0;
+  position: relative;
+  z-index: 1;
+`;
 
-    @media screen and (max-width: 920px){
-        flex-direction: column;
-    }
+export const PartnershipsWrapper = styled.div`
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+`;
+
+export const PartnershipsRow = styled.div`
+  display: grid;
+  grid-auto-columns: minmax(auto, 1fr);
+  align-items: center;
+  grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
+
+  @media screen and (max-width: 768px) {
+      grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
+  }
+`;
+
+export const Column1 = styled.div`
+    margin-bottom: 15px;
+    padding: 0 15px;
+    grid-area: col1;
 `
 
-export const PartnershipsTextWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    max-width: 40%;
-    margin: 48px;
-
-    @media screen and (max-width: 920px){
-        align-items: center;
-        max-width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+export const Column2 = styled.div`
+    margin-bottom: 15px;
+    padding: 0 15px;
+    grid-area: col2;
 `
+
+export const TextWrapper = styled.div`
+  max-width: 540px;
+  z-index: 1;
+`;
+
+export const TopLine = styled.p`
+  color: ${Colors.black};
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  margin-bottom: 16px;
+  z-index: 1;
+`;
 
 export const Heading = styled.h1`
-    margin-bottom: 24px;
-    font-size: 64px;
-    font-weight: 800;
-    color: ${Colors.offWhite};
-    font-family: 'Asap', sans-serif;
-    text-align: right;
-
-    text-shadow: 5px 2px 15px rgba(0,0,0,0.4);
-
-    @media screen and (max-width: 480px){
-        font-size: 18px;
-        text-align: center;
-    }
-    @media screen and (max-width: 920px){
-        font-size: 36px;
-        text-align: center;
-    }
-`
+  margin-bottom: 24px;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: ${Colors.black};
+  z-index: 1;
+`;
 
 export const Subtitle = styled.p`
-    margin-bottom: 8px;
-    font-size: 24px;
-    font-family: 'Montserrat', sans-serif;
-    color: ${Colors.offWhite};
+  max-width: 440px;
+  margin-bottom: 35px;
+  font-size: 18px;
+  line-height: 24px;
+  color: ${Colors.black};
+  z-index: 1;
+`;
 
-    text-align: right;
-    line-height: 1.5;
+export const BtnWrap = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  z-index: 1;
+`;
 
-    @media screen and (max-width: 480px){
-        font-size: 12px;
-        text-align: center;
-    }
-    @media screen and (max-width: 920px){
-        font-size: 16px;
-        text-align: center;
-    }
-`
+export const Img = styled.img`
+  width: 100%;
+  padding-right: 0;
+  z-index: 1;
+  border-radius: 24px;
 
-export const ButtonWrapper = styled.div`
-    max-width: 20%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 24px;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
+`;
 
-    @media screen and (max-width: 920px){
-        max-width: 80%;
-    }
-`
+export const TickerWrapper = styled.div`
+  background: ${Colors.offWhite};
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 0;
+`;
 
-export const ImgWrapper = styled.div`
-    max-width: 60%;
-
-    @media screen and (max-width: 920px){
-        max-width: 100%;
-    }
-`
-
-export const ImgBg = styled.img`
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
-`
+export const TickerLogoImg = styled.img`
+  width: 6rem;
+  height: 6rem;
+  overflow: hidden;
+  object-fit: cover;
+  margin: 0 0.5rem 0 0.5rem;
+`; 
