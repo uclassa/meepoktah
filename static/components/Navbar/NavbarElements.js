@@ -30,7 +30,7 @@ export const NavbarContainer = styled.div`
     justify-content: space-between;
     height: 80px;
     z-index: 1;
-    width: 100%;
+    width: 70%;
     padding: 0 24px:
     max-width: 1100px;
 `;
