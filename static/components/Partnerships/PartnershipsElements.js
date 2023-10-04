@@ -21,29 +21,27 @@ export const PartnershipsWrapper = styled.div`
 `;
 
 export const PartnershipsRow = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
-  justify-content: center;
-  margin: 0 0 4rem 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+  grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
+
+  @media screen and (max-width: 768px) {
+      grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
+  }
 `;
 
 export const Column1 = styled.div`
-  padding: 0 15px;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-`;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    grid-area: col1;
+`
 
 export const Column2 = styled.div`
-  padding: 0 15px;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-`;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    grid-area: col2;
+`
 
 export const TextWrapper = styled.div`
   max-width: 540px;
@@ -89,6 +87,10 @@ export const Img = styled.img`
   padding-right: 0;
   z-index: 1;
   border-radius: 24px;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 export const TickerWrapper = styled.div`
