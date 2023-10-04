@@ -16,7 +16,7 @@ const Programs = () => {
 
   return (
     <ProgramsContainer>
-      <Title> what you can expect... </Title>
+      <Title> what we do </Title>
       <ProgramsCardWrapper>
         <ProgramsCard>
           <Heading>

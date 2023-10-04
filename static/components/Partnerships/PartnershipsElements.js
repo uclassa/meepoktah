@@ -7,7 +7,7 @@ export const PartnershipsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   height: fit-content;
-  padding: 100px 0 100px 0;
+  padding: 100px 0 25px 0;
   position: relative;
   z-index: 1;
 `;
@@ -25,6 +25,7 @@ export const PartnershipsRow = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin: 0 0 4rem 0;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -93,11 +94,13 @@ export const Img = styled.img`
 export const TickerWrapper = styled.div`
   background: ${Colors.offWhite};
   display: flex;
+  flex-direction: row;
+  margin: 0 0 0 0;
 `;
 
 export const TickerLogoImg = styled.img`
-  width: 12rem;
-  height: 12rem;
+  width: 6rem;
+  height: 6rem;
   overflow: hidden;
   object-fit: cover;
   margin: 0 0.5rem 0 0.5rem;

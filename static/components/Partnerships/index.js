@@ -19,14 +19,20 @@ import Ticker from 'react-ticker'
 
 import partnershipsImg from "../../images/partnershipsImg.jpg"
 import simpangImg from "../../images/simpang.jpg"
-import sgnImg from "../../images/sgnLogo.png"
 import sunmerry from "../../images/sunmerry.png"
 import volcano from "../../images/volcano.jpg"
 import sginnovate from "../../images/sginnovate.jpg"
+import bdu from "../../images/bdu.jpg"
+import bursa from "../../images/bursa.jpg"
+import msa from "../../images/msa.png"
+import tca from "../../images/tca.png"
+import ibsa from "../../images/ibsa.jpg"
 
 const Partnerships = () => {
 
-  const subtitleString = ("Our partners are a huge part of our community. We are always looking for new partners to work with, so if you're interested, please reach out to us!")
+  const subtitleString = ("Our partner organisations bring a lot of value our community. " + 
+                          "They provide us with resources, mentorship, and opportunities for our members. " +
+                          "We are always looking for new partners to work with, so if you're interested, please reach out to us!")
 
   return (
     <>
@@ -36,7 +42,7 @@ const Partnerships = () => {
           <Column1>
             <TextWrapper>
               <TopLine>Partnerships</TopLine>
-              <Heading>Our Partners</Heading>
+              <Heading>We are open to working with your organisation!</Heading>
               <Subtitle>{subtitleString}</Subtitle>
               <BtnWrap>
                 <Button href="mailto:ssa.uclabruins@gmail.com" primary={false}>Contact Us!</Button>
@@ -48,6 +54,7 @@ const Partnerships = () => {
           </Column2>
         </PartnershipsRow>
       </PartnershipsWrapper>
+      <TopLine>our partners</TopLine>
     </PartnershipsContainer>
     <Ticker>
       {({ index }) => (
@@ -55,8 +62,11 @@ const Partnerships = () => {
           <TickerLogoImg src={simpangImg} alt="simpang"/>
           <TickerLogoImg src={sunmerry} alt="sunmerry"/>
           <TickerLogoImg src={volcano} alt="volcano"/>
-          <TickerLogoImg src={sgnImg} alt="sgn"/>
-          <TickerLogoImg src={sginnovate} alt="sginnovate"/>
+          <TickerLogoImg src={bdu} alt="bdu"/>
+          <TickerLogoImg src={bursa} alt="bursa"/>
+          <TickerLogoImg src={msa} alt="msa"/>
+          <TickerLogoImg src={tca} alt="tca"/>
+          <TickerLogoImg src={ibsa} alt="ibsa"/>
         </TickerWrapper>
       )}
     </Ticker>

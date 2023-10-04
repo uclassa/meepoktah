@@ -50,7 +50,7 @@ const Exco = () => {
             }) : <></>
           }
         </ExcoWrapper>
-        <Blob />
+        {/* <Blob /> */}
     </ExcoContainer>
   )
 }

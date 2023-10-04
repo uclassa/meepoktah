@@ -42,16 +42,11 @@ export const ExcoCard = styled.div`
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    background: ${Colors.navyBlue};
+    background: ${Colors.darkBlue};
     border-radius: 15px;
-    border-color: ${Colors.navyBlue};
-    border-style: solid;
-    border-width: 1px;
 
-    box-shadow: 0px 5px 8px #060714;
     height: 400px;
     width: 320px;
-    margin-bottom: 20px;
     z-index: 2;
 `
 
@@ -114,7 +109,6 @@ export const Blob = styled.div`
     margin-right: auto;
     position: absolute;
     z-index: 1;
-    background: rgb(212,68,68);
     background: linear-gradient(19deg, rgba(212,68,68,1) 0%, rgba(196,34,34,1) 39%, rgba(255,70,70,1) 72%, rgba(212,68,68,1) 100%);
     height: 900px;
     width: 1400px;

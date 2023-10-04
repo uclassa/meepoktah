@@ -2,7 +2,7 @@ export const excoData = [
     {
         name: "Matthew Ryan Teo",
         role: "President",
-        year: "'25",
+        year: "'24",
         major: "Computer Science and Engineering",
         photo: require("./../../images/excos/president.jpg"),
         altPhoto: "",
@@ -20,7 +20,7 @@ export const excoData = [
     {
         name: "Pierce Chong",
         role: "External Vice President",
-        year: "'25",
+        year: "'24",
         major: "Computer Science",
         photo: require("./../../images/excos/evp.jpg"),
         altPhoto: "",
@@ -56,7 +56,7 @@ export const excoData = [
     {
         name: "Kai Jun Tay",
         role: "Partnerships Director",
-        year: "'25",
+        year: "'24",
         major: "Computer Engineering",
         photo: require("./../../images/excos/partnerships.jpg"),
         altPhoto: "",
@@ -65,10 +65,10 @@ export const excoData = [
     {
         name: "Hazim Bin Fathul Rahman",
         role: "Advisor",
-        year: "'23, '24",
+        year: "'24",
         major: "Legal Studies",
         photo: require("./../../images/excos/advisor.jpg"),
-        altPhoto: "",
+        altPhoto: require("./../../images/excos/elmo.png"),
         alt: "Photo of Hazim",
     },
     {
@@ -78,7 +78,7 @@ export const excoData = [
         major: "Neuroscience and English",
         photo: require("./../../images/excos/committeeMember1.jpg"),
         altPhoto: require("./../../images/excos/rat.jpg"),
-        alt: "Photo of Hazim",
+        alt: "Photo of Ariane",
     },
     {
         name: "Jonathan Ng",
@@ -87,14 +87,15 @@ export const excoData = [
         major: "MCDB",
         photo: require("./../../images/excos/committeeMember2.jpg"),
         altPhoto: "",
-        alt: "Photo of Hazim",
+        alt: "Photo of Jonathan",
     },
-    // {
-    //     name: "Ella Liu",
-    //     role: "Committee Member",
-    //     year: "'26",
-    //     major: "Psychology",
-    //     photo: require("./../../images/excos/advisor.jpg"),
-    //     alt: "Photo of Hazim",
-    // },
+    {
+        name: "Ella Liu",
+        role: "Committee Member",
+        year: "'26",
+        major: "Psychology",
+        photo: require("./../../images/excos/committeeMember3.jpg"),
+        altPhoto: require("./../../images/excos/deer.png"),
+        alt: "Photo of Ella",
+    },
 ]
