@@ -15,13 +15,13 @@ const Home = ({isOpen, toggle}) => {
   <>
     <Sidebar isOpen={isOpen} toggle={toggle}/>
     <Navbar toggle={toggle}/>
-    <Hero />
-    <Introduction />
-    <Programs />
-    <Events />
-    <Exco />
+    <Hero/>
+    <Introduction/>
+    <Programs/>
+    <Events/>
+    <Exco/>
     <Partnerships/>
-    <Footer />
+    <Footer/>
   </>
   )
 }
