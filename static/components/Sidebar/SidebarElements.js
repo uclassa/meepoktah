@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link as LinkRouter } from 'react-router-dom'
-import Colors from '../styles.js'
+import Colors from './../styles.js'
 
 export const SidebarContainer = styled.aside`
     position: fixed;

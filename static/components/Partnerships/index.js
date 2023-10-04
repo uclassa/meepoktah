@@ -21,12 +21,12 @@ import partnershipsImg from "../../images/partnershipsImg.jpg"
 import simpangImg from "../../images/simpang.jpg"
 import sunmerry from "../../images/sunmerry.png"
 import volcano from "../../images/volcano.jpg"
-import sginnovate from "../../images/sginnovate.jpg"
 import bdu from "../../images/bdu.jpg"
 import bursa from "../../images/bursa.jpg"
 import msa from "../../images/msa.png"
 import tca from "../../images/tca.png"
 import ibsa from "../../images/ibsa.jpg"
+import sginnovate from "../../images/sginnovate.jpg"
 
 const Partnerships = () => {
 

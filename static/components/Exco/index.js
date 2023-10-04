@@ -11,9 +11,7 @@ import {
   ExcoCard,
   ExcoPhoto,
   ExcoWrapper,
-  ExcoInfo,
-  Blob,
-  BottomDiv
+  ExcoInfo
 } from './ExcoElements'
 
 
