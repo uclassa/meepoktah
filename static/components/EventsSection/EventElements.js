@@ -29,7 +29,7 @@ export const EventsHeaderWrapper = styled.div`
     max-width: 800px;
     align-items: center;
     justify-content: center;
-    margin-top: 300px;
+    margin-top: 2rem;
     @media screen and (max-width: 1440px){
         margin-top: 0px;
     }

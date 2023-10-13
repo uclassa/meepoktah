@@ -18,10 +18,10 @@ import {
 const Exco = () => {
 
   return (
-    <ExcoContainer>
+    <ExcoContainer id="team">
         <ExcoHeader> Executive Board </ExcoHeader>
         <ExcoSubheader>Our association is built by our community</ExcoSubheader>
-        <ExcoWrapper id="team">
+        <ExcoWrapper>
           { 
             excoData.length > 0 ?
             excoData.map((data, index) => {

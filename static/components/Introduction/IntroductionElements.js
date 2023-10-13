@@ -76,10 +76,12 @@ export const Heading = styled.h1`
 `
 
 export const Subtitle = styled.p`
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
     max-width: 440px;
     margin-bottom: 35px;
-    font-size: 1rem;
-    line-height: 2rem;
+    font-size: 1.3rem;
+    line-height: 2.2rem;
 `
 
 export const BtnWrap = styled.div`
