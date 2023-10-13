@@ -97,6 +97,7 @@ export const TickerWrapper = styled.div`
   background: ${Colors.offWhite};
   display: flex;
   flex-direction: row;
+  height: fit-content;
   margin: 0 0 0 0;
 `;
 

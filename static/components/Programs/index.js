@@ -1,54 +1,37 @@
 import React from 'react'
 import {
   ProgramsContainer,
-  ProgramsCardWrapper,
+  ProgramWrapper,
   Title,
-  ProgramsCard,
-  ProgramsCard2,
-  ProgramsCard3,
-  Heading,
-  Subtitle
+  Img
 } from './ProgramsElements'
-import {Button} from '../Commons/ButtonElement.js'
+import InfiniteCarousel from '../Commons/InfiniteCarousel'
 import Emoji from '../Commons/Emojis.js'
+import {Button} from '../Commons/ButtonElement.js'
+
+import deer from '../../images/excos/deer.png'
 
 const Programs = () => {
 
+  const membershipCardLink = "https://forms.gle/UUue5zvbuXmDH5ua7"
+  const famSignupLink = "https://forms.gle/usgkAHvXxwgKQPjz9"
+
   return (
     <ProgramsContainer>
-      <Title> what we do </Title>
-      <ProgramsCardWrapper>
-        <ProgramsCard>
-          <Heading>
-            <Emoji symbol="💳" /> Membership card
-          </Heading>
-          <Subtitle>
-            At at one-time fee of $20, enjoy 15% off Simpang Asia and reduced entry to events!
-          </Subtitle>
-          <Subtitle>
-            <a href="https://forms.gle/UUue5zvbuXmDH5ua7">Reserve one!</a>
-          </Subtitle>
-        </ProgramsCard>
-        <ProgramsCard2>
-          <Heading>
-            <Emoji symbol="🙆‍♂️" /> Families
-          </Heading>
-          <Subtitle>
-            Families are small groups that meet regularly to hang out and bond over food, games, and more!
-          </Subtitle>
-          <Button href="https://forms.gle/usgkAHvXxwgKQPjz9">
-            Sign up!
-          </Button>
-        </ProgramsCard2>
-        <ProgramsCard3>
-          <Heading>
-            <Emoji symbol="✌"/> Socials
-          </Heading>
-          <Subtitle>
-            From board game nights to kickbacks, SSA hosts a variety of socials throughout the year!
-          </Subtitle>
-        </ProgramsCard3>
-      </ProgramsCardWrapper>
+      <ProgramWrapper>
+        <Title>Family system</Title>
+        <InfiniteCarousel>
+          <Img src={deer}/>
+          <Img src={deer}/>
+          <Img src={deer}/>
+        </InfiniteCarousel>
+      </ProgramWrapper>
+      <ProgramWrapper>
+        <Title>Membership Card</Title>
+      </ProgramWrapper>
+      <ProgramWrapper>
+        <Title>Mentorship</Title>
+      </ProgramWrapper>
     </ProgramsContainer>
   )
 }

@@ -2,8 +2,12 @@ import styled from 'styled-components'
 import Colors from './../styles.js'
 
 export const IntroductionContainer = styled.div`
+    display: flex;
     margin-top: -48px;
     background: ${Colors.offWhite};
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
 
     @media screen and (max-width: 768px) {
         padding: 100px 0;

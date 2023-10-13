@@ -3,7 +3,6 @@ import Colors from './../styles.js'
 
 export const ExcoContainer = styled.div`
     height: fit-content;
-    padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;

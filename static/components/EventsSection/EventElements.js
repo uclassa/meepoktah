@@ -5,13 +5,12 @@ import Colors from './../styles.js'
 
 export const EventsContainer = styled.div`
     height: fit-content;
-    padding: 50px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: ${Colors.offWhite};
 
-    margin-top: -300px;
     @media screen and (max-width: 1440px){
         margin-top: 0px;
     }
