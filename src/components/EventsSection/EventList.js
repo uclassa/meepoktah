@@ -17,21 +17,28 @@ const EventList = (props) => {
     <EventsCardWrapper>
         {
             events.map((data, index) => {
+
+                let id = "1bw8MB_HJxJhn5UuPD6Kv4t6hgoEWnDTM";
+                if (data.image != null){
+                    id = data.image.split("/")[5].slice(10);
+                }
+                const imageLink = "https://lh3.google.com/u/0/d/" + id;
+
                 return(
-                <EventsCard key={index}>
-                    <EventsPhoto src={data.image} alt="Picture of event"/>
-                    <EventsTextWrapperCol href={data.link} target="_blank">
-                        <EventsDatePlace>{new Date(data.date).toDateString()} | {data.address}</EventsDatePlace>
-                        <EventsTitle>{data.title}</EventsTitle>
-                        {
-                            new Date(data.date) > new Date() ?
-                            <EventsDescription>{data.description}</EventsDescription> : null
-                        }
-                        <BtnWrap color={data.color}>
-                            <ArrowRight />
-                        </BtnWrap>
-                    </EventsTextWrapperCol>
-                </EventsCard>
+                    <EventsCard key={index}>
+                        <EventsPhoto src={imageLink} alt="Picture of event"/>
+                        <EventsTextWrapperCol href={data.link} target="_blank">
+                            <EventsDatePlace>{new Date(data.date).toDateString()} | {data.address}</EventsDatePlace>
+                            <EventsTitle>{data.title}</EventsTitle>
+                            {
+                                new Date(data.date) > new Date() ?
+                                <EventsDescription>{data.description}</EventsDescription> : null
+                            }
+                            <BtnWrap color={data.color}>
+                                <ArrowRight />
+                            </BtnWrap>
+                        </EventsTextWrapperCol>
+                    </EventsCard>
                 )}
             )
         }
