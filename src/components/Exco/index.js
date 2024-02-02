@@ -17,6 +17,10 @@ import {
 
 const Exco = () => {
 
+  const [excoPhotos, setExcoPhotos] = useState(excoData.map((data) => {
+    return {photo: data.photo, altPhoto: data.altPhoto}
+  }));
+
   return (
     <ExcoContainer id="team">
         <ExcoHeader> Executive Board </ExcoHeader>
@@ -26,14 +30,25 @@ const Exco = () => {
             excoData.length > 0 ?
             excoData.map((data, index) => {
 
-              const [image, setImage] = useState(data.photo);
-              const handleMouseOver = () => {
-                if (data.altPhoto === "") return;
-                setImage(data.altPhoto);
-              };
-              const handleMouseOut = () => {
-                setImage(data.photo);
-              };
+              // Switches the photo to the alt photo when hovered over
+              const handleMouseOver = (e) => {
+                const newExcoPhotos = [...excoPhotos];
+                if (newExcoPhotos[index].altPhoto.length < 1) {
+                  return;
+                }
+                newExcoPhotos[index].photo = data.altPhoto;
+                newExcoPhotos[index].altPhoto = data.photo;
+                setExcoPhotos(newExcoPhotos);
+              }
+
+              const handleMouseOut = (e) => {
+                const newExcoPhotos = [...excoPhotos];
+                newExcoPhotos[index].photo = data.photo;
+                newExcoPhotos[index].altPhoto = data.altPhoto;
+                setExcoPhotos(newExcoPhotos);
+              }
+
+              const image = excoPhotos[index].photo;
 
               return (
                 <ExcoCard key={index}>
@@ -48,7 +63,6 @@ const Exco = () => {
             }) : <></>
           }
         </ExcoWrapper>
-        {/* <Blob /> */}
     </ExcoContainer>
   )
 }

@@ -11,8 +11,8 @@ import {
   Subtitle,
   BtnWrap,
   Img,
-} from './ProgramsElements'
-import InfiniteCarousel from '../Commons/InfiniteCarousel'
+} from './ProgramsElements.js'
+import InfiniteCarousel from '../Commons/InfiniteCarousel.js'
 import {Button} from '../Commons/ButtonElement.js'
 import Emoji from '../Commons/Emojis.js'
 

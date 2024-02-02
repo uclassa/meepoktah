@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link as LinkRouter } from 'react-router-dom'
 import { Link as LinkScroll } from 'react-scroll'
 
-import Colors from './../styles.js'
+import Colors from '../styles.js'
 
 export const Nav = styled.nav`
     background: ${({navBG}) => (navBG ? Colors.red : 'transparent')};

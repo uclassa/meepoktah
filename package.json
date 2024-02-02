@@ -42,7 +42,7 @@
     "watch-parcel": "parcel static/index.html",
     "build": "parcel build static/index.html",
     "livereload": "livereload static -w 100",
-    "dev": "concurrently -n \"server,client,livereload\" -c \"blue,green,yellow\" \"npm run watch-node\" \"npm run watch-parcel\" \"npm run livereload\""
+    "dev": "react-scripts start"
   },
   "eslintConfig": {
     "extends": [

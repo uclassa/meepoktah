@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import Colors from './../styles.js'
+import Colors from '../styles.js'
 
-export const IntroductionContainer = styled.div`
+export const ProgramsContainer = styled.div`
     display: flex;
     background: ${Colors.offWhite};
     height: 100vh;
@@ -10,52 +10,52 @@ export const IntroductionContainer = styled.div`
 
     @media screen and (max-width: 768px) {
         padding: 100px 0;
+        height: fit-content;
     }
-`
+`;
 
-export const IntroductionWrapper = styled.div`
-    display: grid;
+export const ProgramWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
     z-index: 1;
-    height: 860px;
+    height: fit-content;
     width: 100%;
     max-width: 1100px;
     margin-right: auto;
     margin-left: auto;
-    padding: 0 24px;
+    padding-top: 4rem;
     justify-content: center;
 
     @media screen and (max-width: 768px) {
-        padding-top: 10rem;
+        padding-top: 12rem;
+        max-width: 100%;
+        flex-direction: column;
     }
-`
-
-export const IntroductionRow = styled.div`
-    display: grid;
-    grid-auto-columns: minmax(auto, 1fr);
-    align-items: center;
-    grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
-
-    @media screen and (max-width: 768px) {
-        grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
-    }
-`
+`;
 
 export const Column1 = styled.div`
-    margin-bottom: 15px;
-    padding: 0 15px;
-    grid-area: col1;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: fit-content;
 `
 
 export const Column2 = styled.div`
-    margin-bottom: 15px;
-    padding: 0 15px;
-    grid-area: col2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding-top: 2rem;
+    }
 `
 
 export const TextWrapper = styled.div`
-    max-width: 540px;
-    padding-top: 0;
-    padding-bottom: 60px;
+    width: fit-content;
+    height: 100%;
+    padding: 0 1.5rem;
 `
 
 export const TopLine = styled.p`
@@ -65,6 +65,10 @@ export const TopLine = styled.p`
     letter-spacing: 1.4px;
     text-transform: uppercase;
     margin-bottom: 16px;
+
+    @media screen and (max-width: 768px) {
+        text-align: center;
+    }
 `
 
 export const Heading = styled.h1`
@@ -75,6 +79,7 @@ export const Heading = styled.h1`
 
     @media screen and (max-width: 480px) {
         font-size: 32px;
+        text-align: center;
     }
 `
 
@@ -84,7 +89,7 @@ export const Subtitle = styled.p`
     max-width: 440px;
     margin-bottom: 35px;
     font-size: 1.3rem;
-    line-height: 2.2rem;
+    line-height: 2.5rem;
 `
 
 export const BtnWrap = styled.div`
@@ -92,20 +97,12 @@ export const BtnWrap = styled.div`
     justify-content: flex-start;
     margin-left: auto;
     margin-right: auto;
-`
 
-export const ImgWrap = styled.div`
-    max-width: 555px;
-    height: 100%;
+    @media screen and (max-width: 768px) {
+        justify-content: center;
+    }
 `
 
 export const Img = styled.img`
     width: 100%;
-    margin: 0 0 10px 0;
-    padding-right: 0;
-    border-radius: 32px;
-
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
-`
+`;
