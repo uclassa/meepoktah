@@ -10,23 +10,11 @@ import {
   Heading,
   Subtitle,
   BtnWrap,
-  Img,
-  TickerWrapper,
-  TickerLogoImg
+  Img
 } from './PartnershipsElements.js'
 import { Button } from '../Commons/ButtonElement.js'
-import Ticker from 'react-ticker'
 
 import partnershipsImg from "../../images/partnershipsImg.jpg"
-import simpangImg from "../../images/simpang.jpg"
-import sunmerry from "../../images/sunmerry.png"
-import volcano from "../../images/volcano.jpg"
-import bdu from "../../images/bdu.jpg"
-import bursa from "../../images/bursa.jpg"
-import msa from "../../images/msa.png"
-import tca from "../../images/tca.png"
-import ibsa from "../../images/ibsa.jpg"
-import sginnovate from "../../images/sginnovate.jpg"
 
 const Partnerships = () => {
 
@@ -35,7 +23,6 @@ const Partnerships = () => {
                           "We are always looking for new partners to work with, so if you're interested, please reach out to us!")
 
   return (
-    <>
     <PartnershipsContainer id="partnerships">
       <PartnershipsWrapper>
         <PartnershipsRow imgStart={false}>
@@ -54,23 +41,7 @@ const Partnerships = () => {
           </Column2>
         </PartnershipsRow>
       </PartnershipsWrapper>
-      <TopLine>our partners</TopLine>
     </PartnershipsContainer>
-    <Ticker>
-      {({ index }) => (
-        <TickerWrapper>
-          <TickerLogoImg src={simpangImg} alt="simpang"/>
-          <TickerLogoImg src={sunmerry} alt="sunmerry"/>
-          <TickerLogoImg src={volcano} alt="volcano"/>
-          <TickerLogoImg src={bdu} alt="bdu"/>
-          <TickerLogoImg src={bursa} alt="bursa"/>
-          <TickerLogoImg src={msa} alt="msa"/>
-          <TickerLogoImg src={tca} alt="tca"/>
-          <TickerLogoImg src={ibsa} alt="ibsa"/>
-        </TickerWrapper>
-      )}
-    </Ticker>
-    </>
   )
 }
 

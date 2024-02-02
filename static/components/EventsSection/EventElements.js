@@ -5,13 +5,12 @@ import Colors from './../styles.js'
 
 export const EventsContainer = styled.div`
     height: fit-content;
-    padding: 50px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: ${Colors.offWhite};
 
-    margin-top: -300px;
     @media screen and (max-width: 1440px){
         margin-top: 0px;
     }
@@ -30,7 +29,7 @@ export const EventsHeaderWrapper = styled.div`
     max-width: 800px;
     align-items: center;
     justify-content: center;
-    margin-top: 300px;
+    margin-top: 2rem;
     @media screen and (max-width: 1440px){
         margin-top: 0px;
     }

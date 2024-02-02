@@ -3,136 +3,106 @@ import Colors from './../styles.js'
 
 export const ProgramsContainer = styled.div`
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: fit-content;
     background: ${Colors.offWhite};
-    padding: 56px 0 48px 0;
-`
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
 
-export const ProgramsCardWrapper = styled.div`
+    @media screen and (max-width: 768px) {
+        padding: 100px 0;
+        height: fit-content;
+    }
+`;
+
+export const ProgramWrapper = styled.div`
     display: flex;
     flex-direction: row;
-    background: ${Colors.offWhite};
+    z-index: 1;
     height: fit-content;
+    width: 100%;
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 4rem;
+    justify-content: center;
 
-    justify-content: space-evenly;
-    align-items: top;
-
-    @media screen and (max-width: 920px){
+    @media screen and (max-width: 768px) {
+        padding-top: 12rem;
+        max-width: 100%;
         flex-direction: column;
-        align-items: center;
     }
-`
+`;
 
-export const ProgramsCard = styled.div`
+export const Column1 = styled.div`
     display: flex;
-    flex-direction: column;
-    justify-content: top;
     align-items: center;
-
-    border-radius: 48px;
-    background: #e0e0e0;
-    box-shadow:  24px 24px 48px #d7d7d7,
-                -24px -24px 48px #e9e9e9;
-    height: 480px;
-    max-width: 30%;
-
-    margin: 24px 0 24px 0;
-    padding: 56px 0 0 0;
-    
-    border-radius: 88% 12% 83% 17% / 13% 78% 22% 87%;
-
-    @media screen and (max-width: 920px){
-        max-width: 90%;
-    }
+    justify-content: start;
+    width: fit-content;
 `
 
-export const ProgramsCard2 = styled.div`
+export const Column2 = styled.div`
     display: flex;
-    flex-direction: column;
-    justify-content: top;
     align-items: center;
+    justify-content: center;
+    width: 70%;
 
-    border-radius: 48px;
-    background: #e0e0e0;
-    box-shadow:  24px 24px 48px #d7d7d7,
-                -24px -24px 48px #e9e9e9;
-    height: 480px;
-    max-width: 30%;
-
-    margin: 24px 0 24px 0;
-    padding: 56px 0 0 0;
-    
-    border-radius: 19% 81% 14% 86% / 80% 26% 74% 20%;
-
-    @media screen and (max-width: 920px){
-        max-width: 90%;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding-top: 2rem;
     }
 `
 
-export const ProgramsCard3 = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    align-items: center;
-
-    border-radius: 48px;
-    background: #e0e0e0;
-    box-shadow:  24px 24px 48px #d7d7d7,
-                -24px -24px 48px #e9e9e9;
-    height: 480px;
-    max-width: 30%;
-
-    margin: 24px 0 24px 0;
-    padding: 56px 0 0 0;
-    
-    border-radius: 19% 81% 10% 90% / 78% 12% 88% 22% ;
-
-    @media screen and (max-width: 920px){
-        max-width: 90%;
-    }
+export const TextWrapper = styled.div`
+    width: fit-content;
+    height: 100%;
+    padding: 0 1.5rem;
 `
 
-export const Title = styled.p`
-    font-size: 2rem;
-    color: #000;
-    text-align: center;
-
-    max-width: 60%;
+export const TopLine = styled.p`
+    font-size: 16px;
+    line-height: 16px;
     font-weight: 700;
     letter-spacing: 1.4px;
     text-transform: uppercase;
     margin-bottom: 16px;
 
-    @media screen and (max-width: 768px){
-        font-size: 2.5rem;
+    @media screen and (max-width: 768px) {
+        text-align: center;
     }
 `
 
 export const Heading = styled.h1`
-    font-size: 3rem;
-    color: #000;
     margin-bottom: 24px;
-    text-align: center;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 600;
 
-    @media screen and (max-width: 768px){
-        font-size: 2.5rem;
+    @media screen and (max-width: 480px) {
+        font-size: 32px;
+        text-align: center;
     }
 `
 
 export const Subtitle = styled.p`
-    font-size: 2rem;
-    max-width: 70%;
-    margin-bottom: 24px;
-    line-height: 1.2;
-    text-align: center;
-    
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    max-width: 440px;
+    margin-bottom: 35px;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+`
 
-    @media screen and (max-width: 768px){
-        font-size: 1.5rem;
+export const BtnWrap = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 768px) {
+        justify-content: center;
     }
 `
+
+export const Img = styled.img`
+    width: 100%;
+`;

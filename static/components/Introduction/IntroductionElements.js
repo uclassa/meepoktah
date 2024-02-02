@@ -2,8 +2,11 @@ import styled from 'styled-components'
 import Colors from './../styles.js'
 
 export const IntroductionContainer = styled.div`
-    margin-top: -48px;
+    display: flex;
     background: ${Colors.offWhite};
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
 
     @media screen and (max-width: 768px) {
         padding: 100px 0;
@@ -20,6 +23,10 @@ export const IntroductionWrapper = styled.div`
     margin-left: auto;
     padding: 0 24px;
     justify-content: center;
+
+    @media screen and (max-width: 768px) {
+        padding-top: 10rem;
+    }
 `
 
 export const IntroductionRow = styled.div`
@@ -72,10 +79,12 @@ export const Heading = styled.h1`
 `
 
 export const Subtitle = styled.p`
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
     max-width: 440px;
     margin-bottom: 35px;
-    font-size: 1rem;
-    line-height: 2rem;
+    font-size: 1.3rem;
+    line-height: 2.2rem;
 `
 
 export const BtnWrap = styled.div`
@@ -95,4 +104,8 @@ export const Img = styled.img`
     margin: 0 0 10px 0;
     padding-right: 0;
     border-radius: 32px;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 `
