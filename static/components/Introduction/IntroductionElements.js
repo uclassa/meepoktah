@@ -3,7 +3,6 @@ import Colors from './../styles.js'
 
 export const IntroductionContainer = styled.div`
     display: flex;
-    margin-top: -48px;
     background: ${Colors.offWhite};
     height: 100vh;
     align-items: center;
@@ -24,6 +23,10 @@ export const IntroductionWrapper = styled.div`
     margin-left: auto;
     padding: 0 24px;
     justify-content: center;
+
+    @media screen and (max-width: 768px) {
+        padding-top: 10rem;
+    }
 `
 
 export const IntroductionRow = styled.div`
@@ -101,4 +104,8 @@ export const Img = styled.img`
     margin: 0 0 10px 0;
     padding-right: 0;
     border-radius: 32px;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 `

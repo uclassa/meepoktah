@@ -5,8 +5,6 @@ import {
   Title,
   Column1,
   Column2,
-  Column3,
-  Column4,
   TextWrapper,
   TopLine,
   Heading,
@@ -29,8 +27,6 @@ const Programs = () => {
   const famSignupLink = "https://forms.gle/usgkAHvXxwgKQPjz9"
 
   const fams = "Our family system is a great way to meet new people and make friends! You will be placed in a family with other members and a family head. You will be able to participate in fun events and activities with your family throughout the year!"
-  const discounts = "Our membership card will give you discounts at local restaurants and stores!"
-  const cultural = "We host cultural events throughout the year to celebrate our heritage and learn more about our culture!"
 
   return (
     <ProgramsContainer>
@@ -54,34 +50,6 @@ const Programs = () => {
             <Img src={famImg3}/>
             <Img src={famImg4}/>
           </InfiniteCarousel>
-        </Column2>
-      </ProgramWrapper>
-      <ProgramWrapper>
-        <Column3>
-        </Column3>
-        <Column4>
-          <TextWrapper>
-            <TopLine><Emoji symbol={"💳"}/>Get an SSA Card!</TopLine>
-            <Heading>DISCOUNTS</Heading>
-            <Subtitle>{discounts}</Subtitle>
-            <BtnWrap>
-              <Button href={membershipCardLink} target="_blank" rel="noopener noreferrer">
-                Reserve
-              </Button>
-            </BtnWrap>
-          </TextWrapper>
-        </Column4>
-      </ProgramWrapper>
-      <ProgramWrapper>
-        <Column1>
-          <TextWrapper>
-            <TopLine><Emoji symbol={"💕"}/>Learn about SG</TopLine>
-            <Heading>CULTURAL</Heading>
-            <Subtitle>{cultural}</Subtitle>
-          </TextWrapper>
-        </Column1>
-        <Column2>
-        
         </Column2>
       </ProgramWrapper>
     </ProgramsContainer>

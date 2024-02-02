@@ -3,12 +3,11 @@ import Colors from "./../styles.js";
 
 export const PartnershipsContainer = styled.div`
   background: ${Colors.offWhite};
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: fit-content;
-  padding: 100px 0 25px 0;
-  position: relative;
+  justify-content: center;
   z-index: 1;
 `;
 
@@ -89,7 +88,7 @@ export const Img = styled.img`
   border-radius: 24px;
 
   @media screen and (max-width: 768px) {
-    width: 90%;
+    display: none;
   }
 `;
 
