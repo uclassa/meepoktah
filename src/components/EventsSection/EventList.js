@@ -6,10 +6,17 @@ import {
     EventsTextWrapperCol,
     EventsDatePlace,
     EventsTitle,
-    EventsDescription,
-    BtnWrap,
-    ArrowRight
+    EventsDescription
 } from './EventElements'
+
+const EventDate = (start, end) => {
+    if (end === null){
+        return new Date(start).toDateString();
+    }
+    else{
+        return new Date(start).toDateString() + " - " + new Date(end).toDateString();
+    }
+}
 
 const EventList = (props) => {
   const {events} = props;
@@ -17,26 +24,25 @@ const EventList = (props) => {
     <EventsCardWrapper>
         {
             events.map((data, index) => {
-
-                let id = "1bw8MB_HJxJhn5UuPD6Kv4t6hgoEWnDTM";
+                
+                let id = "1sjeMx0YGXRrNqMxy7l6iIC0pN63pIeNO";
                 if (data.image != null){
-                    id = data.image.split("/")[5].slice(10);
+                    id = data.image.slice(-33);
                 }
                 const imageLink = "https://lh3.google.com/u/0/d/" + id;
+
+                const dateString = EventDate(data.start_date, data.end_date);
 
                 return(
                     <EventsCard key={index}>
                         <EventsPhoto src={imageLink} alt="Picture of event"/>
                         <EventsTextWrapperCol href={data.link} target="_blank">
-                            <EventsDatePlace>{new Date(data.date).toDateString()} | {data.address}</EventsDatePlace>
+                            <EventsDatePlace> {dateString} | {data.venue}</EventsDatePlace>
                             <EventsTitle>{data.title}</EventsTitle>
                             {
-                                new Date(data.date) > new Date() ?
+                                new Date(data.start_date) > new Date() ?
                                 <EventsDescription>{data.description}</EventsDescription> : null
                             }
-                            <BtnWrap color={data.color}>
-                                <ArrowRight />
-                            </BtnWrap>
                         </EventsTextWrapperCol>
                     </EventsCard>
                 )}

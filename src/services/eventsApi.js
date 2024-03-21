@@ -10,10 +10,10 @@ export const getPastEvents = async () => {
     try {
         const res = await http.get('/events');
         const data = res.data.filter(
-            event => (new Date((event.start_date) < new Date())) 
+            event => new Date(event.start_date) < new Date()
         ).sort(
             (a, b) => new Date(b.start_date) - new Date(a.start_date)
-        ).slice(0, 6);
+        ).slice(0, 8);
         return {
             status: res.status,
             data: data

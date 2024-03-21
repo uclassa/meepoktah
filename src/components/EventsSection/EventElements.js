@@ -121,7 +121,7 @@ export const EventsCard = styled.div`
     box-shadow: 0px 15px 24px #656565;
 
     @media screen and (max-width: 480px){
-        height: 145px;
+        height: 120px;
         width: 350px;
     }
 
