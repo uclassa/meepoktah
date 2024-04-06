@@ -51,7 +51,7 @@ const EventsSection = () => {
                         <EventsCenteredBox>
                             <EventsSubtitle>  
                                 No upcoming events for now. Check out our
-                                <InstagramLink href='https://www.instagram.com/ucla.ssa/' target="_blank">Instagram</InstagramLink>
+                                <InstagramLink href={import.meta.env.VITE_INSTAGRAM_LINK} target="_blank">Instagram</InstagramLink>
                                 to stay up to date with future events!
                             </EventsSubtitle>
                         </EventsCenteredBox>
@@ -64,7 +64,7 @@ const EventsSection = () => {
                     <EventsCenteredBox>
                         <EventsSubtitle> Find us on Instagram to keep up to date with all our happenings! <Emoji symbol="👇" /></EventsSubtitle>
                         <Button
-                            href="https://www.instagram.com/ucla.ssa/"
+                            href={import.meta.env.VITE_INSTAGRAM_LINK}
                             target="_blank"
                             fontBig = '1'
                         > Stalk Us! </Button>
