@@ -1,8 +1,6 @@
 import axios from "axios";
 
-// require('dotenv').config();
-
-const DJANGO_API = process.env.REACT_APP_DJANGO_API;
+const DJANGO_API = import.meta.env.VITE_DJANGO_API;
 
 /*
   Axios instance where we will call HTTP methods from.

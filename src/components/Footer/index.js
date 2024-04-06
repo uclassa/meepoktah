@@ -11,6 +11,7 @@ import {
     FooterLogo,
     MailingListButton
 } from './FooterElements'
+import sgnLogo from '../../images/sgnLogo.png'
 
 const Footer = () => {
   return (
@@ -21,7 +22,7 @@ const Footer = () => {
                     <FooterLinkItems>
                         <FooterLinkTitle> <Emoji symbol="💪"/>Supported by:</FooterLinkTitle>
                         <a href="https://singaporeglobalnetwork.gov.sg/join-us/" target="_blank">
-                            <FooterLogo src={require("./../../images/sgnLogo.png")} alt="SGN Logo" />
+                            <FooterLogo src={sgnLogo} alt="SGN Logo" />
                         </a>
                     </FooterLinkItems>
                     <FooterLinkItems>

@@ -12,6 +12,7 @@ import {
     NavLinks,
     SotongButton,
 } from './NavbarElements'
+import ssaLogo from "./../../images/ssaLogo.png"
 
 const Navbar = ({toggle}) => {
 
@@ -35,7 +36,7 @@ const Navbar = ({toggle}) => {
     <Nav navBG={navBG}>
         <NavbarContainer>
             <NavLogo to="/" onClick={returnHome}>
-                <img src={require("./../../images/ssaLogo.png")} height="75px" alt={"UCLA SSA"}/>
+                <img src={ssaLogo} height="75px" alt={"UCLA SSA"}/>
             </NavLogo>
             <MobileIcon onClick={toggle}>
                 <FaBars />

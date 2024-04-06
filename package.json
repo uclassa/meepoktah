@@ -23,7 +23,7 @@
   "scripts": {
     "start": "npx http-server ./dist",
     "dev": "vite dev",
-    "build": "vite build ./public",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "eslintConfig": {

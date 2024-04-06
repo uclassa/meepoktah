@@ -2,7 +2,6 @@ import React from 'react'
 import {
   ProgramsContainer,
   ProgramWrapper,
-  Title,
   Column1,
   Column2,
   TextWrapper,

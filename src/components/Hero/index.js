@@ -12,13 +12,14 @@ import {
     ArrowForward,
     ArrowRight,
 } from './HeroElements'
+import heroVideo from '../../videos/hero.mp4'
 
 
 const Hero = () => {
 
   const [video, setVideo] = useState();
   useEffect(() => {
-     setVideo(require('../../videos/hero.mp4'));
+     setVideo(heroVideo);
   }, [])
   
   const [hover, setHover] = useState(false)
