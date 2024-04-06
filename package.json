@@ -8,7 +8,6 @@
     "node": "18.x"
   },
   "dependencies": {
-    "@testing-library/react": "12.1.5",
     "axios": "0.27.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -44,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react": "^14.2.2",
     "@vitejs/plugin-react": "^4.2.1",
     "vite": "^5.2.7"
   }
