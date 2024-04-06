@@ -25,11 +25,12 @@ const EventList = (props) => {
         {
             events.map((data, index) => {
                 
-                let id = "1sjeMx0YGXRrNqMxy7l6iIC0pN63pIeNO";
+                let imageID = "1sjeMx0YGXRrNqMxy7l6iIC0pN63pIeNO";
                 if (data.image != null){
-                    id = data.image.slice(-33);
+                    imageID = data.image;
                 }
-                const imageLink = "https://lh3.google.com/u/0/d/" + id;
+
+                const imageLink = "https://lh3.googleusercontent.com/u/0/d/" + imageID;
 
                 const dateString = EventDate(data.start_date, data.end_date);
 
