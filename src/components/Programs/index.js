@@ -22,9 +22,6 @@ import famImg4 from '../../images/fams/fam4.jpg'
 
 const Programs = () => {
 
-  const membershipCardLink = "https://forms.gle/UUue5zvbuXmDH5ua7"
-  const famSignupLink = "https://forms.gle/usgkAHvXxwgKQPjz9"
-
   const fams = "Our family system is a great way to meet new people and make friends! You will be placed in a family with other members and a family head. You will be able to participate in fun events and activities with your family throughout the year!"
 
   return (
@@ -36,7 +33,7 @@ const Programs = () => {
             <Heading>FAMILY SYSTEM</Heading>
             <Subtitle>{fams}</Subtitle>
             <BtnWrap>
-              <Button href={famSignupLink} target="_blank" rel="noopener noreferrer">
+              <Button href={import.meta.env.VITE_FAM_SIGNUP} target="_blank" rel="noopener noreferrer">
                 Sign up
               </Button>
             </BtnWrap>

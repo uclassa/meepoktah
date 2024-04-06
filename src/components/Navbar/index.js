@@ -55,10 +55,10 @@ const Navbar = ({toggle}) => {
                     <NavLinks to="partnerships" smooth={true} duration={500} spy={true} exact='true' activeClass="active">Partnerships</NavLinks>
                 </NavItem>
                 <NavItem>
-                    <SotongButton href='https://docs.google.com/forms/d/e/1FAIpQLSc2FAgLIKSJ2ot7VmHFEzoiJIGdtCstcSfK5497U_34AaNUKQ/viewform' target="_blank">Membership</SotongButton>
+                    <SotongButton href={import.meta.env.VITE_MEMBERSHIP_CARD_LINK} target="_blank">Membership</SotongButton>
                 </NavItem>
                 <NavItem>
-                    <SotongButton href="https://medium.com/@ssa.uclabruins/ucla-ssa-sotong-guide-6e68161a2506" target="_blank">Sotong Guide</SotongButton>
+                    <SotongButton href={import.meta.env.VITE_SOTONG_GUIDE} target="_blank">Sotong Guide</SotongButton>
                 </NavItem>
             </NavMenu>
         </NavbarContainer>    

@@ -25,7 +25,7 @@ const EventList = (props) => {
         {
             events.map((data, index) => {
                 
-                let imageID = "1sjeMx0YGXRrNqMxy7l6iIC0pN63pIeNO";
+                let imageID = import.meta.env.VITE_DEFAULT_EVENT_IMAGE_ID;
                 if (data.image != null){
                     imageID = data.image;
                 }

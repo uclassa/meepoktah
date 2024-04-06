@@ -42,7 +42,7 @@ const Hero = () => {
             <HeroH1> SINGAPORE STUDENTS' ASSOCIATION </HeroH1>
             <HeroP> <Emoji symbol="👋"/> Hello! Welcome to SSA, a tight-knit community that welcomes everyone! </HeroP>
             <HeroBtnWrapper>
-                <Button href='https://discord.gg/TtdgWEG68U'
+                <Button href={import.meta.env.VITE_DISCORD_LINK}
                         target='_blank'
                         onMouseEnter={onHover} 
                         onMouseLeave={onHover}

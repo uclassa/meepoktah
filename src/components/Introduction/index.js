@@ -32,7 +32,7 @@ const Introduction = () => {
               <Heading>We are the Singapore Students' Association at UCLA!</Heading>
               <Subtitle>{subtitleString}</Subtitle>
               <BtnWrap>
-                <Button href="https://discord.com/invite/TtdgWEG68U" primary={false}>Discord!</Button>
+                <Button href={import.meta.env.VITE_DISCORD_LINK} primary={false}>Discord!</Button>
               </BtnWrap>
             </TextWrapper>
           </Column1>
