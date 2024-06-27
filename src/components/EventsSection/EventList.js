@@ -24,13 +24,7 @@ const EventList = (props) => {
     <EventsCardWrapper>
         {
             events.map((data, index) => {
-                
-                let imageID = import.meta.env.VITE_DEFAULT_EVENT_IMAGE_ID;
-                if (data.image != null){
-                    imageID = data.image;
-                }
-
-                const imageLink = "https://lh3.googleusercontent.com/u/0/d/" + imageID;
+                const imageLink = data.image == null ? "/images/eventDefault.jpg" : "https://lh3.googleusercontent.com/u/0/d/" + data.image;
 
                 const dateString = EventDate(data.start_date, data.end_date);
 
