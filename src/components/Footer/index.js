@@ -11,7 +11,6 @@ import {
     FooterLogo,
     MailingListButton
 } from './FooterElements'
-import sgnLogo from '../../images/sgnLogo.png'
 
 const Footer = () => {
   return (
@@ -22,7 +21,7 @@ const Footer = () => {
                     <FooterLinkItems>
                         <FooterLinkTitle> <Emoji symbol="💪"/>Supported by:</FooterLinkTitle>
                         <a href={import.meta.env.VITE_SGN_JOIN_LINK} target="_blank">
-                            <FooterLogo src={sgnLogo} alt="SGN Logo" />
+                            <FooterLogo src="/images/sgnLogo.png" alt="SGN Logo" />
                         </a>
                     </FooterLinkItems>
                     <FooterLinkItems>
