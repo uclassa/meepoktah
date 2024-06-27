@@ -15,10 +15,7 @@ import InfiniteCarousel from '../Commons/InfiniteCarousel.js'
 import {Button} from '../Commons/ButtonElement.js'
 import Emoji from '../Commons/Emojis.js'
 
-import famImg1 from '../../images/fams/fam1.jpg'
-import famImg2 from '../../images/fams/fam2.jpg'
-import famImg3 from '../../images/fams/fam3.jpg'
-import famImg4 from '../../images/fams/fam4.jpg'
+const basePath = "/images/fams/"
 
 const Programs = () => {
 
@@ -41,10 +38,10 @@ const Programs = () => {
         </Column1>
         <Column2>
           <InfiniteCarousel>
-            <Img src={famImg1}/>
-            <Img src={famImg2}/>
-            <Img src={famImg3}/>
-            <Img src={famImg4}/>
+            <Img src={basePath + "fam1.jpg"}/>
+            <Img src={basePath + "fam2.jpg"}/>
+            <Img src={basePath + "fam3.jpg"}/>
+            <Img src={basePath + "fam4.jpg"}/>
           </InfiniteCarousel>
         </Column2>
       </ProgramWrapper>

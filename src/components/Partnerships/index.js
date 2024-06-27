@@ -14,8 +14,6 @@ import {
 } from './PartnershipsElements.js'
 import { Button } from '../Commons/ButtonElement.js'
 
-import partnershipsImg from "../../images/partnershipsImg.jpg"
-
 const Partnerships = () => {
 
   const subtitleString = ("Our partner organisations bring a lot of value our community. " + 
@@ -37,7 +35,7 @@ const Partnerships = () => {
             </TextWrapper>
           </Column1>
           <Column2>
-            <Img src={partnershipsImg} alt="partnerships"/>
+            <Img src="/images/partnershipsImg.jpg" alt="partnerships"/>
           </Column2>
         </PartnershipsRow>
       </PartnershipsWrapper>

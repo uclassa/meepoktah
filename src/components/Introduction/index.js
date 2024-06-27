@@ -14,7 +14,6 @@ import {
   Img
 } from './IntroductionElements.js'
 import {Button} from '../Commons/ButtonElement.js'
-import img1 from "../../images/introImg.jpg"
 
 const Introduction = () => {
 
@@ -38,7 +37,7 @@ const Introduction = () => {
           </Column1>
           <Column2>
             <ImgWrap>
-              <Img src={img1} alt="vision"/>
+              <Img src="/images/introImg.jpg" alt="vision"/>
             </ImgWrap>
           </Column2>
         </IntroductionRow>
