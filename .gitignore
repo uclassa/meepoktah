@@ -54,3 +54,6 @@ service_token.json
 .gcloudignore
 .vscode
 .history/
+
+# MS photos metadata
+*Zone.Identifier
