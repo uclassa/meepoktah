@@ -52,7 +52,7 @@ export const excoData = [
         year: "'27",
         major: "Electrical Engineering",
         photo: basePath + "publicity.jpg",
-        altPhoto: "",
+        altPhoto: basePath + "publicity_alt.jpg",
         alt: "Photo of Kyra",
     },
     {
@@ -70,7 +70,7 @@ export const excoData = [
         year: "'26",
         major: "Computer Science and Engineering",
         photo: basePath + "technology.jpg",
-        altPhoto: "",
+        altPhoto: basePath + "technology_alt.jpg",
         alt: "Photo of Alex",
     },
     {
