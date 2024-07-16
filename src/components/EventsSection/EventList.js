@@ -24,7 +24,7 @@ const EventList = (props) => {
     <EventsCardWrapper>
         {
             events.map((data, index) => {
-                const imageLink = data.image == null ? "/images/eventDefault.jpg" : "https://lh3.googleusercontent.com/u/0/d/" + data.image;
+                const imageLink = data.image == null ? "/images/eventDefault.jpg" : data.image;
 
                 const dateString = EventDate(data.start_date, data.end_date);
 
