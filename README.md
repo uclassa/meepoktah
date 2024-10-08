@@ -2,7 +2,7 @@
 
 Hello! Meepoktah is the *best way* to have bak chor mee :yum: 
 
-It is also the 2022 revamp of the [UCLA Singapore Students' Association](www.uclassa.org) website. Check it out, learn more about SSA and join us for our events!
+It is also the 2022 revamp of the [UCLA Singapore Students' Association](https://www.uclassa.org) website. Check it out, learn more about SSA and join us for our events!
 
 The site is a React SPA served by a Node HTTP server, with styling implemented largely using [Styled components](https://styled-components.com/). Event data is hosted on our PostgreSQL database.
 
