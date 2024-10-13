@@ -8,7 +8,7 @@ export const getPastEvents = async () => {
     */
 
     try {
-        const res = await http.get('/events');
+        const res = await http.get('/events/');
         const data = res.data.filter(
             event => new Date(event.start_date) < new Date()
         ).sort(
@@ -25,7 +25,7 @@ export const getPastEvents = async () => {
 
 export const getUpcomingEvents = async () => {
     try {
-        const res = await http.get('/events');
+        const res = await http.get('/events/');
         const data = res.data.filter(
             event => new Date(event.start_date) > new Date()
                   ||(new Date(event.start_date) === new Date())

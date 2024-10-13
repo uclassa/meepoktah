@@ -24,7 +24,7 @@ export default function InfiniteCarousel(props) {
 
 // wrap the carousel, adding border radius
 const CarouselWrapper = styled.div`
-  height: 50vh;
+  aspect-ratio: 4/3;
   width: 80%;
   object-fit: cover;
   border-radius: 32px;
