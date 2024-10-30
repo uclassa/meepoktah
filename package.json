@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "meepoktah",
   "version": "0.2.0",
   "description": "UCLA SSA Portal",
