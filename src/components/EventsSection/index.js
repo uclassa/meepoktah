@@ -12,27 +12,21 @@ import {
     InstagramLink
 } from './EventElements'
 import EventList from './EventList'
-import {
-    getUpcomingEvents,
-    getPastEvents
-} from "../../services/eventsApi"
+import { getEvents } from "../../services/eventsApi"
 
 const EventsSection = () => {
 
   const [upcomingEvents, setUpcomingEvents] = useState();
-  const _handleGetUpcomingEvents = async () => {
-    const res = await getUpcomingEvents()
-    setUpcomingEvents(res.data)
-  }
   const [pastEvents, setPastEvents] = useState();
-  const _handleGetPastEvents = async () => {
-    const res = await getPastEvents()
-    setPastEvents(res.data)
+
+  const _handleGetEvents = async () => {
+    const res = await getEvents();
+    setUpcomingEvents(res.upcoming);
+    setPastEvents(res.past);
   }
 
   useEffect(() => {
-    _handleGetUpcomingEvents();
-    _handleGetPastEvents();
+    _handleGetEvents();
   }, []);
 
   return (

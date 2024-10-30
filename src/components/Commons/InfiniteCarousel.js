@@ -14,7 +14,8 @@ export default function InfiniteCarousel(props) {
         showStatus={false} 
         showIndicators={false} 
         showArrows={false} 
-        infiniteLoop={true} 
+        infiniteLoop={true}
+        showThumbs={false}
       >
         {props.children}
       </Carousel>
