@@ -12,7 +12,7 @@ import {
     ArrowForward,
     ArrowRight,
 } from './HeroElements'
-import heroVideo from '../../videos/hero.mp4'
+import heroVideo from '/videos/hero.mp4'
 
 
 const Hero = () => {
