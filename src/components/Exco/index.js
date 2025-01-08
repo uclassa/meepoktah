@@ -50,10 +50,8 @@ function ExcoMember({data}) {
   return (
     <ExcoCard>
       <ExcoInfo onMouseOver={() => { if (data.alt_photo !== null) setDisplayAlt(true);}} onMouseOut={() => setDisplayAlt(false)}>
-        { displayAlt
-          ? <ExcoPhoto src={data.alt_photo} alt={data.alt}/>
-          : <ExcoPhoto src={data.photo} alt={data.alt}/>
-        }
+        <ExcoPhoto src={data.alt_photo} alt={data.alt} style={{display: displayAlt ? "block" : "none"}} />
+        <ExcoPhoto src={data.photo} alt={data.alt} style={{display: displayAlt ? "none" : "block"}} />
         <ExcoH2>{data.name}</ExcoH2>
         <ExcoP>{data.role}</ExcoP>
         <ExcoH4>{data.major} {data.year}</ExcoH4>
