@@ -1,6 +1,6 @@
 import React from 'react'
-import { useState } from 'react'
-import { excoData } from './ExcoData'
+import { useState, useEffect } from 'react'
+import http from '../../services/httpCommon'
 import {
   ExcoContainer,
   ExcoHeader,
@@ -16,10 +16,19 @@ import {
 
 
 const Exco = () => {
+  const [excoData, setExcoData] = useState([]);
 
-  const [excoPhotos, setExcoPhotos] = useState(excoData.map((data) => {
-    return {photo: data.photo, altPhoto: data.altPhoto}
-  }));
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const res = await http.get('/exco/');
+        setExcoData(res.data);
+      } catch (error) {
+        console.log(error);
+      };
+    }
+    fetchData();
+  }, []);
 
   return (
     <ExcoContainer id="team">
@@ -28,42 +37,28 @@ const Exco = () => {
         <ExcoWrapper>
           { 
             excoData.length > 0 ?
-            excoData.map((data, index) => {
-
-              // Switches the photo to the alt photo when hovered over
-              const handleMouseOver = (e) => {
-                const newExcoPhotos = [...excoPhotos];
-                if (newExcoPhotos[index].altPhoto.length < 1) {
-                  return;
-                }
-                newExcoPhotos[index].photo = data.altPhoto;
-                newExcoPhotos[index].altPhoto = data.photo;
-                setExcoPhotos(newExcoPhotos);
-              }
-
-              const handleMouseOut = (e) => {
-                const newExcoPhotos = [...excoPhotos];
-                newExcoPhotos[index].photo = data.photo;
-                newExcoPhotos[index].altPhoto = data.altPhoto;
-                setExcoPhotos(newExcoPhotos);
-              }
-
-              const image = excoPhotos[index].photo;
-
-              return (
-                <ExcoCard key={index}>
-                  <ExcoInfo>
-                    <ExcoPhoto src={image} alt={data.alt} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}/>
-                    <ExcoH2>{data.name}</ExcoH2>
-                    <ExcoP>{data.role}</ExcoP>
-                    <ExcoH4>{data.major} {data.year}</ExcoH4>
-                  </ExcoInfo>
-                </ExcoCard>
-              )
-            }) : <></>
+            excoData.map((data, index) => <ExcoMember data={data} key={index}/>) : <></>
           }
         </ExcoWrapper>
     </ExcoContainer>
+  )
+}
+
+function ExcoMember({data}) {
+  const [displayAlt, setDisplayAlt] = useState(false);
+
+  return (
+    <ExcoCard>
+      <ExcoInfo onMouseOver={() => { if (data.alt_photo !== null) setDisplayAlt(true);}} onMouseOut={() => setDisplayAlt(false)}>
+        { displayAlt
+          ? <ExcoPhoto src={data.alt_photo} alt={data.alt}/>
+          : <ExcoPhoto src={data.photo} alt={data.alt}/>
+        }
+        <ExcoH2>{data.name}</ExcoH2>
+        <ExcoP>{data.role}</ExcoP>
+        <ExcoH4>{data.major} {data.year}</ExcoH4>
+      </ExcoInfo>
+    </ExcoCard>
   )
 }
 
