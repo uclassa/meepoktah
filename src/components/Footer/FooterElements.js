@@ -92,7 +92,7 @@ export const FooterExternalLink = styled.a`
 export const FooterLogo = styled.img`
     object-fit: cover;
     height: 100px;
-    width: 100px;
+    width: auto;
     transition: 0.1s ease-in-out;
 
     &:hover {
