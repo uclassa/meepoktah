@@ -19,6 +19,7 @@
     "styled-components": "5.3.5"
   },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "start": "npx http-server ./dist",
     "dev": "vite dev",
     "build": "vite build",
