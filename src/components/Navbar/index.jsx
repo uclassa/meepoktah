@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { animateScroll as scroll } from 'react-scroll'
 import { FaBars } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib'
@@ -23,7 +23,9 @@ const Navbar = ({toggle}) => {
         setNavBG(false);
     }
   }
-  window.addEventListener('scroll', changeNavBG);
+  useEffect(() => {
+    window.addEventListener('scroll', changeNavBG);
+  });
 
   const returnHome = () => {
     scroll.scrollToTop();
@@ -34,7 +36,7 @@ const Navbar = ({toggle}) => {
    <IconContext.Provider value={{color: '#fff'}}>
     <Nav $navBG={navBG}>
         <NavbarContainer>
-            <NavLogo to="/" onClick={returnHome}>
+            <NavLogo onClick={returnHome}>
                 <img src="/images/ssaLogo.png" height="75px" alt={"UCLA SSA"}/>
             </NavLogo>
             <MobileIcon onClick={toggle}>
