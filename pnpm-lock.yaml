@@ -11,6 +11,9 @@ importers:
       axios:
         specifier: ^1.7.7
         version: 1.7.7
+      babel-plugin-styled-components:
+        specifier: ^2.1.4
+        version: 2.1.4(@babel/core@7.26.0)(styled-components@5.3.5(@babel/core@7.26.0)(react-dom@18.3.1(react@18.3.1))(react-is@17.0.2)(react@18.3.1))(supports-color@5.5.0)
       react:
         specifier: ^18.2.0
         version: 18.3.1
