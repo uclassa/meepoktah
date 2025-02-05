@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Colors from "../styles.js";
+import Colors from "../styles";
 
 export const PartnershipsContainer = styled.div`
   background: ${Colors.offWhite};
