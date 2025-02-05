@@ -13,7 +13,7 @@ import {
 
 const Sidebar = ({isOpen, toggle}) => {
   return (
-    <SidebarContainer isOpen={isOpen}>
+    <SidebarContainer $isOpen={isOpen}>
         <SidebarWrapper>
             <SidebarMenu>
             <NavItem>

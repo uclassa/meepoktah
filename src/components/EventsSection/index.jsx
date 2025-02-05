@@ -20,9 +20,13 @@ const EventsSection = () => {
   const [pastEvents, setPastEvents] = useState();
 
   const _handleGetEvents = async () => {
-    const res = await getEvents();
-    setUpcomingEvents(res.upcoming);
-    setPastEvents(res.past);
+    try {
+        const res = await getEvents();
+        setUpcomingEvents(res.upcoming);
+        setPastEvents(res.past);
+    } catch (error) {
+        console.log(error);
+    }
   }
 
   useEffect(() => {
@@ -60,7 +64,7 @@ const EventsSection = () => {
                         <Button
                             href={import.meta.env.VITE_INSTAGRAM_LINK}
                             target="_blank"
-                            fontBig = '1'
+                            $fontBig = '1'
                         > Stalk Us! </Button>
                     </EventsCenteredBox>
                 </EventsWrapper>

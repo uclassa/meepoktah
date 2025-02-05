@@ -23,14 +23,14 @@ const Partnerships = () => {
   return (
     <PartnershipsContainer id="partnerships">
       <PartnershipsWrapper>
-        <PartnershipsRow imgStart={false}>
+        <PartnershipsRow $imgStart={false}>
           <Column1>
             <TextWrapper>
               <TopLine>Partnerships</TopLine>
               <Heading>We are open to working with your organisation!</Heading>
               <Subtitle>{subtitleString}</Subtitle>
               <BtnWrap>
-                <Button href="mailto:ssa.uclabruins@gmail.com" primary={false}>Contact Us!</Button>
+                <Button href="mailto:ssa.uclabruins@gmail.com" $primary={false}>Contact Us!</Button>
               </BtnWrap>
             </TextWrapper>
           </Column1>

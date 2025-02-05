@@ -46,8 +46,8 @@ const Hero = () => {
                         target='_blank'
                         onMouseEnter={onHover} 
                         onMouseLeave={onHover}
-                        primary="true"
-                        dark="true">
+                        $primary={true}
+                        $dark={true}>
                     Join Us! {hover ? <ArrowForward /> : <ArrowRight />}
                 </Button>
             </HeroBtnWrapper>

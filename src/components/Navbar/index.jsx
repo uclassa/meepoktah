@@ -32,7 +32,7 @@ const Navbar = ({toggle}) => {
   return (
    <>
    <IconContext.Provider value={{color: '#fff'}}>
-    <Nav navBG={navBG}>
+    <Nav $navBG={navBG}>
         <NavbarContainer>
             <NavLogo to="/" onClick={returnHome}>
                 <img src="/images/ssaLogo.png" height="75px" alt={"UCLA SSA"}/>

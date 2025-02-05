@@ -24,14 +24,14 @@ const Introduction = () => {
   return (
     <IntroductionContainer id="about">
       <IntroductionWrapper>
-        <IntroductionRow imgStart={false}>
+        <IntroductionRow $imgStart={false}>
           <Column1>
             <TextWrapper>
               <TopLine>Who are we?</TopLine>
               <Heading>We are the Singapore Students' Association at UCLA!</Heading>
               <Subtitle>{subtitleString}</Subtitle>
               <BtnWrap>
-                <Button href={import.meta.env.VITE_DISCORD_LINK} primary={false}>Discord!</Button>
+                <Button href={import.meta.env.VITE_DISCORD_LINK} $primary={false}>Discord!</Button>
               </BtnWrap>
             </TextWrapper>
           </Column1>

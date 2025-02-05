@@ -11,8 +11,8 @@ export const SidebarContainer = styled.aside`
     display: grid;
     align-items: center;
     transition: 0.3s ease-in-out;
-    opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
-    top: ${({ isOpen }) => (isOpen ? '79px' : '-70%')};
+    opacity: ${({ $isOpen }) => ($isOpen ? '100%' : '0')};
+    top: ${({ $isOpen }) => ($isOpen ? '79px' : '-70%')};
 `
 
 export const SidebarWrapper = styled.div`

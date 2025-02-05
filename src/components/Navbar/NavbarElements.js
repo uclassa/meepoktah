@@ -5,7 +5,7 @@ import { Link as LinkScroll } from 'react-scroll'
 import Colors from '../styles'
 
 export const Nav = styled.nav`
-    background: ${({navBG}) => (navBG ? Colors.red : 'transparent')};
+    background: ${({$navBG}) => ($navBG ? Colors.red : 'transparent')};
     transition: all 0.2s ease-in;
     height: 80px;
     margin-top: -80px;

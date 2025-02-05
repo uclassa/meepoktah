@@ -142,7 +142,7 @@ export const BtnWrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: ${ props => props.color || Colors.red};
+    background: ${({$color}) => $color || Colors.red};
     width: 60px;
     height: 60px;
     border-radius: 60px;
