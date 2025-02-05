@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 import Colors from '../styles'
 
 export const ExcoContainer = styled.div`

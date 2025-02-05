@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 import { Link as LinkRouter } from 'react-router-dom'
 import Colors from '../styles'
 
