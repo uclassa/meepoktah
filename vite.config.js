@@ -11,4 +11,9 @@ export default defineConfig({
     }),
     vike()
   ],
+  ssr: {
+    noExternal: [
+      "react-icons"
+    ]
+  }
 })
