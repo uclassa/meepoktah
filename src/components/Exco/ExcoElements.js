@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import Colors from '../styles.js'
+import { styled } from 'styled-components'
+import Colors from '../styles'
 
 export const ExcoContainer = styled.div`
     height: fit-content;

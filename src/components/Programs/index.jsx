@@ -10,10 +10,10 @@ import {
   Subtitle,
   BtnWrap,
   Img,
-} from './ProgramsElements.js'
-import InfiniteCarousel from '../Commons/InfiniteCarousel.js'
-import {Button} from '../Commons/ButtonElement.js'
-import Emoji from '../Commons/Emojis.js'
+} from './ProgramsElements'
+import InfiniteCarousel from '../Commons/InfiniteCarousel'
+import {Button} from '../Commons/ButtonElement'
+import Emoji from '../Commons/Emojis'
 
 const basePath = "/images/fams/"
 

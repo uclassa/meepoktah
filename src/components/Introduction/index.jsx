@@ -12,8 +12,8 @@ import {
   BtnWrap,
   ImgWrap,
   Img
-} from './IntroductionElements.js'
-import {Button} from '../Commons/ButtonElement.js'
+} from './IntroductionElements'
+import {Button} from '../Commons/ButtonElement'
 
 const Introduction = () => {
 

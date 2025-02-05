@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 import { Link as LinkRouter } from 'react-router-dom'
 import { Link as LinkScroll } from 'react-scroll'
 
-import Colors from '../styles.js'
+import Colors from '../styles'
 
 export const Nav = styled.nav`
     background: ${({navBG}) => (navBG ? Colors.red : 'transparent')};
@@ -31,7 +31,6 @@ export const NavbarContainer = styled.div`
     height: 80px;
     z-index: 1;
     width: 70%;
-    padding: 0 24px:
     max-width: 1100px;
 `;
 
@@ -52,7 +51,7 @@ export const MobileIcon = styled.div`
 
     @media screen and (max-width: 768px){
         display: block;
-        position: absolute:
+        position: absolute;
         top: 0;
         right: 0;
         transform: translate(-100%, 35%);

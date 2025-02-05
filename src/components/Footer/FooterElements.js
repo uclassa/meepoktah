@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 import { Link } from 'react-router-dom'
-import Colors from '../styles.js'
+import Colors from '../styles'
 
 export const FooterContainer = styled.footer`
     background: rgb(228,179,99);

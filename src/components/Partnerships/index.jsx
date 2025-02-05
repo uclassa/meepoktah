@@ -11,8 +11,8 @@ import {
   Subtitle,
   BtnWrap,
   Img
-} from './PartnershipsElements.js'
-import { Button } from '../Commons/ButtonElement.js'
+} from './PartnershipsElements'
+import { Button } from '../Commons/ButtonElement'
 
 const Partnerships = () => {
 
