@@ -3,6 +3,6 @@ import vikeReact from 'vike-react/config'
 // https://vike.dev/config
 
 export default {
-  stream: true,
+  stream: false, // fix for express
   extends: [vikeReact]
 }

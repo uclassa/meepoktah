@@ -9,7 +9,9 @@
     "node": "18.x"
   },
   "dependencies": {
+    "@universal-middleware/express": "^0.4.0",
     "axios": "^1.7.7",
+    "express": "^4.21.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "4.4.0",
@@ -22,9 +24,10 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "dev": "vike dev",
+    "start": "cross-env NODE_ENV=production node ./src/express-entry.js",
+    "dev": "node ./src/express-entry.js",
     "build": "vike build",
-    "preview": "vike preview"
+    "preview": "cross-env NODE_ENV=production node ./src/express-entry.js"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +51,8 @@
     "@testing-library/react": "^14.2.2",
     "@vitejs/plugin-react": "^4.2.1",
     "babel-plugin-styled-components": "^2.1.4",
-    "vite": "^5.2.7"
+    "cross-env": "^7.0.3",
+    "tsx": "^4.19.2",
+    "vite": "^6.1.0"
   }
 }
