@@ -1,59 +1,8 @@
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
-*.swp
-
-pids
-logs
-results
-tmp
-
-# Build
-public/css/main.css
-/dist
-/.parcel-cache
-
-# Coverage reports
-coverage
-
-# API keys and secrets
-.env
-mongoKey.js
-
-# Dependency directory
-node_modules
-bower_components
-
-# Editors
-.idea
-*.iml
-
-# OS metadata
 .DS_Store
-Thumbs.db
+/node_modules/
 
-# Ignore built ts files
-dist/**/*
+# React Router
+/.react-router/
+/build/
 
-# Ignore output from coverage report
-coverage
-
-.cache/
-
-dist/
-
-app.yaml
-
-service_token.json
-
-.gcloudignore
-.vscode
-.history/
-
-# MS photos metadata
-*Zone.Identifier
+.env
