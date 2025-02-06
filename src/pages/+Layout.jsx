@@ -4,9 +4,7 @@ import './Layout.css'
 export default function Layout({children}) {
     return (
         <StrictMode>
-            <div>
-                {children}
-            </div>
+            {children}
         </StrictMode>
     )
 }
