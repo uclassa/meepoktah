@@ -1,21 +1,4 @@
-import { useState, useEffect } from "react";
-import http from "../services/httpCommon";
-
-const Exco = () => {
-    const [excoData, setExcoData] = useState([]);
-
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                const res = await http.get("/exco/");
-                setExcoData(res.data);
-            } catch (error) {
-                console.log(error);
-            }
-        }
-        fetchData();
-    }, []);
-
+const Exco = ({excoData}: {excoData: Object[]}) => {
     return (
         <div
             id="team"
@@ -28,7 +11,7 @@ const Exco = () => {
             <h3 className="mb-9 text-red italic">
                 Our association is built by our community
             </h3>
-            {excoData.length > 0 && (
+            {excoData?.length > 0 && (
                 <div className="max-w-[1400px] grid md:grid-cols-2 xl:grid-cols-3 items-center gap-4 py-2.5">
                     {excoData.map((data, index) => (
                         <ExcoMember data={data} key={index} />

@@ -1,27 +1,9 @@
-import { useEffect, useState } from "react";
 import Emoji from "../Commons/Emojis";
 import Button from "../Commons/Button";
-import { getEvents } from "../../services/eventsApi";
 import './Events.scss'
 
-export default function EventsSection() {
-    const [upcomingEvents, setUpcomingEvents] = useState([]);
-    const [pastEvents, setPastEvents] = useState([]);
-
-    const _handleGetEvents = async () => {
-        try {
-            const res = await getEvents();
-            setUpcomingEvents(res.upcoming);
-            setPastEvents(res.past);
-        } catch (error) {
-            console.log(error);
-        }
-    };
-
-    useEffect(() => {
-        _handleGetEvents();
-    }, []);
-
+export default function EventsSection({upcomingEvents, pastEvents}: {upcomingEvents: Object[], pastEvents: Object[]}) {
+    
     return (
         <div id="events" className="events-container flex flex-col max-w-[1100px] mx-auto items-center pb-[50px] p-5 md:-mt-12 xl:mt-0 text-darkblue">
             <h1> Our Events </h1>
@@ -30,7 +12,7 @@ export default function EventsSection() {
                 {" "}
                 <Emoji symbol="🙌" /> Upcoming Events{" "}
             </h2>
-            {upcomingEvents.length > 0 ? (
+            {upcomingEvents?.length > 0 ? (
                 <EventList events={upcomingEvents} />
             ) : (
                 <p className="text-center leading-[1.3]">
@@ -46,7 +28,7 @@ export default function EventsSection() {
                 </p>
             )}
             <h2> A couple of our past events</h2>
-            {pastEvents.length > 0 && <EventList events={pastEvents} />}
+            {pastEvents?.length > 0 && <EventList events={pastEvents} />}
             <div className="flex flex-col items-center">
                 <p className="text-center leading-[1.3]">
                     {" "}

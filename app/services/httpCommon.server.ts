@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const DJANGO_API = import.meta.env.VITE_DJANGO_API;
+const DJANGO_API = process.env.VITE_DJANGO_API;
 
 /*
   Axios instance where we will call HTTP methods from.

@@ -1,4 +1,4 @@
-import http from "./httpCommon";
+import http from "./httpCommon.server";
 
 export const getEvents = async () => {
     try {

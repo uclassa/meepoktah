@@ -1,4 +1,3 @@
-import React from "react";
 
 /*
     Can find emojis here: https://www.freecodecamp.org/news/all-emojis-emoji-list-for-copy-and-paste/
