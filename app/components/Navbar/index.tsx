@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { animateScroll as scroll, Link as LinkScroll } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
@@ -15,7 +15,14 @@ export default function Navbar({
     const navbar = useRef(null);
 
     useEffect(() => {
-        window.addEventListener("scroll", () => console.log(navbar.current));
+        window.addEventListener("scroll", () => {
+            if (!navbar.current) return;
+            const navbarElement = navbar.current as HTMLElement;
+            if (window.scrollY >= 700)
+                navbarElement.classList.add("bg-red");
+            else
+                navbarElement.classList.remove("bg-red");
+        });
     });
 
     return (
@@ -27,7 +34,7 @@ export default function Navbar({
                     top: isOpen ? "79px" : "-70%",
                 }}
             >
-                <div className="flex flex-col items-end m-6 gap-4">
+                <div className="flex flex-col items-end m-6 gap-4 md:hidden">
                     <NavItems />
                 </div>
             </aside>

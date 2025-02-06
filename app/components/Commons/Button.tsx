@@ -17,7 +17,7 @@ export default function Button(props: any) {
 
     return (
         <div
-            className={`rounded-[50px] whitespace-nowrap outline-none border-none cursor-pointer flex justify-center items-center ${padding} ${fontsize} ${bg} ${text} transition duration-200 ease-in-out ${bgHover} ${textHover}`}
+            className={`rounded-[50px] whitespace-nowrap w-max outline-none border-none cursor-pointer flex justify-center items-center ${padding} ${fontsize} ${bg} ${text} transition duration-200 ease-in-out ${bgHover} ${textHover}`}
             {...restprops}
         >
             {children}

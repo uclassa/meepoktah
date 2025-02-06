@@ -30,7 +30,7 @@ export default function Hero() {
             <div className='hero-content'>
                 <h1> SINGAPORE STUDENTS' ASSOCIATION </h1>
                 <p> <Emoji symbol="👋" /> Hello! Welcome to SSA, a tight-knit community that welcomes everyone! </p>
-                <div className='hero-button-wrapper'>
+                <div className='mt-4.5'>
                     <Button onMouseEnter={onHover}
                         onMouseLeave={onHover}
                         primary={true}>

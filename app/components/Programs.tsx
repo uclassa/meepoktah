@@ -18,17 +18,15 @@ const Programs = () => {
                     </p>
                     <h1 className="mb-6 text-[32px] md:text-5xl leading-[1.1] font-semibold">FAMILY SYSTEM</h1>
                     <p className="font-inter font-medium mb-[35px] text-[1.3rem] leading-[2.5rem]">{fams}</p>
-                    <div className="flex justify-start mx-auto">
-                        <Button>
-                            <a
-                                href={import.meta.env.VITE_FAM_SIGNUP}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Sign up
-                            </a>
-                        </Button>
-                    </div>
+                    <Button>
+                        <a
+                            href={import.meta.env.VITE_FAM_SIGNUP}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Sign up
+                        </a>
+                    </Button>
                 </div>
                 <div className="p-7.5 max-w-[540px] col-end-2 m-auto lg:row-end-2">
                     <InfiniteCarousel>

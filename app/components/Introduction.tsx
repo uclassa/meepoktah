@@ -19,16 +19,14 @@ const Introduction = () => {
                         UCLA!
                     </h1>
                     <p className="font-inter font-medium max-w-[440px] mb-[35px] text-[1.3rem] leading-[2.2rem]">{subtitleString}</p>
-                    <div className="flex justify-start mx-auto">
-                        <Button>
-                            <a
-                                href={import.meta.env.VITE_DISCORD_LINK}
-                                target="_blank"
-                            >
-                                Discord!
-                            </a>
-                        </Button>
-                    </div>
+                    <Button>
+                        <a
+                            href={import.meta.env.VITE_DISCORD_LINK}
+                            target="_blank"
+                        >
+                            Discord!
+                        </a>
+                    </Button>
                 </div>
                 <div className="p-7.5 col-auto lg:col-start-2 max-w-[540px] m-auto">
                     <img className="w-full rounded-[32px]" src="/images/introImg.jpg" alt="vision" />
