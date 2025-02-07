@@ -1,7 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useContext } from "react";
 import { animateScroll as scroll, Link as LinkScroll } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
+import { envContext } from "../Commons/Contexts";
 
 import "./Navbar.scss";
 
@@ -67,6 +68,7 @@ export default function Navbar({
 }
 
 function NavItems() {
+    const env = useContext(envContext);
     return (
         <>
             <li>
@@ -120,7 +122,7 @@ function NavItems() {
             <li>
                 <a
                     className="link"
-                    href={import.meta.env.VITE_MEMBERSHIP_CARD_LINK}
+                    href={env.VITE_MEMBERSHIP_CARD_LINK}
                     target="_blank"
                 >
                     Membership
@@ -129,7 +131,7 @@ function NavItems() {
             <li>
                 <a
                     className="link"
-                    href={import.meta.env.VITE_SOTONG_GUIDE}
+                    href={env.VITE_SOTONG_GUIDE}
                     target="_blank"
                 >
                     Sotong Guide

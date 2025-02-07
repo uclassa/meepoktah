@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import Button from "./Commons/Button";
+import { envContext } from "./Commons/Contexts";
 
 const Introduction = () => {
+    const env = useContext(envContext);
+
     let subtitleString =
         "A thriving community of Singaporeans at UCLA, we welcome everyone! " +
         "Whether you're Singaporean, lived in Singapore, or think Singapore is really cool, we'd love to have you join us! " +
@@ -21,7 +25,7 @@ const Introduction = () => {
                     <p className="font-inter font-medium max-w-[440px] mb-[35px] text-[1.3rem] leading-[2.2rem]">{subtitleString}</p>
                     <Button>
                         <a
-                            href={import.meta.env.VITE_DISCORD_LINK}
+                            href={env.VITE_DISCORD_LINK}
                             target="_blank"
                         >
                             Discord!

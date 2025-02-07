@@ -1,10 +1,13 @@
 import InfiniteCarousel from "./Commons/InfiniteCarousel";
 import Emoji from "./Commons/Emojis";
 import Button from "./Commons/Button";
+import { useContext } from "react";
+import { envContext } from "./Commons/Contexts";
 
 const basePath = "/images/fams/";
 
 const Programs = () => {
+    const env = useContext(envContext);
     const fams =
         "Our family system is a great way to meet new people and make friends! You will be placed in a family with other members and a family head. You will be able to participate in fun events and activities with your family throughout the year!";
 
@@ -20,7 +23,7 @@ const Programs = () => {
                     <p className="font-inter font-medium mb-[35px] text-[1.3rem] leading-[2.5rem]">{fams}</p>
                     <Button>
                         <a
-                            href={import.meta.env.VITE_FAM_SIGNUP}
+                            href={env.VITE_FAM_SIGNUP}
                             target="_blank"
                             rel="noopener noreferrer"
                         >

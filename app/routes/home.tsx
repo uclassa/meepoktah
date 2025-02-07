@@ -1,5 +1,5 @@
 import type { Route } from "./+types/home";
-import { useState } from "react";
+import { createContext, useState } from "react";
 
 import Navbar from "~/components/Navbar";
 import Hero from "~/components/Hero";
@@ -12,6 +12,7 @@ import Footer from "~/components/Footer";
 import { getEvents } from "~/services/eventsApi.server";
 import httpCommon from "~/services/httpCommon.server";
 import { useLoaderData } from "react-router";
+import { envContext } from "~/components/Commons/Contexts";
 
 export function meta({}: Route.MetaArgs) {
     return [
@@ -25,18 +26,28 @@ export async function loader() {
     const exco = await httpCommon.get('/exco/');
     return {
         events,
-        exco: exco.data
+        exco: exco.data,
+        env: {
+            VITE_INSTAGRAM_LINK: process.env.VITE_INSTAGRAM_LINK,
+            VITE_DISCORD_LINK: process.env.VITE_DISCORD_LINK,
+            VITE_MEMBERSHIP_CARD_LINK: process.env.VITE_MEMBERSHIP_CARD_LINK,
+            VITE_GITHUB_LINK: process.env.VITE_GITHUB_LINK,
+            VITE_MAILCHIMP: process.env.VITE_MAILCHIMP,
+            VITE_FAM_SIGNUP: process.env.VITE_FAM_SIGNUP,
+            VITE_SGN_JOIN_LINK: process.env.VITE_SGN_JOIN_LINK,
+            VITE_SOTONG_GUIDE: process.env.VITE_SOTONG_GUIDE
+        }
     }
 }
 
 export default function Home() {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
-    const {events, exco} = useLoaderData<typeof loader>();
+    const {events, exco, env} = useLoaderData<typeof loader>();
     
 
     return (
-        <>
+        <envContext.Provider value={env}>
             <Navbar toggle={toggle} isOpen={isOpen} />
             <Hero />
             <Introduction />
@@ -45,6 +56,6 @@ export default function Home() {
             <Exco excoData={exco}/>
             <Partnerships/>
             <Footer/>
-        </>
+        </envContext.Provider>
     );
 }

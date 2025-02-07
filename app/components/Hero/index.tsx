@@ -3,6 +3,8 @@ import Emoji from '../Commons/Emojis'
 import { MdArrowForward, MdKeyboardArrowRight } from 'react-icons/md'
 import heroVideo from '/videos/hero.mp4'
 import Button from '../Commons/Button'
+import { useContext } from 'react'
+import { envContext } from '../Commons/Contexts'
 import './Hero.scss';
 
 
@@ -16,6 +18,8 @@ export default function Hero() {
     const onHover = () => {
         setHover(!hover);
     }
+
+    const env = useContext(envContext);
 
     return (
         <div className='hero-container'>
@@ -34,7 +38,7 @@ export default function Hero() {
                     <Button onMouseEnter={onHover}
                         onMouseLeave={onHover}
                         primary={true}>
-                        <a href={import.meta.env.VITE_DISCORD_LINK}
+                        <a href={env.VITE_DISCORD_LINK}
                             target='_blank' />
                         Join Us! {hover ? <MdArrowForward className='ml-2 text-xl' /> : <MdKeyboardArrowRight className='ml-2 text-xl' />}
                     </Button>
