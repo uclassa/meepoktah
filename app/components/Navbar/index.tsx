@@ -16,14 +16,16 @@ export default function Navbar({
     const navbar = useRef(null);
 
     useEffect(() => {
-        window.addEventListener("scroll", () => {
+        const updateBG = () => {
             if (!navbar.current) return;
             const navbarElement = navbar.current as HTMLElement;
             if (window.scrollY >= 700)
                 navbarElement.classList.add("bg-red");
             else
                 navbarElement.classList.remove("bg-red");
-        });
+        }
+        window.addEventListener("scroll", updateBG);
+        updateBG();
     });
 
     return (

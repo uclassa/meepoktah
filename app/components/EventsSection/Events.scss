@@ -42,11 +42,11 @@
     .event-card {
         display: flex;
         flex-direction: row;
-        background: #000;
         border-radius: 15px;
         border-color: var(--color-darkblue);
         border-style: solid;
         border-width: 1px;
+        background-color: #656565;
         height: 250px;
         width: 500px;
         margin-bottom: 20px;
@@ -76,6 +76,13 @@
             padding: 25px;
             position: absolute;
             overflow: hidden;
+            transition: all 0.2s ease;
+            background-color: rgba(0, 0, 0, 0.5);
+
+            &:hover {
+                background-color: unset;
+                opacity: 0;
+            }
 
             @media screen and (max-width: 48rem) {
                 padding: 10px;
@@ -86,7 +93,7 @@
                 max-width: 550px;
                 margin-bottom: 12px;
                 letter-spacing: 1px;
-        
+
                 @media screen and (max-width: 480px){
                     margin-bottom: 0;
                     font-size: 1rem;

@@ -75,7 +75,7 @@ function EventCard(data, index) {
     return (
         <div key={index} className="event-card">
             <img
-                className="w-full opacity-0.45 object-cover"
+                className="w-full object-cover"
                 src={imageLink}
                 alt="Picture of event"
             />
