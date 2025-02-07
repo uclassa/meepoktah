@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Asap", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-inter: "Inter", sans-serif;
+  --color-red: #CC3333;
+  --color-offwhite: #E8E9EB;
+  --color-grey: #E0E0E0;
+  --color-gold: #E4B363;
+  --color-darkblue: #0B0E24;
+  --color-navyblue: #192841;
+}
+
+html,
+body {
+  @apply bg-offwhite font-sans text-black;
+  line-height: normal;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}

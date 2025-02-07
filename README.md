@@ -1,39 +1,100 @@
-# :sparkles: Official website for UCLA SSA
+# Welcome to React Router!
 
-Hello! Meepoktah is the *best way* to have bak chor mee :yum: 
+A modern, production-ready template for building full-stack React applications using React Router.
 
-It is also the 2022 revamp of the [UCLA Singapore Students' Association](https://www.uclassa.org) website. Check it out, learn more about SSA and join us for our events!
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
 
-The site is a React SPA served by a Node HTTP server, with styling implemented largely using [Styled components](https://styled-components.com/). Event data is hosted on our PostgreSQL database.
+## Features
 
-## Development setup
-Local development is done using [Vite](https://vitejs.dev/).
+- 🚀 Server-side rendering
+- ⚡️ Hot Module Replacement (HMR)
+- 📦 Asset bundling and optimization
+- 🔄 Data loading and mutations
+- 🔒 TypeScript by default
+- 🎉 TailwindCSS for styling
+- 📖 [React Router docs](https://reactrouter.com/)
 
-Make sure you have [node version 18](https://nodejs.org/en/) installed before starting development. 
-It is recommended to use [nvm](https://github.com/nvm-sh/nvm) to easily switch between node versions.
+## Getting Started
 
-.env.template contains the environment variables needed to run the app. Create a .env file in the root directory and fill in the necessary values.
+### Installation
 
-Clone the repository:
-```
-git clone https://github.com/uclassa/meepoktah
-...
-cd meepoktah
+Install the dependencies:
+
+```bash
 npm install
 ```
-Use the following command to run the app on your local machine:
-```
+
+### Development
+
+Start the development server with HMR:
+
+```bash
 npm run dev
+```
+
+Your application will be available at `http://localhost:5173`.
+
+## Building for Production
+
+Create a production build:
+
+```bash
+npm run build
 ```
 
 ## Deployment
 
-The site is deployed on [Railway](https://railway.app/). Deployment is done automatically when changes are successfully merged to the main branch.
+### Docker Deployment
 
-To preview the site locally before deployment, you can run the following commands:
-```
-npm run build
-npm run preview
+This template includes three Dockerfiles optimized for different package managers:
+
+- `Dockerfile` - for npm
+- `Dockerfile.pnpm` - for pnpm
+- `Dockerfile.bun` - for bun
+
+To build and run using Docker:
+
+```bash
+# For npm
+docker build -t my-app .
+
+# For pnpm
+docker build -f Dockerfile.pnpm -t my-app .
+
+# For bun
+docker build -f Dockerfile.bun -t my-app .
+
+# Run the container
+docker run -p 3000:3000 my-app
 ```
 
-After creating a pull request, you can preview the changes on a temporary deployment on Railway.
+The containerized application can be deployed to any platform that supports Docker, including:
+
+- AWS ECS
+- Google Cloud Run
+- Azure Container Apps
+- Digital Ocean App Platform
+- Fly.io
+- Railway
+
+### DIY Deployment
+
+If you're familiar with deploying Node applications, the built-in app server is production-ready.
+
+Make sure to deploy the output of `npm run build`
+
+```
+├── package.json
+├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
+├── build/
+│   ├── client/    # Static assets
+│   └── server/    # Server-side code
+```
+
+## Styling
+
+This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+
+---
+
+Built with ❤️ using React Router.
