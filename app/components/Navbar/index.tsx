@@ -19,11 +19,9 @@ export default function Navbar({
         const updateBG = () => {
             if (!navbar.current) return;
             const navbarElement = navbar.current as HTMLElement;
-            if (window.scrollY >= 700)
-                navbarElement.classList.add("bg-red");
-            else
-                navbarElement.classList.remove("bg-red");
-        }
+            if (window.scrollY >= 700) navbarElement.classList.add("bg-red");
+            else navbarElement.classList.remove("bg-red");
+        };
         window.addEventListener("scroll", updateBG);
         updateBG();
     });
@@ -42,10 +40,7 @@ export default function Navbar({
                 </div>
             </aside>
             <IconContext.Provider value={{ color: "#fff" }}>
-                <nav
-                    className="navbar"
-                    ref={navbar}
-                >
+                <nav className="navbar" ref={navbar}>
                     <div className="flex justify-between h-20 w-7/10 max-w-[1100px]">
                         <div
                             className="cursor-pointer text-2xl ml-6 min-w-[75px] max-w-[75px] content-center"
@@ -126,6 +121,7 @@ function NavItems() {
                     className="link"
                     href={env.VITE_MEMBERSHIP_CARD_LINK}
                     target="_blank"
+                    rel="noreferrer"
                 >
                     Membership
                 </a>
@@ -135,6 +131,7 @@ function NavItems() {
                     className="link"
                     href={env.VITE_SOTONG_GUIDE}
                     target="_blank"
+                    rel="noreferrer"
                 >
                     Sotong Guide
                 </a>

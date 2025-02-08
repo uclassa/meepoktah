@@ -6,7 +6,9 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "lint": "pnpm exec eslint",
+    "format": "pnpm exec prettier . --write"
   },
   "dependencies": {
     "@react-router/node": "^7.1.5",
@@ -21,17 +23,29 @@
     "react-scroll": "^1.9.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.19.0",
     "@react-router/dev": "^7.1.5",
     "@tailwindcss/vite": "^4.0.0",
     "@types/node": "^20",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
     "@types/react-scroll": "^1.8.10",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
     "react-router-devtools": "^1.1.0",
     "sass-embedded": "^1.83.4",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.7.2",
+    "typescript-eslint": "^8.23.0",
     "vite": "^6.1.0",
     "vite-tsconfig-paths": "^5.1.4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }

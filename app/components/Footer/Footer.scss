@@ -1,6 +1,12 @@
 .footer-container {
-    background: rgb(228,179,99);
-    background: linear-gradient(19deg, rgba(228,179,99,1) 0%, rgba(252,180,63,1) 39%, rgba(245,190,101,1) 72%, rgba(255,199,107,1) 100%);
+    background: rgb(228, 179, 99);
+    background: linear-gradient(
+        19deg,
+        rgba(228, 179, 99, 1) 0%,
+        rgba(252, 180, 63, 1) 39%,
+        rgba(245, 190, 101, 1) 72%,
+        rgba(255, 199, 107, 1) 100%
+    );
 
     p {
         color: var(--color-navyblue);

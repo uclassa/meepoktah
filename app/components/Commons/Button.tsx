@@ -1,5 +1,12 @@
-export default function Button(props: any) {
-    let { primary, big, fontBig, children, ...restprops } = props;
+export default function Button(
+    props: React.PropsWithChildren & {
+        primary?: boolean;
+        big?: boolean;
+        fontBig?: boolean;
+        [key: string]: unknown;
+    },
+) {
+    const { primary, big, fontBig, children, ...restprops } = props;
     let bg, bgHover, text, textHover;
     if (primary) {
         bg = "bg-offwhite";

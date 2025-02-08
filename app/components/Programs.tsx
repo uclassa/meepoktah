@@ -19,8 +19,12 @@ const Programs = () => {
                         <Emoji symbol={"🤗"} />
                         Join a family!
                     </p>
-                    <h1 className="mb-6 text-[32px] md:text-5xl leading-[1.1] font-semibold">FAMILY SYSTEM</h1>
-                    <p className="font-inter font-medium mb-[35px] text-[1.3rem] leading-[2.5rem]">{fams}</p>
+                    <h1 className="mb-6 text-[32px] md:text-5xl leading-[1.1] font-semibold">
+                        FAMILY SYSTEM
+                    </h1>
+                    <p className="font-inter font-medium mb-[35px] text-[1.3rem] leading-[2.5rem]">
+                        {fams}
+                    </p>
                     <Button>
                         <a
                             href={env.VITE_FAM_SIGNUP}

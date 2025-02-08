@@ -1,4 +1,4 @@
-const Exco = ({excoData}: {excoData: Object[]}) => {
+const Exco = ({ excoData }: { excoData: Record<string, string>[] }) => {
     return (
         <div
             id="team"
@@ -22,7 +22,7 @@ const Exco = ({excoData}: {excoData: Object[]}) => {
     );
 };
 
-function ExcoMember({ data }: any) {
+function ExcoMember({ data }: { data: Record<string, string> }) {
     return (
         <div className="bg-darkblue text-offwhite flex flex-col w-[320px] rounded-2xl overflow-hidden items-center">
             <div className="grid grid-cols-1 grid-rows-1 h-[320px] overflow-hidden top-0 items-center justify-items-center">

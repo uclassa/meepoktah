@@ -2,15 +2,10 @@ import Emoji from "../Commons/Emojis";
 import Button from "../Commons/Button";
 import { useContext } from "react";
 import { envContext } from "../Commons/Contexts";
+import type { Events, Event } from "~/services/eventsApi.server";
 import "./Events.scss";
 
-export default function EventsSection({
-    upcomingEvents,
-    pastEvents,
-}: {
-    upcomingEvents: Object[];
-    pastEvents: Object[];
-}) {
+export default function EventsSection({ upcoming, past }: Partial<Events>) {
     const env = useContext(envContext);
 
     return (
@@ -24,8 +19,8 @@ export default function EventsSection({
                 {" "}
                 <Emoji symbol="🙌" /> Upcoming Events{" "}
             </h2>
-            {upcomingEvents?.length > 0 ? (
-                <EventList events={upcomingEvents} />
+            {upcoming && upcoming?.length > 0 ? (
+                <EventList events={upcoming} />
             ) : (
                 <p className="text-center leading-[1.3]">
                     No upcoming events for now. Check out our
@@ -33,6 +28,7 @@ export default function EventsSection({
                         className="bg-red p-[1px] rounded-[5px] m-1 text-offwhite transition duration-200 ease hover:bg-gold hover:text-black cursor-pointer"
                         href={env.VITE_INSTAGRAM_LINK}
                         target="_blank"
+                        rel="noreferrer"
                     >
                         Instagram
                     </a>
@@ -40,7 +36,7 @@ export default function EventsSection({
                 </p>
             )}
             <h2> A couple of our past events</h2>
-            {pastEvents?.length > 0 && <EventList events={pastEvents} />}
+            {past && past?.length > 0 && <EventList events={past} />}
             <div className="flex flex-col items-center">
                 <p className="text-center leading-[1.3]">
                     {" "}
@@ -51,6 +47,7 @@ export default function EventsSection({
                     <a
                         href={env.VITE_INSTAGRAM_LINK}
                         target="_blank"
+                        rel="noreferrer"
                     >
                         Stalk Us!
                     </a>{" "}
@@ -60,17 +57,17 @@ export default function EventsSection({
     );
 }
 
-const EventList = ({ events }) => (
+const EventList = ({ events }: { events: Event[] }) => (
     <div className="text-offwhite grid auto-cols-fr grid-cols-1 xl:grid-cols-2 gap-6 max-w-[1400px] items-center">
         {events.map(EventCard)}
     </div>
 );
 
-function EventCard(data, index) {
+function EventCard(props: Event, index: number) {
     const imageLink =
-        data.image == null ? "/images/eventDefault.jpg" : data.image;
+        props?.image == null ? "/images/eventDefault.jpg" : props.image;
 
-    const date = new Date(data.start_date);
+    const date = new Date(props.start_date);
 
     return (
         <div key={index} className="event-card">
@@ -79,13 +76,20 @@ function EventCard(data, index) {
                 src={imageLink}
                 alt="Picture of event"
             />
-            <a className="event-text-wrapper" href={data.link} target="_blank">
+            <a
+                className="event-text-wrapper"
+                href={props.link ?? "javascript:"}
+                target="_blank"
+                rel="noreferrer"
+            >
                 <p className="">
                     {" "}
-                    {date.toDateString()} | {data.venue}
+                    {date.toDateString()} | {props.venue}
                 </p>
-                <h3 className="text-2xl md:text-5xl">{data.title}</h3>
-                {date > new Date() && <p>{data.description}</p>}
+                <h3 className="text-2xl md:text-5xl">{props.title}</h3>
+                {date.getTime() > new Date().getTime() && (
+                    <p>{props.description}</p>
+                )}
             </a>
         </div>
     );

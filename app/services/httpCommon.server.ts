@@ -7,9 +7,10 @@ const DJANGO_API = process.env.VITE_DJANGO_API;
   Import into service file before writing request functions.
 */
 export default axios.create({
-  baseURL: DJANGO_API,
-  headers: {
-    "Accept": "application/json",
-    "Content-Type": "application/json",
-  },
+    baseURL: DJANGO_API,
+    headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+    },
+    timeout: 500,
 });
