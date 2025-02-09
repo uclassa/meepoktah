@@ -8,15 +8,15 @@ const Partnerships = () => {
 
     return (
         <div id="partnerships" className="flex items-center justify-center">
-            <div className="grid auto-cols-fr w-full max-w-[1100px] mx-auto px-6 pb-20 justify-center items-center pt-20 md:pt-40">
-                <div className="p-7.5 col-end-2 max-w-[540px] m-auto">
-                    <p className="leading-4 font-bold tracking-[1.4px] uppercase mb-4">
+            <div className="mx-auto grid w-full max-w-[1100px] auto-cols-fr items-center justify-center px-6 pt-20 pb-20 md:pt-40">
+                <div className="col-end-2 m-auto max-w-[540px] p-7.5">
+                    <p className="mb-4 leading-4 font-bold tracking-[1.4px] uppercase">
                         Partnerships
                     </p>
-                    <h1 className="mb-6 text-[32px] md:text-5xl leading-[1.1] font-semibold">
+                    <h1 className="mb-6 text-[32px] leading-[1.1] font-semibold md:text-5xl">
                         We are open to working with your organisation!
                     </h1>
-                    <p className="font-inter font-medium max-w-[440px] mb-[35px] text-[1.3rem] leading-[2.2rem]">
+                    <p className="mb-[35px] max-w-[440px] font-inter text-[1.3rem] leading-[2.2rem] font-medium">
                         {subtitleString}
                     </p>
                     <Button>
@@ -25,7 +25,7 @@ const Partnerships = () => {
                         </a>
                     </Button>
                 </div>
-                <div className="p-7.5 col-auto lg:col-start-2 max-w-[540px] m-auto">
+                <div className="col-auto m-auto max-w-[540px] p-7.5 lg:col-start-2">
                     <img
                         className="w-full rounded-[32px]"
                         src="/images/partnershipsImg.jpg"

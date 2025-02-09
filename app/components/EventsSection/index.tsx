@@ -11,7 +11,7 @@ export default function EventsSection({ upcoming, past }: Partial<Events>) {
     return (
         <div
             id="events"
-            className="events-container flex flex-col max-w-[1100px] mx-auto items-center pb-[50px] p-5 md:-mt-12 xl:mt-0 text-darkblue"
+            className="events-container mx-auto flex max-w-[1100px] flex-col items-center p-5 pb-[50px] text-darkblue md:-mt-12 xl:mt-0"
         >
             <h1> Our Events </h1>
             <p> Watch this space for updates on future events!</p>
@@ -25,7 +25,7 @@ export default function EventsSection({ upcoming, past }: Partial<Events>) {
                 <p className="text-center leading-[1.3]">
                     No upcoming events for now. Check out our
                     <a
-                        className="bg-red p-[1px] rounded-[5px] m-1 text-offwhite transition duration-200 ease hover:bg-gold hover:text-black cursor-pointer"
+                        className="ease m-1 cursor-pointer rounded-[5px] bg-red p-[1px] text-offwhite transition duration-200 hover:bg-gold hover:text-black"
                         href={env.VITE_INSTAGRAM_LINK}
                         target="_blank"
                         rel="noreferrer"
@@ -58,7 +58,7 @@ export default function EventsSection({ upcoming, past }: Partial<Events>) {
 }
 
 const EventList = ({ events }: { events: Event[] }) => (
-    <div className="text-offwhite grid auto-cols-fr grid-cols-1 xl:grid-cols-2 gap-6 max-w-[1400px] items-center">
+    <div className="grid max-w-[1400px] auto-cols-fr grid-cols-1 items-center gap-6 text-offwhite xl:grid-cols-2">
         {events.map(EventCard)}
     </div>
 );

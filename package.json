@@ -35,6 +35,7 @@
     "eslint-plugin-react": "^7.37.4",
     "globals": "^15.14.0",
     "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "react-router-devtools": "^1.1.0",
     "sass-embedded": "^1.83.4",
     "tailwindcss": "^4.0.0",

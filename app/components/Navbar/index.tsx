@@ -35,26 +35,26 @@ export default function Navbar({
                     top: isOpen ? "79px" : "-70%",
                 }}
             >
-                <div className="flex flex-col items-end m-6 gap-4 md:hidden">
+                <div className="m-6 flex flex-col items-end gap-4 md:hidden">
                     <NavItems />
                 </div>
             </aside>
             <IconContext.Provider value={{ color: "#fff" }}>
                 <nav className="navbar" ref={navbar}>
-                    <div className="flex justify-between h-20 w-7/10 max-w-[1100px]">
+                    <div className="flex h-20 w-7/10 max-w-[1100px] justify-between">
                         <div
-                            className="cursor-pointer text-2xl ml-6 min-w-[75px] max-w-[75px] content-center"
+                            className="ml-6 max-w-[75px] min-w-[75px] cursor-pointer content-center text-2xl"
                             onClick={scroll.scrollToTop}
                         >
                             <img src="/images/ssaLogo.png" alt={"UCLA SSA"} />
                         </div>
                         <div
-                            className="block md:hidden absolute top-1/3 right-[20px] text-[1.8rem] cursor-pointer"
+                            className="absolute top-1/3 right-[20px] block cursor-pointer text-[1.8rem] md:hidden"
                             onClick={toggle}
                         >
                             <FaBars />
                         </div>
-                        <ul className="hidden md:flex items-center list-none text-center mr-6">
+                        <ul className="mr-6 hidden list-none items-center text-center md:flex">
                             <NavItems />
                         </ul>
                     </div>

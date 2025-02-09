@@ -13,16 +13,16 @@ const Programs = () => {
 
     return (
         <div className="flex items-center justify-center">
-            <div className="grid w-full auto-cols-fr max-w-[1100px] mx-auto px-6 justify-center pt-20 md:pt-40">
-                <div className="p-7.5 max-w-[540px] col-auto lg:col-start-2 m-auto">
-                    <p className="leading-4 font-bold tracking-[1.4px] uppercase mb-4">
+            <div className="mx-auto grid w-full max-w-[1100px] auto-cols-fr justify-center px-6 pt-20 md:pt-40">
+                <div className="col-auto m-auto max-w-[540px] p-7.5 lg:col-start-2">
+                    <p className="mb-4 leading-4 font-bold tracking-[1.4px] uppercase">
                         <Emoji symbol={"🤗"} />
                         Join a family!
                     </p>
-                    <h1 className="mb-6 text-[32px] md:text-5xl leading-[1.1] font-semibold">
+                    <h1 className="mb-6 text-[32px] leading-[1.1] font-semibold md:text-5xl">
                         FAMILY SYSTEM
                     </h1>
-                    <p className="font-inter font-medium mb-[35px] text-[1.3rem] leading-[2.5rem]">
+                    <p className="mb-[35px] font-inter text-[1.3rem] leading-[2.5rem] font-medium">
                         {fams}
                     </p>
                     <Button>
@@ -35,7 +35,7 @@ const Programs = () => {
                         </a>
                     </Button>
                 </div>
-                <div className="p-7.5 max-w-[540px] col-end-2 m-auto lg:row-end-2">
+                <div className="col-end-2 m-auto max-w-[540px] p-7.5 lg:row-end-2">
                     <InfiniteCarousel>
                         <img src={basePath + "fam1.jpg"} />
                         <img src={basePath + "fam2.jpg"} />

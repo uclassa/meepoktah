@@ -7,7 +7,7 @@ const Footer = () => {
     const env = useContext(envContext);
 
     return (
-        <div className="footer-container p-10 flex flex-col lg:grid lg:auto-cols-fr basis-1 gap-8 justify-between">
+        <div className="footer-container flex basis-1 flex-col justify-between gap-8 p-10 lg:grid lg:auto-cols-fr">
             <div className="row-end-1 flex flex-col">
                 <p>
                     {" "}
@@ -80,7 +80,7 @@ const Footer = () => {
                     Repository
                 </a>
             </div>
-            <div className="row-end-1 flex flex-col -mt-1">
+            <div className="row-end-1 -mt-1 flex flex-col">
                 <p>
                     {" "}
                     <Emoji symbol="📧" />

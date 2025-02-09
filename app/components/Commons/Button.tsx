@@ -24,7 +24,7 @@ export default function Button(
 
     return (
         <div
-            className={`rounded-[50px] whitespace-nowrap w-max outline-none border-none cursor-pointer flex justify-center items-center ${padding} ${fontsize} ${bg} ${text} transition duration-200 ease-in-out ${bgHover} ${textHover}`}
+            className={`flex w-max cursor-pointer items-center justify-center rounded-[50px] border-none whitespace-nowrap outline-none ${padding} ${fontsize} ${bg} ${text} transition duration-200 ease-in-out ${bgHover} ${textHover}`}
             {...restprops}
         >
             {children}

@@ -4,7 +4,7 @@ import type { PropsWithChildren } from "react";
 
 export default function InfiniteCarousel({ children }: PropsWithChildren) {
     return (
-        <div className="aspect-4/3 object-cover rounded-[32px] overflow-hidden">
+        <div className="aspect-4/3 overflow-hidden rounded-[32px] object-cover">
             <Carousel
                 autoPlay={true}
                 interval={1500}
