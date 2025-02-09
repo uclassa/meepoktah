@@ -1,12 +1,15 @@
+import type { PropsWithChildren } from "react";
+
 export default function Button(
-    props: React.PropsWithChildren & {
+    props: PropsWithChildren & {
         primary?: boolean;
         big?: boolean;
         fontBig?: boolean;
+        className?: string;
         [key: string]: unknown;
     },
 ) {
-    const { primary, big, fontBig, children, ...restprops } = props;
+    const { primary, big, fontBig, children, className, ...restprops } = props;
     let bg, bgHover, text, textHover;
     if (primary) {
         bg = "bg-offwhite";
@@ -23,11 +26,11 @@ export default function Button(
     const fontsize = fontBig ? "text-[20px]" : "text-[16px]";
 
     return (
-        <div
-            className={`flex w-max cursor-pointer items-center justify-center rounded-[50px] border-none whitespace-nowrap outline-none ${padding} ${fontsize} ${bg} ${text} transition duration-200 ease-in-out ${bgHover} ${textHover}`}
+        <a
+            className={`flex w-max cursor-pointer items-center justify-center rounded-[50px] border-none whitespace-nowrap outline-none ${padding} ${fontsize} ${bg} ${text} transition duration-200 ease-in-out ${bgHover} ${textHover} ${className}`}
             {...restprops}
         >
             {children}
-        </div>
+        </a>
     );
 }

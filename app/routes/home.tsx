@@ -1,18 +1,18 @@
 import type { Route } from "./+types/home";
 import { useState } from "react";
 
-import Navbar from "~/components/Navbar";
-import Hero from "~/components/Hero";
-import Introduction from "~/components/Introduction";
-import Programs from "~/components/Programs";
-import Events from "~/components/EventsSection";
-import Exco from "~/components/Exco";
-import Partnerships from "~/components/Partnerships";
-import Footer from "~/components/Footer";
+import Navbar from "~/sections/Navbar";
+import Hero from "~/sections/Hero";
+import Introduction from "~/sections/Introduction";
+import Programs from "~/sections/Programs";
+import Events from "~/sections/Events";
+import Exco from "~/sections/Exco";
+import Partnerships from "~/sections/Partnerships";
+import Footer from "~/sections/Footer";
 import { getEvents } from "~/services/eventsApi.server";
 import httpCommon from "~/services/httpCommon.server";
 import { useLoaderData } from "react-router";
-import { envContext } from "~/components/Commons/Contexts";
+import { envContext } from "~/services/Contexts";
 import { reportError } from "~/services/eventsApi.server";
 
 // eslint-disable-next-line no-empty-pattern
@@ -55,13 +55,15 @@ export default function Home() {
     return (
         <envContext.Provider value={env}>
             <Navbar toggle={toggle} isOpen={isOpen} />
-            <Hero />
-            <Introduction />
-            <Programs />
-            <Events upcoming={events.upcoming} past={events.past} />
-            <Exco excoData={exco} />
-            <Partnerships />
-            <Footer />
+            <div className="flex flex-col items-center">
+                <Hero />
+                <Introduction />
+                <Programs />
+                <Events upcoming={events.upcoming} past={events.past} />
+                <Exco excoData={exco} />
+                <Partnerships />
+                <Footer />
+            </div>
         </envContext.Provider>
     );
 }

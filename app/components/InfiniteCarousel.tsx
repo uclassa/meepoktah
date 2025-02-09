@@ -1,6 +1,6 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 import type { PropsWithChildren } from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function InfiniteCarousel({ children }: PropsWithChildren) {
     return (
