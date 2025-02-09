@@ -82,7 +82,7 @@ function EventCard(props: Event, index: number) {
                 target="_blank"
                 rel="noreferrer"
             >
-                <p className="">
+                <p suppressHydrationWarning={true}>
                     {" "}
                     {date.toDateString()} | {props.venue}
                 </p>
