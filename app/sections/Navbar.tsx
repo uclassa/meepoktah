@@ -1,8 +1,9 @@
-import { useEffect, useRef, useContext, type ReactNode } from "react";
-import { animateScroll as scroll, Link as LinkScroll } from "react-scroll";
+import { useEffect, useRef, useContext } from "react";
+import { animateScroll as scroll } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { envContext } from "~/services/Contexts";
+import NavItem from "~/components/NavItem";
 
 export default function Navbar({
     toggle,
@@ -40,7 +41,7 @@ export default function Navbar({
                     top: isOpen ? "79px" : "-70%",
                 }}
             >
-                <ul className="grid justify-items-end gap-4">
+                <ul className="grid justify-items-end gap-8">
                     <NavItems />
                 </ul>
             </aside>
@@ -62,7 +63,7 @@ export default function Navbar({
                         >
                             <FaBars />
                         </div>
-                        <ul className="hidden grid-flow-col items-center justify-items-center text-center text-offwhite lg:grid">
+                        <ul className="hidden grid-flow-col items-center justify-items-center gap-4 text-center text-offwhite lg:grid">
                             <NavItems />
                         </ul>
                     </nav>
@@ -83,42 +84,5 @@ function NavItems() {
             <NavItem href={env.VITE_MEMBERSHIP_CARD_LINK}>Membership</NavItem>
             <NavItem href={env.VITE_SOTONG_GUIDE}>Sotong Guide</NavItem>
         </>
-    );
-}
-
-function NavItem({
-    href,
-    to: optionalTo,
-    children,
-}: {
-    href?: string;
-    to?: string;
-    children?: ReactNode;
-}) {
-    const to = optionalTo ?? "";
-    return (
-        <li className="w-max p-2 transition-all duration-100 hover:scale-110">
-            {href ? (
-                <a
-                    className="cursor-pointer p-2 transition-all duration-100"
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    {children}
-                </a>
-            ) : (
-                <LinkScroll
-                    className="cursor-pointer p-2 transition-all duration-100"
-                    to={to}
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    activeClass="border-b-5 border-gold"
-                >
-                    {children}
-                </LinkScroll>
-            )}
-        </li>
     );
 }
