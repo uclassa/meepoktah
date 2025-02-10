@@ -77,7 +77,7 @@ const EventList = ({
 
 function EventCard(props: Event, index: number) {
     const imageLink =
-        props?.image == null ? "/images/eventDefault.jpg" : props.image;
+        props?.image == null ? "/assets/images/eventDefault.jpg" : props.image;
 
     const date = new Date(props.start_date);
 

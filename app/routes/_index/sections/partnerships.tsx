@@ -21,7 +21,7 @@ const Partnerships = () => {
                 rightContent={
                     <img
                         className="w-full rounded-[32px]"
-                        src="/images/partnershipsImg.jpg"
+                        src="/assets/images/partnershipsImg.jpg"
                         alt="partnerships"
                     />
                 }

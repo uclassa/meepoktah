@@ -6,7 +6,7 @@ import InfiniteCarousel from "~/components/InfiniteCarousel";
 import Emoji from "~/components/Emoji";
 import Button from "~/components/Button";
 
-const basePath = "/images/fams/";
+const basePath = "/assets/images/fams/";
 
 const Programs = () => {
     const env = useContext(envContext);

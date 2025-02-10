@@ -41,7 +41,7 @@ const Introduction = () => {
                 rightContent={
                     <img
                         className="w-full rounded-[32px]"
-                        src="/images/introImg.jpg"
+                        src="/assets/images/introImg.jpg"
                         alt="vision"
                     />
                 }

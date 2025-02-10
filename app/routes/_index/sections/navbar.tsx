@@ -55,7 +55,10 @@ export default function Navbar({
                             className="max-w-[75px] min-w-[75px] cursor-pointer content-center text-2xl"
                             onClick={scroll.scrollToTop}
                         >
-                            <img src="/images/ssaLogo.png" alt={"UCLA SSA"} />
+                            <img
+                                src="/assets/images/ssaLogo.png"
+                                alt={"UCLA SSA"}
+                            />
                         </div>
                         <div
                             className="my-auto cursor-pointer text-[1.8rem] lg:hidden"

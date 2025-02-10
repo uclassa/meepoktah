@@ -19,7 +19,7 @@ export default function Footer() {
                 <NavItem href={env.VITE_SGN_JOIN_LINK}>
                     <img
                         className="max-w-50"
-                        src="/images/sgnLogo.png"
+                        src="/assets/images/sgnLogo.png"
                         alt="SGN Logo"
                     />
                 </NavItem>

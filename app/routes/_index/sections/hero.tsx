@@ -3,7 +3,7 @@ import { envContext } from "~/services/Contexts";
 import { MdArrowForward, MdKeyboardArrowRight } from "react-icons/md";
 import Button from "~/components/Button";
 import Emoji from "~/components/Emoji";
-import heroVideo from "/videos/hero.mp4";
+import heroVideo from "/assets/videos/hero.mp4";
 
 export default function Hero() {
     const [video, setVideo]: [undefined | string, (video: string) => void] =
