@@ -1,27 +1,18 @@
-import type { Route } from "./+types/home";
 import { useState } from "react";
 
-import Navbar from "~/sections/Navbar";
-import Hero from "~/sections/Hero";
-import Introduction from "~/sections/Introduction";
-import Programs from "~/sections/Programs";
-import Events from "~/sections/Events";
-import Exco from "~/sections/Exco";
-import Partnerships from "~/sections/Partnerships";
-import Footer from "~/sections/Footer";
+import Navbar from "./sections/navbar";
+import Hero from "./sections/hero";
+import Introduction from "./sections/introduction";
+import Programs from "./sections/programs";
+import Events from "./sections/events";
+import Exco from "./sections/exco";
+import Partnerships from "./sections/partnerships";
+import Footer from "./sections/footer";
 import { getEvents } from "~/services/eventsApi.server";
 import httpCommon from "~/services/httpCommon.server";
 import { useLoaderData } from "react-router";
 import { envContext } from "~/services/Contexts";
 import { reportError } from "~/services/eventsApi.server";
-
-// eslint-disable-next-line no-empty-pattern
-export function meta({}: Route.MetaArgs) {
-    return [
-        { title: "UCLA SSA" },
-        { name: "description", content: "Welcome to SSA's official website." },
-    ];
-}
 
 export async function loader() {
     const [events, exco] = await Promise.all([

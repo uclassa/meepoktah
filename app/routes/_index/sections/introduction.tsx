@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { envContext } from "../services/Contexts";
+import { envContext } from "~/services/Contexts";
 import InfoCard from "~/components/InfoCard";
 import DoubleCard from "~/components/DoubleCard";
 import Button from "~/components/Button";

@@ -10,6 +10,14 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
+// eslint-disable-next-line no-empty-pattern
+export function meta({}: Route.MetaArgs) {
+    return [
+        { title: "UCLA SSA" },
+        { name: "description", content: "Welcome to SSA's official website." },
+    ];
+}
+
 export const links: Route.LinksFunction = () => [
     { rel: "preconnect", href: "https://fonts.googleapis.com" },
     {
