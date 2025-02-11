@@ -84,26 +84,28 @@ function EventCard(props: Event, index: number) {
     return (
         <div
             key={index}
-            className="relative grid h-[150px] w-[350px] max-w-full overflow-hidden rounded-[15px] border-1 border-solid border-darkblue bg-[#656565] shadow-[0px_15px_24px_#656565] transition duration-200 hover:scale-103 sm:h-[250px] sm:w-[500px]"
+            className="relative grid h-[150px] w-[350px] max-w-full auto-cols-fr auto-rows-fr overflow-hidden rounded-[15px] border-1 border-solid border-darkblue bg-[#656565] shadow-[0px_15px_24px_#656565] transition duration-200 hover:scale-103 sm:h-[250px] sm:w-[500px]"
         >
             <img
-                className="col-end-1 row-end-1 w-full object-cover"
+                className="col-end-1 row-end-1 h-full w-full object-cover object-top"
                 src={imageLink}
                 alt="Picture of event"
             />
             <a
-                className="col-end-1 row-end-1 flex h-full w-full flex-col bg-[rgba(0,0,0,0.5)] p-[10px] transition duration-200 hover:opacity-0 md:p-[25px]"
-                href={props.link ?? "javascript:"}
+                className="col-end-1 row-end-1 flex h-full w-full flex-col bg-[rgba(0,0,0,0.5)] p-[10px] transition duration-200 hover:opacity-0 sm:p-[25px]"
+                href={props.link ?? undefined}
                 target="_blank"
                 rel="noreferrer"
             >
                 <p
-                    className="max-w-[550px] tracking-[1px] sm:mb-3 sm:text-2xl"
+                    className="max-w-[550px] overflow-hidden tracking-[1px] sm:mb-3 sm:text-2xl"
                     suppressHydrationWarning={true}
                 >
                     {date.toDateString()} | {props.venue}
                 </p>
-                <h3 className="text-2xl md:text-5xl">{props.title}</h3>
+                <h3 className="overflow-hidden text-2xl break-words sm:text-5xl">
+                    {props.title}
+                </h3>
                 {date.getTime() > new Date().getTime() && (
                     <p>{props.description}</p>
                 )}
