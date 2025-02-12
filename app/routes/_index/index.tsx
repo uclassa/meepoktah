@@ -40,9 +40,11 @@ export default function Home() {
         <envContext.Provider value={env}>
             <Navbar toggle={toggle} isOpen={isOpen} />
             <div className="flex flex-col items-center">
-                <Hero />
-                <Introduction />
-                <Programs />
+                <Hero />{" "}
+                <div id="about">
+                    <Introduction />
+                    <Programs />
+                </div>
                 <Suspense
                     fallback={
                         <>

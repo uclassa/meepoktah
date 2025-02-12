@@ -1,6 +1,7 @@
 import InfoCard from "~/components/InfoCard";
 import DoubleCard from "~/components/DoubleCard";
 import Button from "~/components/Button";
+import NavItem from "~/components/NavItem";
 
 const Partnerships = () => {
     return (
@@ -13,8 +14,13 @@ const Partnerships = () => {
                             heading="We are open to working with your organisation!"
                             description="Our partner organisations bring a lot of value to our community. They provide us with resources, mentorship, and opportunities for our members. We are always looking for new partners to work with, so if you're interested, please reach out to us!"
                         />
-                        <Button href="mailto:ssa.uclabruins@gmail.com">
-                            Contact Us!
+                        <Button className="relative">
+                            <NavItem
+                                href="mailto:ssa.uclabruins@gmail.com"
+                                extendHitboxToNearestRelative={true}
+                            >
+                                Contact Us!
+                            </NavItem>
                         </Button>
                     </>
                 }

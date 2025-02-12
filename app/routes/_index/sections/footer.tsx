@@ -1,7 +1,7 @@
 import { useContext, type ReactNode } from "react";
 import { envContext } from "~/services/Contexts";
 import Emoji from "~/components/Emoji";
-import NavItem from "~/components/NavItem";
+import BaseNavItem from "~/components/NavItem";
 
 export default function Footer() {
     const env = useContext(envContext);
@@ -71,7 +71,16 @@ function FooterUl({
     return (
         <div className="row-end-1">
             <h3 className="mb-3">{heading}</h3>
-            <ul className="-ml-2 grid gap-2 text-[0.9rem]">{children}</ul>
+            <ul className="grid gap-2 text-[0.9rem]">{children}</ul>
         </div>
+    );
+}
+
+function NavItem(props: Record<string, unknown>) {
+    return (
+        <BaseNavItem
+            className="transition-transform duration-100 hover:scale-105"
+            {...props}
+        />
     );
 }

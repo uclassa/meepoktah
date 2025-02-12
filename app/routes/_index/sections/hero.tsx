@@ -1,9 +1,9 @@
 import { useEffect, useState, useContext } from "react";
 import { envContext } from "~/services/Contexts";
-import { MdArrowForward, MdKeyboardArrowRight } from "react-icons/md";
-import Button from "~/components/Button";
+import ArrowButton from "~/components/ArrowButton";
 import Emoji from "~/components/Emoji";
 import heroVideo from "/assets/videos/hero.mp4";
+import NavItem from "~/components/NavItem";
 
 export default function Hero() {
     const [video, setVideo]: [undefined | string, (video: string) => void] =
@@ -11,11 +11,6 @@ export default function Hero() {
     useEffect(() => {
         setVideo(heroVideo);
     }, []);
-
-    const [hover, setHover] = useState(false);
-    const onHover = () => {
-        setHover(!hover);
-    };
 
     const env = useContext(envContext);
 
@@ -36,22 +31,14 @@ export default function Hero() {
                     <Emoji symbol="👋" /> Hello! Welcome to SSA, a tight-knit
                     community that welcomes everyone!
                 </p>
-                <Button
-                    className="before:absolute before:top-0 before:h-full before:w-full"
-                    onMouseEnter={onHover}
-                    onMouseLeave={onHover}
-                    primary={true}
-                    href={env.VITE_DISCORD_LINK}
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    Join Us!
-                    {hover ? (
-                        <MdArrowForward className="ml-2 text-xl" />
-                    ) : (
-                        <MdKeyboardArrowRight className="ml-2 text-xl" />
-                    )}
-                </Button>
+                <ArrowButton primary={true} left={false}>
+                    <NavItem
+                        href={env.VITE_DISCORD_LINK}
+                        extendHitboxToNearestRelative={true}
+                    >
+                        Join us!
+                    </NavItem>
+                </ArrowButton>
             </div>
         </div>
     );

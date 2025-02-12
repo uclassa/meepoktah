@@ -3,7 +3,7 @@ import { animateScroll as scroll } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { envContext } from "~/services/Contexts";
-import NavItem from "~/components/NavItem";
+import BaseNavItem from "~/components/NavItem";
 
 export default function Navbar({
     toggle,
@@ -86,6 +86,16 @@ function NavItems() {
             <NavItem to="partnerships">Partnerships</NavItem>
             <NavItem href={env.VITE_MEMBERSHIP_CARD_LINK}>Membership</NavItem>
             <NavItem href={env.VITE_SOTONG_GUIDE}>Sotong Guide</NavItem>
+            <NavItem href="auth/login">Member Login</NavItem>
         </>
+    );
+}
+
+function NavItem(props: { className?: string; [key: string]: unknown }) {
+    const { className, ...restprops } = props;
+    return (
+        <li className="block transition duration-100 hover:scale-110">
+            <BaseNavItem className={className ?? "" + "p-2"} {...restprops} />
+        </li>
     );
 }

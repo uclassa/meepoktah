@@ -1,15 +1,11 @@
-import type { PropsWithChildren } from "react";
-
-export default function Button(
-    props: PropsWithChildren & {
-        primary?: boolean;
-        big?: boolean;
-        fontBig?: boolean;
-        className?: string;
-        [key: string]: unknown;
-    },
-) {
-    const { primary, big, fontBig, children, className, ...restprops } = props;
+export default function Button(props: {
+    primary?: boolean;
+    size?: number;
+    fontBig?: boolean;
+    className?: string;
+    [key: string]: unknown;
+}) {
+    const { primary, size, fontBig, className, ...restprops } = props;
     let bg, bgHover, text, textHover;
     if (primary) {
         bg = "bg-offwhite";
@@ -22,15 +18,25 @@ export default function Button(
         text = "text-offwhite";
         textHover = "hover:text-black";
     }
-    const padding = big ? "px-12 py-3.5" : "px-7.5 py-3";
+
+    let padding;
+    switch (size ?? 1) {
+        case 0:
+            padding = "px-4 py-2.5";
+            break;
+        case 1:
+            padding = "px-7.5 py-3";
+            break;
+        case 2:
+            padding = "px-12 py-3.5";
+            break;
+    }
     const fontsize = fontBig ? "text-[20px]" : "text-[16px]";
 
     return (
-        <a
-            className={`flex w-max cursor-pointer items-center justify-center rounded-[50px] border-none whitespace-nowrap outline-none ${padding} ${fontsize} ${bg} ${text} transition duration-200 ease-in-out ${bgHover} ${textHover} ${className}`}
+        <div
+            className={`flex w-max cursor-pointer items-center justify-center rounded-[50px] border-none whitespace-nowrap outline-none ${padding} ${fontsize} ${bg} ${text} transition duration-200 ease-in-out ${bgHover} ${textHover} ${className ?? ""}`}
             {...restprops}
-        >
-            {children}
-        </a>
+        />
     );
 }
