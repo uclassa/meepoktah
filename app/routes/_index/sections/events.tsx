@@ -2,9 +2,8 @@ import Emoji from "~/components/Emoji";
 import Button from "~/components/Button";
 import { useContext, type ReactNode } from "react";
 import { envContext } from "~/services/Contexts";
-import type { Events, Event } from "~/services/eventsApi.server";
 
-export default function EventsSection({ upcoming, past }: Events) {
+export default function EventsSection({ upcoming, past }: App.Events) {
     const env = useContext(envContext);
 
     return (
@@ -63,7 +62,7 @@ const EventList = ({
     events,
 }: {
     heading: ReactNode;
-    events: Event[];
+    events: App.Event[];
 }) => (
     <div className="flex w-full flex-col items-center py-5">
         <h2 className="self-start text-2xl sm:text-[2rem]">{heading}</h2>
@@ -75,7 +74,7 @@ const EventList = ({
     </div>
 );
 
-function EventCard(props: Event, index: number) {
+function EventCard(props: App.Event, index: number) {
     const imageLink =
         props?.image == null ? "/assets/images/eventDefault.jpg" : props.image;
 

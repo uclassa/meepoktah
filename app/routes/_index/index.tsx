@@ -1,31 +1,24 @@
-import { useState } from "react";
+import { useState, Suspense } from "react";
+import { Await } from "react-router";
 
 import Navbar from "./sections/navbar";
 import Hero from "./sections/hero";
 import Introduction from "./sections/introduction";
 import Programs from "./sections/programs";
-import Events from "./sections/events";
+import EventSection from "./sections/events";
 import Exco from "./sections/exco";
 import Partnerships from "./sections/partnerships";
 import Footer from "./sections/footer";
-import { getEvents } from "~/services/eventsApi.server";
-import httpCommon from "~/services/httpCommon.server";
+import APIClient from "~/services/httpCommon.server";
 import { useLoaderData } from "react-router";
 import { envContext } from "~/services/Contexts";
-import { reportError } from "~/services/eventsApi.server";
 
 export async function loader() {
-    const [events, exco] = await Promise.all([
-        getEvents(),
-        httpCommon
-            .get("/exco/")
-            .then((res) => res.data)
-            .catch((e) => reportError(e) ?? []),
-    ]);
     return {
-        events,
-        exco,
+        events: APIClient.getEvents(),
+        exco: APIClient.getExco(),
         env: {
+            VITE_DJANGO_API: process.env.VITE_DJANGO_API,
             VITE_INSTAGRAM_LINK: process.env.VITE_INSTAGRAM_LINK,
             VITE_DISCORD_LINK: process.env.VITE_DISCORD_LINK,
             VITE_MEMBERSHIP_CARD_LINK: process.env.VITE_MEMBERSHIP_CARD_LINK,
@@ -39,9 +32,9 @@ export async function loader() {
 }
 
 export default function Home() {
+    const { events, exco, env } = useLoaderData<typeof loader>();
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
-    const { events, exco, env } = useLoaderData<typeof loader>();
 
     return (
         <envContext.Provider value={env}>
@@ -50,8 +43,26 @@ export default function Home() {
                 <Hero />
                 <Introduction />
                 <Programs />
-                <Events upcoming={events.upcoming} past={events.past} />
-                <Exco excoData={exco} />
+                <Suspense
+                    fallback={
+                        <>
+                            <EventSection upcoming={[]} past={[]} />
+                            <Exco excoData={[]} />
+                        </>
+                    }
+                >
+                    <Await resolve={events}>
+                        {(events) => (
+                            <EventSection
+                                upcoming={events.upcoming}
+                                past={events.past}
+                            />
+                        )}
+                    </Await>
+                    <Await resolve={exco}>
+                        {(exco) => <Exco excoData={exco} />}
+                    </Await>
+                </Suspense>
                 <Partnerships />
                 <Footer />
             </div>

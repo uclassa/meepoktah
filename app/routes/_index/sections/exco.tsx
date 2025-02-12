@@ -1,15 +1,4 @@
-interface ExcoMemberData {
-    id: number;
-    name: string;
-    role: string;
-    major: string;
-    year: string;
-    photo: string;
-    alt_photo: string | null;
-    alt: string;
-}
-
-export default function Exco({ excoData }: { excoData: ExcoMemberData[] }) {
+export default function Exco({ excoData }: { excoData: App.ExcoMemberData[] }) {
     return (
         <div
             id="team"
@@ -32,7 +21,7 @@ export default function Exco({ excoData }: { excoData: ExcoMemberData[] }) {
     );
 }
 
-function ExcoMember(data: ExcoMemberData) {
+function ExcoMember(data: App.ExcoMemberData) {
     return (
         <div className="flex w-[320px] flex-col items-center overflow-hidden rounded-2xl bg-darkblue text-offwhite">
             <div className="top-0 grid h-[320px] grid-cols-1 grid-rows-1 items-center justify-items-center overflow-hidden">
