@@ -3,7 +3,7 @@ import { animateScroll as scroll } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { envContext } from "~/services/Contexts";
-import NavItem from "~/components/NavItem";
+import BaseNavItem from "~/components/NavItem";
 
 export default function Navbar({
     toggle,
@@ -33,12 +33,12 @@ export default function Navbar({
     });
 
     return (
-        <>
+        <div className="sticky top-0 z-1">
             <aside
-                className="fixed z-1 w-full bg-[#b30000] p-6 text-offwhite transition-all duration-300 lg:hidden"
+                className="absolute w-full bg-[#b30000] p-6 text-offwhite transition-all duration-300 lg:hidden"
                 style={{
                     opacity: isOpen ? "100%" : "100%",
-                    top: isOpen ? "79px" : "-70%",
+                    top: isOpen ? "79px" : "-300px",
                 }}
             >
                 <ul className="grid justify-items-end gap-8">
@@ -46,7 +46,7 @@ export default function Navbar({
                 </ul>
             </aside>
             <div
-                className="fixed z-2 h-20 w-full transition-all duration-300 max-lg:bg-red"
+                className="absolute h-20 w-full transition-all duration-300 max-lg:bg-red"
                 ref={navbar}
             >
                 <IconContext.Provider value={{ color: "#fff" }}>
@@ -72,7 +72,7 @@ export default function Navbar({
                     </nav>
                 </IconContext.Provider>
             </div>
-        </>
+        </div>
     );
 }
 
@@ -86,6 +86,16 @@ function NavItems() {
             <NavItem to="partnerships">Partnerships</NavItem>
             <NavItem href={env.VITE_MEMBERSHIP_CARD_LINK}>Membership</NavItem>
             <NavItem href={env.VITE_SOTONG_GUIDE}>Sotong Guide</NavItem>
+            <NavItem href="auth/login">Member Login</NavItem>
         </>
+    );
+}
+
+function NavItem(props: { className?: string; [key: string]: unknown }) {
+    const { className, ...restprops } = props;
+    return (
+        <li className="block transition duration-100 hover:scale-110">
+            <BaseNavItem className={className ?? "" + "p-2"} {...restprops} />
+        </li>
     );
 }

@@ -1,5 +1,6 @@
 import Emoji from "~/components/Emoji";
 import Button from "~/components/Button";
+import NavItem from "~/components/NavItem";
 import { useContext, type ReactNode } from "react";
 import { envContext } from "~/services/Contexts";
 
@@ -44,13 +45,13 @@ export default function EventsSection({ upcoming, past }: App.Events) {
                     Find us on Instagram to keep up to date with all our
                     happenings! <Emoji symbol="👇" />
                 </p>
-                <Button
-                    fontBig={true}
-                    href={env.VITE_INSTAGRAM_LINK}
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    Stalk Us!
+                <Button className="relative" fontBig={true}>
+                    <NavItem
+                        href={env.VITE_INSTAGRAM_LINK}
+                        extendHitboxToNearestRelative={true}
+                    >
+                        Stalk us!
+                    </NavItem>
                 </Button>
             </div>
         </div>

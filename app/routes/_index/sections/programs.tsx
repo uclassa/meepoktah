@@ -5,6 +5,7 @@ import DoubleCard from "~/components/DoubleCard";
 import InfiniteCarousel from "~/components/InfiniteCarousel";
 import Emoji from "~/components/Emoji";
 import Button from "~/components/Button";
+import NavItem from "~/components/NavItem";
 
 const basePath = "/assets/images/fams/";
 
@@ -41,12 +42,13 @@ const Programs = () => {
                             </>
                         }
                     />
-                    <Button
-                        href={env.VITE_FAM_SIGNUP}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Sign up
+                    <Button className="relative">
+                        <NavItem
+                            href={env.VITE_FAM_SIGNUP}
+                            extendHitboxToNearestRelative={true}
+                        >
+                            Sign up
+                        </NavItem>
                     </Button>
                 </>
             }

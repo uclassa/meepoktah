@@ -1,31 +1,34 @@
 import type { ReactNode } from "react";
+import { NavLink } from "react-router";
 import { Link as LinkScroll } from "react-scroll";
 
 export default function NavItem({
     href,
-    to: optionalTo,
+    to,
     children,
+    className: propsClassName,
+    extendHitboxToNearestRelative,
 }: {
     href?: string;
     to?: string;
     children?: ReactNode;
+    className?: string;
+    extendHitboxToNearestRelative?: boolean;
 }) {
-    const to = optionalTo ?? "";
+    const className =
+        `${extendHitboxToNearestRelative ? "before:absolute before:top-0 before:left-0 before:w-full before:h-full" : ""} cursor-pointer w-max ${propsClassName ?? ""}`.trim();
     return (
-        <li className="w-max transition-all duration-100 hover:scale-105">
+        <>
             {href ? (
-                <a
-                    className="cursor-pointer p-2 transition-all duration-100"
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                >
+                <NavLink className={className} to={href}>
                     {children}
-                </a>
+                </NavLink>
             ) : (
                 <LinkScroll
-                    className="cursor-pointer p-2 transition-all duration-100"
-                    to={to}
+                    className={(
+                        className + " transition-[border] duration-100"
+                    ).trim()}
+                    to={to ?? ""}
                     smooth={true}
                     duration={500}
                     spy={true}
@@ -34,6 +37,6 @@ export default function NavItem({
                     {children}
                 </LinkScroll>
             )}
-        </li>
+        </>
     );
 }
