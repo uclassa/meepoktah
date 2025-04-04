@@ -15,12 +15,13 @@ export default function ArrowButton(
 ) {
     const { left, children, ...restprops } = props;
     const [hover, setHover] = useState(false);
-    const onHover = () => {
-        setHover(!hover);
-    };
 
     return (
-        <Button onMouseEnter={onHover} onMouseLeave={onHover} {...restprops}>
+        <Button
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+            {...restprops}
+        >
             {left && (
                 <>
                     {hover ? (

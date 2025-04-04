@@ -32,11 +32,13 @@ export default function Hero() {
                     community that welcomes everyone!
                 </p>
                 <ArrowButton primary={true} left={false}>
-                    <NavItem
-                        href={env.VITE_DISCORD_LINK}
-                        extendHitboxToNearestRelative={true}
-                    >
-                        Join us!
+                    <NavItem href={env.VITE_DISCORD_LINK}>
+                        Join our discord!
+                    </NavItem>
+                </ArrowButton>
+                <ArrowButton className="mt-5" primary={false} left={false}>
+                    <NavItem href="https://t.me/+rtKVQe-ui69iYmY1">
+                        2025 admits telegram!
                     </NavItem>
                 </ArrowButton>
             </div>

@@ -1,6 +1,7 @@
 import { useState, Suspense } from "react";
 import { Await } from "react-router";
 
+import Banner from "./sections/banner";
 import Navbar from "./sections/navbar";
 import Hero from "./sections/hero";
 import Introduction from "./sections/introduction";
@@ -38,35 +39,38 @@ export default function Home() {
 
     return (
         <envContext.Provider value={env}>
-            <Navbar toggle={toggle} isOpen={isOpen} />
-            <div className="flex flex-col items-center">
-                <Hero />{" "}
-                <div id="about">
-                    <Introduction />
-                    <Programs />
+            <div className="flex flex-col">
+                <Banner />
+                <Navbar toggle={toggle} isOpen={isOpen} />
+                <div className="z-0 flex flex-col items-center">
+                    <Hero />
+                    <div id="about">
+                        <Introduction />
+                        <Programs />
+                    </div>
+                    <Suspense
+                        fallback={
+                            <>
+                                <EventSection upcoming={[]} past={[]} />
+                                <Exco excoData={[]} />
+                            </>
+                        }
+                    >
+                        <Await resolve={events}>
+                            {(events) => (
+                                <EventSection
+                                    upcoming={events.upcoming}
+                                    past={events.past}
+                                />
+                            )}
+                        </Await>
+                        <Await resolve={exco}>
+                            {(exco) => <Exco excoData={exco} />}
+                        </Await>
+                    </Suspense>
+                    <Partnerships />
+                    <Footer />
                 </div>
-                <Suspense
-                    fallback={
-                        <>
-                            <EventSection upcoming={[]} past={[]} />
-                            <Exco excoData={[]} />
-                        </>
-                    }
-                >
-                    <Await resolve={events}>
-                        {(events) => (
-                            <EventSection
-                                upcoming={events.upcoming}
-                                past={events.past}
-                            />
-                        )}
-                    </Await>
-                    <Await resolve={exco}>
-                        {(exco) => <Exco excoData={exco} />}
-                    </Await>
-                </Suspense>
-                <Partnerships />
-                <Footer />
             </div>
         </envContext.Provider>
     );
