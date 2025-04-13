@@ -11,31 +11,29 @@
     --color-gold: #e4b363;
     --color-darkblue: #0b0e24;
     --color-navyblue: #192841;
-    --animate-scroll-x: scroll-x 15s infinite linear;
     --animate-scale: scale 2s infinite linear;
+}
 
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
-    @keyframes scroll-x {
-        0% {
-            transform: translateX(0%);
-        }
-        100% {
-            transform: translateX(-27.5%);
-        }
+@keyframes scale {
+    0% {
+        transform: scale(1);
     }
 
-    @keyframes scale {
-        0% {
-            transform: scale(1);
-        }
+    50% {
+        transform: scale(1.1);
+    }
 
-        50% {
-            transform: scale(1.1);
-        }
-
-        100% {
-            transform: scale(1);
-        }
+    100% {
+        transform: scale(1);
     }
 }
 
