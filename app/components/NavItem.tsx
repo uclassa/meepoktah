@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import type { ReactNode } from "react";
 import { NavLink } from "react-router";
 import { Link as LinkScroll } from "react-scroll";
@@ -6,7 +7,7 @@ export default function NavItem({
     href,
     to,
     children,
-    className: propsClassName,
+    className,
     extendHitboxToNearestRelative,
 }: {
     href?: string;
@@ -15,8 +16,13 @@ export default function NavItem({
     className?: string;
     extendHitboxToNearestRelative?: boolean;
 }) {
-    const className =
-        `${extendHitboxToNearestRelative ? "before:absolute before:top-0 before:left-0 before:w-full before:h-full" : ""} cursor-pointer w-max ${propsClassName ?? ""}`.trim();
+    className = clsx([
+        extendHitboxToNearestRelative &&
+            "before:absolute before:top-0 before:left-0 before:h-full before:w-full",
+        "w-max cursor-pointer",
+        className,
+    ]);
+
     return (
         <>
             {href ? (
@@ -25,9 +31,10 @@ export default function NavItem({
                 </NavLink>
             ) : (
                 <LinkScroll
-                    className={(
-                        className + " transition-[border] duration-100"
-                    ).trim()}
+                    className={clsx([
+                        className,
+                        "transition-[border] duration-100",
+                    ])}
                     to={to ?? ""}
                     smooth={true}
                     duration={500}
