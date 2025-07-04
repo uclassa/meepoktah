@@ -86,7 +86,7 @@ function NavItems() {
             <NavItem to="partnerships">Partnerships</NavItem>
             <NavItem href={env.VITE_MEMBERSHIP_CARD_LINK}>Membership</NavItem>
             <NavItem href={env.VITE_SOTONG_GUIDE}>Sotong Guide</NavItem>
-            <NavItem href="auth/login">Member Login</NavItem>
+            {/* <NavItem href="auth/login">Member Login</NavItem> */}
         </>
     );
 }
