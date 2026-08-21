@@ -19,6 +19,7 @@ export default function Hero() {
             <video
                 className="col-end-2 row-end-2 h-full w-full bg-[#232a34] object-cover opacity-30"
                 autoPlay={true}
+                playsInline={true}
                 loop={true}
                 muted={true}
                 src={video}
@@ -37,8 +38,8 @@ export default function Hero() {
                     </NavItem>
                 </ArrowButton>
                 <ArrowButton className="mt-5" primary={false} left={false}>
-                    <NavItem href="https://t.me/+rtKVQe-ui69iYmY1">
-                        2025 admits telegram!
+                    <NavItem href="https://t.me/+kbRunm-nCXNmOTA1">
+                        2026 admits telegram!
                     </NavItem>
                 </ArrowButton>
             </div>
