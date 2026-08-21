@@ -26,6 +26,7 @@ export async function loader() {
             VITE_MAILCHIMP: process.env.VITE_MAILCHIMP,
             VITE_SGN_JOIN_LINK: process.env.VITE_SGN_JOIN_LINK,
             VITE_SOTONG_GUIDE: process.env.VITE_SOTONG_GUIDE,
+            VITE_LINKTREE_LINK: process.env.VITE_LINKTREE_LINK,
         },
     };
 }
