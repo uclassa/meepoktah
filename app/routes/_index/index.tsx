@@ -5,7 +5,6 @@ import Banner from "./sections/banner";
 import Navbar from "./sections/navbar";
 import Hero from "./sections/hero";
 import Introduction from "./sections/introduction";
-import Programs from "./sections/programs";
 import EventSection from "./sections/events";
 import Exco from "./sections/exco";
 import Partnerships from "./sections/partnerships";
@@ -25,9 +24,9 @@ export async function loader() {
             VITE_MEMBERSHIP_CARD_LINK: process.env.VITE_MEMBERSHIP_CARD_LINK,
             VITE_GITHUB_LINK: process.env.VITE_GITHUB_LINK,
             VITE_MAILCHIMP: process.env.VITE_MAILCHIMP,
-            VITE_FAM_SIGNUP: process.env.VITE_FAM_SIGNUP,
             VITE_SGN_JOIN_LINK: process.env.VITE_SGN_JOIN_LINK,
             VITE_SOTONG_GUIDE: process.env.VITE_SOTONG_GUIDE,
+            VITE_LINKTREE_LINK: process.env.VITE_LINKTREE_LINK,
         },
     };
 }
@@ -46,7 +45,6 @@ export default function Home() {
                     <Hero />
                     <div id="about">
                         <Introduction />
-                        <Programs />
                     </div>
                     <Suspense
                         fallback={
